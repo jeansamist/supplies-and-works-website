@@ -1,6 +1,7 @@
 // Case studies. Each entry gets its own page at /work/<slug> (except products,
 // which link to their product page). Covers are screenshots of the live sites
-// in public/work/ (or the client logo on its brand colour when the site is offline).
+// Covers show the client logo on its brand colour (files in public/work/);
+// screenshots of the live sites appear on each case-study page.
 // DRAFT: the texts below were written from the project descriptions — review
 // and correct them (years, countries, results).
 import type { ImageKey } from "@/content/images";
@@ -18,10 +19,10 @@ export type CaseStudy = {
   filters: WorkFilter[];
   /** Unsplash fallback image. */
   image: ImageKey;
-  /** Screenshot in /public (preferred over `image`). */
-  cover?: { src: string; alt: string };
-  /** Logo on a brand-colour panel (used when there is no screenshot). */
+  /** Cover: the client's logo (shown in white) centred on its brand colour. */
   logo?: { src: string; bg: string };
+  /** Screenshot of the live site, shown on the case-study page. */
+  screenshot?: { src: string; alt: string };
   /** Live website. */
   link?: string;
   /** Product pages link to their own page instead of a case study. */
@@ -75,7 +76,8 @@ export const work = localized({
         result: "Professional email on your own domain, billed by Mobile Money.",
         filters: ["Software", "Cloud", "AI"],
         image: "cloudDashboard",
-        cover: { src: "/work/marrowmails.jpg", alt: "MarrowMails home page: “Your business deserves better than a Gmail address.”" },
+        logo: { src: "/work/logo-marrowmails.svg", bg: "#FB6107" },
+        screenshot: { src: "/work/marrowmails.jpg", alt: "MarrowMails home page: “Your business deserves better than a Gmail address.”" },
         link: "https://marrowmails.com/",
         detail: {
           seoDescription:
@@ -109,7 +111,8 @@ export const work = localized({
         result: "Real-time call translation in your own cloned voice.",
         filters: ["AI", "Software", "Cloud"],
         image: "aiAbstract",
-        cover: { src: "/work/heekoo.jpg", alt: "Heekoo home page: “One platform. Zero language barriers in your calls.”" },
+        logo: { src: "/work/logo-heekoo.png", bg: "#3C096C" },
+        screenshot: { src: "/work/heekoo.jpg", alt: "Heekoo home page: “One platform. Zero language barriers in your calls.”" },
         link: "https://heekoo.com/",
         detail: {
           seoDescription:
@@ -141,7 +144,8 @@ export const work = localized({
         result: "Njangi groups, transfers and bill payments in one mobile app.",
         filters: ["Software"],
         image: "mobileApp",
-        cover: { src: "/work/yankap.jpg", alt: "yaNkap home page: “The njangi, without the notebook.”" },
+        logo: { src: "/work/logo-yankap.svg", bg: "#FF5500" },
+        screenshot: { src: "/work/yankap.jpg", alt: "yaNkap home page: “The njangi, without the notebook.”" },
         link: "https://yankap.com/",
         detail: {
           seoDescription:
@@ -194,7 +198,8 @@ export const work = localized({
         result: "Online ordering from local restaurants, delivery or takeaway.",
         filters: ["Web", "Software"],
         image: "restaurantKitchen",
-        cover: { src: "/work/ndzeme.jpg", alt: "Ndzeme restaurants page with categories and restaurant listings" },
+        logo: { src: "/work/logo-ndzeme.png", bg: "#FE9719" },
+        screenshot: { src: "/work/ndzeme.jpg", alt: "Ndzeme restaurants page with categories and restaurant listings" },
         link: "https://nzdeme-jeansamist.vercel.app/restaurants",
         detail: {
           seoDescription: "Ndzeme: an online ordering application where users order their favorite dishes and choose delivery or takeaway.",
@@ -218,7 +223,8 @@ export const work = localized({
         result: "An online portfolio combining SEO, design and animation.",
         filters: ["Web", "Creative"],
         image: "videoProduction",
-        cover: { src: "/work/lephenix.jpg", alt: "Lephenix website: services banner and portfolio preview of wedding photos" },
+        logo: { src: "/work/logo-lephenix.png", bg: "#DA3421" },
+        screenshot: { src: "/work/lephenix.jpg", alt: "Lephenix website: services banner and portfolio preview of wedding photos" },
         link: "https://www.lephenix.cm/",
         detail: {
           seoDescription: "Lephenix: the online portfolio of a photography company in Cameroon, combining SEO, design and animation.",
@@ -242,7 +248,8 @@ export const work = localized({
         result: "A Figma prototype turned into a fast, animated, SEO-friendly site.",
         filters: ["Web", "Creative"],
         image: "uiSketches",
-        cover: { src: "/work/web-and-buzz.jpg", alt: "Web and Buzz home page: “We build high-converting websites that get you more leads!”" },
+        logo: { src: "/work/logo-web-and-buzz.png", bg: "#0573E4" },
+        screenshot: { src: "/work/web-and-buzz.jpg", alt: "Web and Buzz home page: “We build high-converting websites that get you more leads!”" },
         link: "https://dev-webandbuzz.vercel.app/",
         detail: {
           seoDescription: "Web and Buzz: a web services agency site, from Figma prototype to a React build with animations that preserve SEO.",
@@ -266,7 +273,8 @@ export const work = localized({
         result: "A clear Figma prototype presenting an optometry practice.",
         filters: ["Creative", "Web"],
         image: "responsiveDevices",
-        cover: { src: "/work/mega-optic.jpg", alt: "Mega Optic home page: “L’opticien qui te convient”" },
+        logo: { src: "/work/logo-mega-optic.png", bg: "#293A89" },
+        screenshot: { src: "/work/mega-optic.jpg", alt: "Mega Optic home page: “L’opticien qui te convient”" },
         link: "https://megaoptic.vercel.app/",
         detail: {
           seoDescription: "Mega Optic: a Figma prototype for an optometry practice in Cameroon, giving a quick overview of its services.",
@@ -300,7 +308,7 @@ export const work = localized({
         studio: "Product",
         result: "Live with paying shops.",
         filters: ["Products", "Software"],
-        image: "boutique",
+        image: "kiraShop",
         href: routes.kira.path,
         detail: productDetail(),
       },

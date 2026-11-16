@@ -1,3 +1,4 @@
+import Image from "next/image";
 import { notFound } from "next/navigation";
 import { WorkCard } from "@/components/interactive/work-cards";
 import { PageHero } from "@/components/sections/page-hero";
@@ -68,6 +69,17 @@ export default async function CaseStudyPage({ params }: PageProps<"/[lang]/work/
           <div data-reveal="clip" className="relative aspect-[16/8] overflow-hidden rounded-[2rem]">
             <WorkCover item={item} sizes="100vw" priority className="size-full" />
           </div>
+          {item.screenshot && (
+            <figure data-reveal className="overflow-hidden rounded-[1.5rem] border border-line bg-surface shadow-[0_30px_60px_-30px_rgba(0,0,0,0.3)]">
+              <div className="flex items-center gap-1.5 border-b border-line px-4 py-3">
+                <span className="size-2.5 rounded-full bg-fg/15" />
+                <span className="size-2.5 rounded-full bg-fg/15" />
+                <span className="size-2.5 rounded-full bg-accent" />
+                {item.link && <span className="ml-3 truncate text-xs text-muted">{item.link.replace(/^https?:\/\//, "")}</span>}
+              </div>
+              <Image src={item.screenshot.src} alt={item.screenshot.alt} width={1440} height={900} unoptimized className="h-auto w-full" />
+            </figure>
+          )}
           {item.link && (
             <div data-reveal>
               <TextLink href={item.link}>{L.visit}</TextLink>
