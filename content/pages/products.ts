@@ -4,6 +4,7 @@ import { localized } from "@/lib/i18n";
 import { routes } from "@/lib/routes";
 
 const demo = (title: string): FinalCta => ({ title, buttons: [{ label: "Request a demo", href: routes.contact.path }] });
+const demoFr = (title: string): FinalCta => ({ title, buttons: [{ label: "Demander une démo", href: routes.contact.path }] });
 
 export const productsHub = localized({
   en: {
@@ -46,6 +47,48 @@ export const productsHub = localized({
       title: "Want a product like this?",
       text: "We can build a SaaS product for your idea, or adapt one of ours to your sector.",
       buttons: [{ label: "Talk to us →", href: routes.contact.path }],
+    } satisfies FinalCta,
+  },
+  fr: {
+    seo: {
+      title: "Produits | Badibo, Kira et plus | Logiciels par Supplies and Works",
+      description: "Des produits SaaS conçus et maintenus par Supplies and Works : Badibo pour les restaurants, Kira pour les commerces, ainsi qu’un CMS et Stock Manager.",
+    } satisfies Seo,
+    hero: {
+      title: "Des logiciels que nous concevons, exploitons et *accompagnons nous-mêmes.*",
+      sub: "De vrais produits. De vrais clients. Un vrai support.",
+    } satisfies PageHeroCopy,
+    why: {
+      eyebrow: "Pourquoi nous créons des produits",
+      text: "Travailler pour nos clients nous a appris à livrer. Créer nos propres produits nous a appris à durer. Le travail produit nous oblige à penser chaque jour aux utilisateurs, à la prise en main, aux tarifs, à la disponibilité et au support. Cette exigence se retrouve dans tout ce que nous construisons pour vous.",
+    },
+    list: {
+      eyebrow: "Nos produits",
+      title: "Nos *produits*",
+      items: [
+        { name: "Badibo", text: "Gestion de restaurant. Commandes, tables, menu, facturation et rapports.", href: routes.badibo.path, mockup: "badibo" as const },
+        { name: "Kira", text: "Gestion de commerce. Ventes, stock, produits et clients.", href: routes.kira.path, mockup: "kira" as const },
+        { name: "CMS", text: "Gérez le contenu de votre site sans développeur.", href: `${routes.moreTools.path}#cms` },
+        { name: "Stock Manager", text: "Une gestion des stocks simple et précise.", href: `${routes.moreTools.path}#stock-manager` },
+        { name: "Autres outils", text: "[Lister les autres outils spécialisés.]", href: `${routes.moreTools.path}#other-tools` },
+      ],
+      cta: "En savoir plus →",
+    },
+    get: {
+      eyebrow: "Ce que vous offrent nos produits",
+      title: "Ce que vous offrent *nos produits*",
+      items: [
+        "**Prêts à l’emploi** : pas de longs projets, vous démarrez vite.",
+        "**Maintenus** : mises à jour et correctifs inclus.",
+        "**Accompagnés** : vous échangez avec ceux qui les ont conçus.",
+        "**Abordables** : un abonnement pensé pour les petites entreprises et celles en croissance.",
+        "**Adaptables** : fonctionnalités et intégrations sur mesure à la demande.",
+      ],
+    },
+    cta: {
+      title: "Vous voulez un produit comme celui-ci ?",
+      text: "Nous pouvons créer un produit SaaS à partir de votre idée, ou adapter l’un des nôtres à votre secteur.",
+      buttons: [{ label: "Parlons-en →", href: routes.contact.path }],
     } satisfies FinalCta,
   },
 });
@@ -155,6 +198,96 @@ export const badibo = localized<ProductPage>({
     ],
     cta: demo("See Badibo working in your restaurant."),
   },
+  fr: {
+    seo: {
+      title: "Badibo | Logiciel de gestion de restaurant | Supplies and Works",
+      description:
+        "Badibo aide les restaurants à gérer commandes, tables, menu, facturation et rapports dans un seul système simple. Conçu et maintenu par Supplies and Works. Demandez une démo.",
+    },
+    hero: {
+      eyebrow: "Produit · Gestion de restaurant",
+      title: "Gérez votre restaurant, *pas votre paperasse.*",
+      sub: "Badibo réunit commandes, tables, menu, facturation et rapports dans un seul système simple, conçu par une équipe attentive à la réalité des cuisines et des salles.",
+      buttons: [
+        { label: "Demander une démo", href: routes.contact.path },
+        { label: "Voir les fonctionnalités", href: "#features" },
+      ],
+    },
+    problem: {
+      eyebrow: "Le problème au quotidien",
+      text: "Des commandes sur papier qui se perdent. Une cuisine qui ne sait pas ce qui arrive. Des additions qui ne correspondent pas. Un menu qui change sans que personne ne le mette à jour. Un gérant incapable de dire ce qui s’est le mieux vendu la semaine dernière. Badibo est conçu pour résoudre exactement cela.",
+    },
+    features: {
+      eyebrow: "Ce que fait Badibo",
+      title: "Ce que fait *Badibo*",
+      note: "(Remplacer par la liste réelle des fonctionnalités.)",
+      items: [
+        { title: "Commandes et tables", text: "Prenez les commandes à table ou au comptoir, envoyez-les instantanément en cuisine et suivez chaque table de la première commande jusqu’au paiement." },
+        { title: "Gestion du menu", text: "Modifiez plats, prix, catégories et disponibilités en quelques secondes. Indiquez les plats épuisés." },
+        { title: "Coordination en cuisine", text: "Les commandes arrivent clairement, dans l’ordre, avec leurs notes. Moins d’erreurs, un service plus rapide." },
+        { title: "Facturation et paiements", text: "Des additions exactes, des paiements partagés, des remises et un historique fiable de chaque vente. [Moyens de paiement acceptés, y compris le mobile money le cas échéant.]" },
+        { title: "Rapports et analyses", text: "Consultez les ventes par jour, par heure, par plat et par membre du personnel. Sachez quoi mettre en avant et quoi retirer." },
+        { title: "Personnel et rôles", text: "Des accès différents pour les propriétaires, gérants, serveurs et caissiers." },
+        { title: "Stock *(le cas échéant)*", text: "Suivez vos ingrédients et recevez des alertes avant la rupture." },
+      ],
+    },
+    daily: {
+      eyebrow: "Au quotidien",
+      title: "Au *quotidien*",
+      items: [
+        { title: "Pour le serveur", text: "une prise de commande plus rapide, moins d’allers-retours en cuisine." },
+        { title: "Pour la cuisine", text: "des bons clairs, moins de malentendus." },
+        { title: "Pour le caissier", text: "une facturation simple et exacte." },
+        { title: "Pour le propriétaire", text: "des chiffres clairs, où que vous soyez." },
+      ],
+    },
+    why: {
+      eyebrow: "Pourquoi les restaurants choisissent Badibo",
+      title: "Pourquoi les restaurants *choisissent Badibo*",
+      items: [
+        "Assez simple pour que le personnel l’adopte rapidement.",
+        "Pensé autour du fonctionnement réel d’un restaurant.",
+        "Accompagné par l’équipe qui l’a créé.",
+        "Hébergé et sauvegardé pour vous.",
+        "Un tarif adapté aux petites entreprises et à celles en croissance.",
+      ],
+    },
+    production: {
+      eyebrow: "En production aujourd’hui",
+      title: "En production *aujourd’hui*",
+      text: "3 restaurants au Cameroun utilisent Badibo. [Ajouter un chiffre clé, par exemple le nombre de commandes traitées.]",
+      quote: { text: "« [TÉMOIGNAGE CLIENT] »", by: "[Nom], [Restaurant], [Ville]" },
+    },
+    plans: {
+      eyebrow: "Formules",
+      title: "*Formules*",
+      items: [
+        { name: "Starter", text: "[Fonctionnalités, prix]" },
+        { name: "Pro", text: "[Fonctionnalités, prix]" },
+        { name: "Multi-établissements", text: "[Fonctionnalités, prix]" },
+      ],
+      note: "(Définir les formules réelles.)",
+    },
+    start: {
+      eyebrow: "Pour démarrer",
+      title: "Pour *démarrer*",
+      steps: [
+        { title: "Démo", text: "nous vous présentons Badibo avec votre propre menu." },
+        { title: "Configuration", text: "nous paramétrons le menu, les tables et les utilisateurs." },
+        { title: "Formation", text: "nous formons votre personnel." },
+        { title: "Mise en service", text: "nous vous accompagnons pendant les premiers jours." },
+      ],
+    },
+    faq: [
+      { q: "Fonctionne-t-il avec une connexion internet instable ?", a: "[Réponse.]" },
+      { q: "Quels appareils puis-je utiliser ?", a: "[Tablette, téléphone, ordinateur, imprimante.]" },
+      { q: "Puis-je gérer plusieurs établissements ?", a: "[Réponse.]" },
+      { q: "Puis-je l’essayer avant de payer ?", a: "[Réponse.]" },
+      { q: "Pouvez-vous l’adapter à mon restaurant ?", a: "Oui, sur demande." },
+      { q: "Où sont stockées mes données et sont-elles sauvegardées ?", a: "[Réponse.]" },
+    ],
+    cta: demoFr("Découvrez Badibo en action dans votre restaurant."),
+  },
 });
 
 export const kira = localized<ProductPage>({
@@ -236,6 +369,84 @@ export const kira = localized<ProductPage>({
     ],
     cta: demo("See Kira working in your shop."),
   },
+  fr: {
+    seo: {
+      title: "Kira | Logiciel de gestion de commerce | Supplies and Works",
+      description:
+        "Kira aide les commerces à gérer ventes, stock, produits et clients avec un système simple et fiable. Conçu et maintenu par Supplies and Works. Demandez une démo.",
+    },
+    hero: {
+      eyebrow: "Produit · Gestion de commerce",
+      title: "Gérez votre commerce *en toute confiance.*",
+      sub: "Kira garde vos ventes, votre stock, vos produits et vos clients sous contrôle : vous savez toujours ce que vous avez, ce qui s’est vendu et ce qu’il faut recommander.",
+      buttons: [
+        { label: "Demander une démo", href: routes.contact.path },
+        { label: "Voir les fonctionnalités", href: "#features" },
+      ],
+    },
+    problem: {
+      eyebrow: "Le problème au quotidien",
+      text: "Un stock compté à la main. Des prix différents entre le rayon et la caisse. Des meilleures ventes en rupture. Des articles qui dorment pendant des mois. Un commerçant qui travaille dur sans voir ses vrais chiffres. Kira vous donne une vue d’ensemble.",
+    },
+    features: {
+      eyebrow: "Ce que fait Kira",
+      title: "Ce que fait *Kira*",
+      note: "(Remplacer par la liste réelle des fonctionnalités.)",
+      items: [
+        { title: "Ventes et encaissement", text: "Des ventes rapides et précises au comptoir, avec tickets de caisse et plusieurs moyens de paiement." },
+        { title: "Inventaire", text: "Niveaux de stock en temps réel, alertes de stock bas, entrées et ajustements." },
+        { title: "Produits et tarifs", text: "Catalogue, catégories, variantes, prix et promotions." },
+        { title: "Clients", text: "Fiches clients, historique d’achats et options de fidélité [le cas échéant]." },
+        { title: "Fournisseurs et achats", text: "Commandes fournisseurs et réception des marchandises [le cas échéant]." },
+        { title: "Rapports", text: "Ventes quotidiennes, hebdomadaires et mensuelles, marges, meilleures et moins bonnes ventes." },
+        { title: "Utilisateurs et rôles", text: "Contrôlez qui peut voir et faire quoi." },
+      ],
+    },
+    why: {
+      eyebrow: "Pourquoi les commerçants choisissent Kira",
+      title: "Pourquoi les commerçants *choisissent Kira*",
+      items: [
+        "Facile à prendre en main, même pour un premier logiciel.",
+        "Conçu pour la réalité des petits et moyens commerces.",
+        "Moins d’erreurs, moins de pertes, de meilleures décisions.",
+        "Hébergé et sauvegardé pour vous.",
+        "Accompagné par ceux qui l’ont conçu.",
+      ],
+    },
+    production: {
+      eyebrow: "En production aujourd’hui",
+      title: "En production *aujourd’hui*",
+      text: "22 commerces au Cameroun utilisent Kira. [Ajouter un chiffre clé.]",
+      quote: { text: "« [TÉMOIGNAGE CLIENT] »", by: "[Nom], [Commerce], [Ville]" },
+    },
+    plans: {
+      eyebrow: "Formules",
+      title: "*Formules*",
+      items: [
+        { name: "Starter", text: "[Fonctionnalités, prix]" },
+        { name: "Pro", text: "[Fonctionnalités, prix]" },
+        { name: "Multi-boutiques", text: "[Fonctionnalités, prix]" },
+      ],
+    },
+    start: {
+      eyebrow: "Pour démarrer",
+      title: "Pour *démarrer*",
+      steps: [
+        { title: "Démo", text: "" },
+        { title: "Configuration de vos produits", text: "" },
+        { title: "Formation", text: "" },
+        { title: "Mise en service accompagnée", text: "" },
+      ],
+    },
+    faq: [
+      { q: "Puis-je importer mes produits existants ?", a: "[Réponse.]" },
+      { q: "Fonctionne-t-il hors ligne ?", a: "[Réponse.]" },
+      { q: "Quels appareils et imprimantes sont pris en charge ?", a: "[Réponse.]" },
+      { q: "Puis-je gérer plusieurs boutiques ?", a: "[Réponse.]" },
+      { q: "Puis-je l’essayer d’abord ?", a: "[Réponse.]" },
+    ],
+    cta: demoFr("Découvrez Kira en action dans votre commerce."),
+  },
 });
 
 export const moreTools = localized({
@@ -274,6 +485,43 @@ export const moreTools = localized({
       title: "Need a custom version?",
       text: "Every business works slightly differently. We can adapt these tools, add features or integrate them with your systems.",
       buttons: [{ label: "Talk to us →", href: routes.contact.path }],
+    } satisfies FinalCta,
+  },
+  fr: {
+    seo: {
+      title: "CMS, Stock Manager et plus | Outils logiciels | Supplies and Works",
+      description:
+        "Des outils logiciels ciblés par Supplies and Works : un système de gestion de contenu, un gestionnaire de stock et d’autres produits spécialisés. Adaptables à vos processus.",
+    } satisfies Seo,
+    hero: {
+      title: "Des outils ciblés pour *des besoins précis.*",
+      sub: "Des produits plus petits qui font une chose, et la font bien.",
+      image: "warehouse",
+    } satisfies PageHeroCopy,
+    tools: [
+      {
+        id: "cms",
+        name: "CMS",
+        what: "Un système de gestion de contenu qui permet à votre équipe de publier et de mettre à jour le contenu de votre site sans développeur.",
+        features: "[Éditeur de pages, médiathèque, blog, multilingue, rôles, champs SEO].",
+        bestFor: "Entreprises, associations et agences qui mettent souvent leur contenu à jour.",
+        image: "readingLaptop" as const,
+      },
+      {
+        id: "stock-manager",
+        name: "Stock Manager",
+        what: "Une gestion des stocks simple et précise.",
+        features: "[Produits, entrées et sorties, alertes, rapports, multi-entrepôts].",
+        bestFor: "Commerces, ateliers et distributeurs qui ont besoin d’une vision claire de leur stock.",
+        image: "warehouse" as const,
+      },
+    ],
+    labels: { what: "De quoi s’agit-il", features: "Fonctionnalités clés", bestFor: "Idéal pour" },
+    other: { title: "Autres outils", text: "[Nom et description en une ligne de chaque outil spécialisé.]" },
+    cta: {
+      title: "Besoin d’une version sur mesure ?",
+      text: "Chaque entreprise fonctionne un peu différemment. Nous pouvons adapter ces outils, ajouter des fonctionnalités ou les intégrer à vos systèmes.",
+      buttons: [{ label: "Parlons-en →", href: routes.contact.path }],
     } satisfies FinalCta,
   },
 });

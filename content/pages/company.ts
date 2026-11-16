@@ -97,6 +97,98 @@ export const about = localized({
       ],
     } satisfies FinalCta,
   },
+  fr: {
+    seo: {
+      title: "À propos de Supplies and Works | Un partenaire technologique complet, depuis le Cameroun",
+      description:
+        "Découvrez qui nous sommes, ce en quoi nous croyons et comment une équipe de dix personnes à Douala conçoit, exploite et protège la technologie d’entreprises du monde entier.",
+    } satisfies Seo,
+    hero: {
+      title: "Un partenaire technologique, *de bout en bout.*",
+      sub: "Nous résolvons les problèmes technologiques des entreprises et des particuliers, de l’infrastructure au cloud, du logiciel à l’IA.",
+      image: "teamMeeting",
+    } satisfies PageHeroCopy,
+    story: {
+      eyebrow: "Notre histoire",
+      paragraphs: [
+        "Supplies and Works est né d’un constat simple : une entreprise a rarement un seul problème technologique. Elle a un réseau qui tombe en panne, un logiciel inadapté, des données mal protégées, un site web qui ne vend pas et une équipe qui passe des heures sur des tâches répétitives. Trop souvent, chaque problème relève d’un prestataire différent, et personne n’a la vue d’ensemble.",
+        "Nous avons choisi d’être l’équipe qui a cette vue d’ensemble. Nous avons commencé par l’infrastructure et les services informatiques, puis nous nous sommes développés vers le logiciel, le cloud, le design et l’automatisation. En chemin, nous avons créé nos propres produits, Badibo et Kira, aujourd’hui utilisés par des clients payants. Nous sommes désormais une équipe de dix personnes, organisée en cinq studios, qui travaille depuis Douala avec des clients du monde entier.",
+      ],
+      milestones: [
+        { year: "[Année]", label: "premier client" },
+        { year: "[Année]", label: "lancement de Badibo" },
+        { year: "[Année]", label: "lancement de Kira" },
+        { year: "[Année]", label: "certification AWS" },
+        { year: "[Année]", label: "premier client international" },
+      ],
+      milestonesNote: "[Ajouter l’année de création, le premier projet et les étapes clés.]",
+    },
+    mission: {
+      eyebrow: "Mission",
+      text: "Être la solution aux problèmes technologiques des entreprises et des particuliers, avec une seule équipe de confiance, de la première idée au fonctionnement quotidien de leurs systèmes.",
+    },
+    vision: {
+      eyebrow: "Vision",
+      items: [
+        { label: "D’ici cinq ans", text: "une entreprise entièrement à distance au service de clients du monde entier, avec l’Amérique du Nord comme marché prioritaire." },
+        { label: "D’ici dix ans", text: "des bureaux dans d’autres pays, au plus près des personnes et des entreprises que nous servons." },
+      ],
+    },
+    values: {
+      eyebrow: "Ce en quoi nous croyons",
+      title: "Ce en quoi nous *croyons*",
+      items: [
+        { title: "Le pragmatisme avant les effets de mode.", text: "Nous recommandons ce qui fonctionne pour votre entreprise, pas ce qui est tendance." },
+        { title: "L’engagement.", text: "Quand nous prenons un projet, nous répondons du résultat, pas seulement des tâches." },
+        { title: "Le savoir-faire.", text: "Un code propre, un design soigné, un câblage bien rangé. La qualité se voit dans les détails." },
+        { title: "L’honnêteté.", text: "Nous disons ce que nous savons faire, ce que nous ne savons pas faire et ce que nous recommandons. Nous ne promettons jamais plus que nous ne pouvons tenir." },
+        { title: "La vision à long terme.", text: "Nous construisons pour la troisième année, pas seulement pour le jour du lancement." },
+      ] satisfies Item[],
+    },
+    different: {
+      eyebrow: "Ce qui nous distingue",
+      title: "Ce qui nous *distingue*",
+      table: {
+        head: ["", "Prestataire informatique classique", "Supplies and Works"],
+        rows: [
+          ["Périmètre", "Une seule spécialité", "Infrastructure, cloud, logiciel, design et IA"],
+          ["Logiciel", "Vend uniquement du temps", "Conçoit et exploite aussi ses propres produits SaaS"],
+          ["Après le lancement", "Livre et s’en va", "Plans de maintenance, de supervision et d’assistance"],
+          ["Sécurité des données", "Souvent négligée", "Une offre centrale : la sauvegarde automatique dans le cloud"],
+          ["Langues", "Une seule", "Anglais et français"],
+        ],
+        highlightCol: 2,
+      } satisfies Table,
+    },
+    studios: { eyebrow: "Les cinq studios", title: "Les cinq *studios*" },
+    certifications: {
+      eyebrow: "Certifications et partenariats",
+      title: "Certifications et *partenariats*",
+      items: [
+        "**AWS Certified Solutions Architect** (fondateur)",
+        "[Autres certifications]",
+        "[Programmes partenaires, par exemple AWS Partner Network, une fois rejoints]",
+      ],
+    },
+    numbers: {
+      eyebrow: "Nos chiffres",
+      title: "Nos *chiffres*",
+      items: [
+        { value: "10", label: "personnes" },
+        { value: "08", label: "projets" },
+        { value: "25", label: "clients" },
+        { value: "03", label: "pays" },
+        { value: "05", label: "ans" },
+      ],
+    },
+    cta: {
+      title: "Rencontrez l’équipe · Planifiez un appel",
+      buttons: [
+        { label: "Rencontrer l’équipe", href: routes.team.path },
+        { label: "Planifier un appel", href: routes.contact.path },
+      ],
+    } satisfies FinalCta,
+  },
 });
 
 export const builtInAfrica = localized({
@@ -175,6 +267,81 @@ export const builtInAfrica = localized({
       ],
     } satisfies FinalCta,
   },
+  fr: {
+    seo: {
+      title: "Conçu en Afrique | Supplies and Works, la technologie depuis le Cameroun",
+      description:
+        "Pourquoi travailler avec une équipe technologique à Douala ? Une solide expertise d’ingénierie, des horaires compatibles, un excellent rapport qualité-prix et deux langues de travail. Découvrez comment nous livrons dans le monde entier.",
+    } satisfies Seo,
+    hero: {
+      title: "Conçu en Afrique. *Livré dans le monde entier.*",
+      sub: "Le Cameroun est l’endroit où nous vivons, apprenons et construisons. Le monde est l’endroit où nous livrons.",
+    } satisfies PageHeroCopy,
+    continent: {
+      eyebrow: "Un continent de bâtisseurs",
+      text: "L’Afrique compte l’une des populations les plus jeunes et à la croissance la plus rapide au monde, et toute une génération d’ingénieurs, de designers et d’entrepreneurs qui créent de vrais produits pour répondre à de vrais problèmes. Nous faisons partie de cette génération. Nous ne demandons aucun traitement de faveur en raison de l’endroit où nous sommes. Nous demandons à être jugés sur ce que nous livrons.",
+    },
+    reasons: {
+      eyebrow: "Six raisons",
+      title: "Six raisons de travailler avec une équipe à *Douala*",
+      items: [
+        { title: "Une véritable expertise technique.", text: "Notre équipe conçoit et exploite des systèmes en production, y compris nos propres logiciels payants." },
+        { title: "Un fuseau horaire pratique.", text: "Douala est à UTC+1. Nous partageons toute la journée de travail avec l’Europe et l’après-midi avec la côte Est des États-Unis : au moins 4 heures par jour. Consultez le tableau des horaires communs ci-dessous." },
+        { title: "Un meilleur rapport qualité-prix.", text: "Une structure de coûts plus légère, c’est plus d’ingénierie pour votre budget, sans rogner sur la qualité." },
+        { title: "Deux langues de travail.", text: "Nous rédigeons, présentons et accompagnons en anglais et en français. Un atout pour l’Amérique du Nord, le Royaume-Uni, la France, le Canada et l’Afrique francophone." },
+        { title: "Une connaissance locale de l’Afrique.", text: "Si vous vous implantez ou vous développez en Afrique centrale, nous comprenons les infrastructures, les habitudes de paiement, les contraintes et les opportunités." },
+        { title: "De l’ambition et de l’attention.", text: "Une jeune entreprise qui a quelque chose à prouver. Chaque projet compte pour nous." },
+      ] satisfies Item[],
+    },
+    overlap: {
+      eyebrow: "Horaires communs",
+      title: "Horaires *communs*",
+      table: {
+        head: ["Votre ville", "Décalage horaire avec Douala", "Plage commune habituelle"],
+        rows: [
+          ["Paris / Bruxelles", "Environ 0 à 1 heure", "Toute la journée de travail"],
+          ["Londres", "Environ 0 à 1 heure", "Toute la journée de travail"],
+          ["New York / Toronto", "Environ 5 à 6 heures", "Au moins 4 heures (de 15 h à 19 h, heure de Douala)"],
+          ["Chicago", "Environ 6 à 7 heures", "Environ 3 heures (de 16 h à 19 h, heure de Douala)"],
+          ["Los Angeles / Vancouver", "Environ 8 à 9 heures", "Courte plage quotidienne, et appels planifiés sur demande"],
+        ],
+      } satisfies Table,
+      footnote: "(Les décalages varient avec l’heure d’été. Vérifier et compléter la colonne des plages communes.)",
+      pickLabel: "Choisissez votre ville",
+    },
+    remote: {
+      eyebrow: "Travail à distance",
+      title: "Comment fonctionne le travail à distance *avec nous*",
+      items: [
+        "**Un interlocuteur unique** qui connaît votre projet.",
+        "**Des outils partagés** : visioconférences, tableau de projet, points écrits.",
+        "**Des démos hebdomadaires** pour suivre l’avancement en permanence.",
+        "**Des horaires communs** définis dès le premier jour.",
+        "**Une documentation claire**, pour que rien ne reste uniquement dans la tête de quelqu’un.",
+      ],
+    },
+    myths: {
+      eyebrow: "Idées reçues",
+      title: "En finir avec les *idées reçues*",
+      items: [
+        { title: "« Les équipes à distance en Afrique, c’est risqué. »", text: "Le risque vient d’un périmètre flou et d’une mauvaise communication, pas de la géographie. Nous réglons les deux avec un plan clair, des démos hebdomadaires et un responsable identifié." },
+        { title: "« La connexion et l’électricité ne sont pas fiables. »", text: "Nous l’anticipons : connexions et alimentation de secours sur notre lieu de travail, outils dans le cloud et procédures de continuité écrites. [Décrire votre dispositif réel.]" },
+        { title: "« Vous ne connaîtrez pas notre marché. »", text: "Nous commençons par étudier votre activité. Nos questions comptent autant que notre code." },
+      ] satisfies Item[],
+    },
+    beyond: {
+      eyebrow: "Au-delà de la livraison",
+      title: "Au-delà de la *livraison*",
+      text: "Nous recrutons et faisons grandir les talents locaux. Nous créons des produits pour les entreprises africaines. [Ajouter les initiatives réelles : stages, formations, partenariats avec des écoles.]",
+    },
+    cta: {
+      title: "Conçu en Afrique. Livré dans le monde entier.",
+      buttons: [
+        { label: "Travailler avec nous", href: routes.contact.path },
+        { label: "Découvrir notre équipe", href: routes.team.path },
+      ],
+    } satisfies FinalCta,
+  },
 });
 
 export const team = localized({
@@ -219,6 +386,49 @@ export const team = localized({
       title: "Join the team",
       text: "We look for people who care about craft and ownership.",
       buttons: [{ label: "See open roles →", href: routes.careers.path }],
+    } satisfies FinalCta,
+  },
+  fr: {
+    seo: {
+      title: "Notre équipe | Supplies and Works",
+      description: "Rencontrez les ingénieurs, designers et techniciens de Supplies and Works. Dix personnes, cinq studios, une même exigence.",
+    } satisfies Seo,
+    hero: {
+      title: "Les personnes *derrière le travail.*",
+      sub: "Dix personnes. Cinq studios. Une même exigence.",
+      image: "teamCollab",
+    } satisfies PageHeroCopy,
+    organized: {
+      eyebrow: "Notre organisation",
+      text: "Chaque studio a un responsable identifié qui répond de la qualité de son travail. Vous savez toujours qui est responsable.",
+    },
+    leads: {
+      eyebrow: "Responsables de studio",
+      title: "Responsables de *studio*",
+      note: "(Compléter avec les dix membres. Une photo, un rôle et une phrase chacun. Uniquement des photos de vrais membres de l’équipe.)",
+      people: [
+        { name: "[Nom du fondateur]", role: "Fondateur · Ingénieur logiciel · Ingénieur cloud · Designer", bio: "AWS Certified Solutions Architect. Dirige l’architecture cloud et l’ingénierie produit. [Courte bio : parcours, projets préférés, langues parlées.]" },
+        { name: "[Nom]", role: "Responsable, Infrastructure et réseau", bio: "Administrateur système et ingénieur réseau. Conçoit et maintient les réseaux et les environnements serveur. [Courte bio.]" },
+        { name: "William [Nom de famille]", role: "Maintenance et support sur site", bio: "Assure le bon fonctionnement des équipements et des systèmes sur site. [Courte bio.]" },
+        { name: "[Nom]", role: "Responsable, Produit et ingénierie", bio: "[Courte bio.]" },
+        { name: "[Nom]", role: "Responsable, IA et automatisation", bio: "[Courte bio.]" },
+        { name: "[Nom]", role: "Responsable, Studio créatif", bio: "[Courte bio.]" },
+      ],
+    },
+    principles: {
+      eyebrow: "Nos principes de travail",
+      title: "Nos principes de *travail*",
+      items: [
+        "Nous relisons le travail les uns des autres.",
+        "Nous documentons ce que nous construisons.",
+        "Nous vous alertons tôt quand quelque chose est en danger.",
+        "Nous continuons d’apprendre : [formations internes, certifications en cours].",
+      ],
+    },
+    join: {
+      title: "Rejoignez l’équipe",
+      text: "Nous recherchons des personnes attachées au travail bien fait et au sens des responsabilités.",
+      buttons: [{ label: "Voir les postes ouverts →", href: routes.careers.path }],
     } satisfies FinalCta,
   },
 });
@@ -285,6 +495,68 @@ export const howWeWork = localized({
       { q: "Do you sign NDAs?", a: "Yes." },
     ] satisfies Faq[],
     cta: { title: "Start with a conversation.", buttons: [{ label: "Book a call", href: routes.contact.path }] } satisfies FinalCta,
+  },
+  fr: {
+    seo: {
+      title: "Notre méthode | Processus, communication et livraison | Supplies and Works",
+      description:
+        "Du premier appel à l’accompagnement dans la durée : comment Supplies and Works planifie, construit, exploite et protège votre projet, avec une communication claire malgré les fuseaux horaires.",
+    } satisfies Seo,
+    hero: {
+      title: "Une méthode claire, du premier appel à *l’accompagnement dans la durée.*",
+      sub: "Construire · Exploiter · Protéger.",
+      image: "stickyNotes",
+    } satisfies PageHeroCopy,
+    journey: {
+      eyebrow: "Le parcours",
+      title: "Le *parcours*",
+      steps: [
+        { title: "Appel de découverte (gratuit)", text: "Un échange de 30 minutes. Nous écoutons, posons des questions et vous disons honnêtement si et comment nous pouvons vous aider." },
+        { title: "Audit et proposition", text: "Pour les projets plus importants, un court audit, payant ou gratuit [à définir]. Vous recevez le périmètre, l’approche, le calendrier et le prix, dans un langage clair." },
+        { title: "Conception et planification", text: "Architecture, parcours utilisateurs ou conception réseau, validés avec vous avant de construire." },
+        { title: "Développement en cycles courts", text: "Le travail est découpé en cycles courts. Chaque semaine, vous voyez une démo et donnez votre avis." },
+        { title: "Tests et mise en ligne", text: "Tests sur de vrais appareils et de vraies données, déploiement, formation et passation." },
+        { title: "Exploitation et protection", text: "Assistance, supervision, sauvegardes, mises à jour et amélioration continue." },
+      ] satisfies Step[],
+    },
+    communicate: {
+      eyebrow: "Notre façon de communiquer",
+      title: "Notre façon de *communiquer*",
+      items: [
+        "**Un interlocuteur unique** qui connaît votre projet.",
+        "**Un tableau de projet partagé** pour suivre l’avancement en temps réel.",
+        "**Des démos hebdomadaires** et de courts résumés écrits.",
+        "**Une procédure d’escalade claire** en cas d’urgence.",
+        "**Une documentation** livrée avec chaque projet.",
+      ],
+    },
+    timezones: {
+      eyebrow: "Travailler entre fuseaux horaires",
+      title: "Travailler entre *fuseaux horaires*",
+      text: "Nous sommes à UTC+1. Nous fixons avec chaque client des plages horaires communes et consignons décisions et points d’avancement par écrit, pour que le travail avance pendant que vous dormez. Nous partageons au moins 4 heures par jour avec la côte Est des États-Unis, répondons sous un jour ouvré et assurons l’assistance de 8 h à 19 h, heure de Douala.",
+    },
+    quality: {
+      eyebrow: "Pratiques qualité",
+      title: "Pratiques *qualité*",
+      tags: ["Revue de code", "Tests automatisés quand ils sont utiles", "Environnements de préproduction", "Contrôles de sécurité", "Sauvegardes avant chaque changement majeur", "Passation écrite"],
+    },
+    tools: {
+      eyebrow: "Nos outils",
+      title: "Nos *outils*",
+      tags: ["[Slack ou Teams]", "[Linear, Jira ou Trello]", "[GitHub]", "[Figma]", "[Google Meet ou Zoom]", "[Notion ou Confluence]"],
+    },
+    ask: {
+      eyebrow: "Ce que nous attendons de vous",
+      title: "Ce que nous attendons *de vous*",
+      text: "Un décideur disponible pour donner son avis, un accès aux personnes qui connaissent l’activité et des validations dans les temps. En retour, vous gagnez en rapidité et en transparence.",
+    },
+    faq: [
+      { q: "Que se passe-t-il si le périmètre change ?", a: "Nous évaluons ensemble l’impact sur les délais et les coûts, et nous nous mettons d’accord avant d’aller plus loin." },
+      { q: "Comment gérez-vous les risques ?", a: "Nous les identifions tôt et planifions en conséquence." },
+      { q: "Et si quelque chose ne nous convient pas ?", a: "Dites-le-nous. Nous corrigeons ou trouvons une solution équitable." },
+      { q: "Signez-vous des accords de confidentialité ?", a: "Oui." },
+    ] satisfies Faq[],
+    cta: { title: "Commençons par en parler.", buttons: [{ label: "Planifier un appel", href: routes.contact.path }] } satisfies FinalCta,
   },
 });
 
@@ -368,6 +640,85 @@ export const engagement = localized({
     },
     cta: { title: "Get a clear estimate.", buttons: [{ label: "Book a call", href: routes.contact.path }] } satisfies FinalCta,
   },
+  fr: {
+    seo: {
+      title: "Modes de collaboration | Projets au forfait, abonnements et équipes dédiées | Supplies and Works",
+      description:
+        "Travaillez avec Supplies and Works au projet, par abonnement mensuel, avec une équipe dédiée ou via un abonnement SaaS. Des tarifs clairs et des conditions souples.",
+    } satisfies Seo,
+    hero: {
+      title: "Travaillez avec nous de la façon *qui vous convient.*",
+      sub: "Des projets, des abonnements, ou les deux.",
+      image: "contractSigning",
+    } satisfies PageHeroCopy,
+    models: {
+      eyebrow: "Quatre façons de collaborer",
+      title: "Quatre façons de *collaborer*",
+      items: [
+        {
+          title: "Projet au forfait",
+          text: "Un livrable défini, avec un prix et un calendrier fixés. Idéal pour les sites web, les applications, les migrations, les identités de marque et les installations d’infrastructure.",
+          best: "vous savez ce dont vous avez besoin.",
+          get: "un périmètre écrit, un prix fixe, des jalons.",
+        },
+        {
+          title: "Abonnement et maintenance",
+          text: "Une formule mensuelle qui couvre l’assistance, l’hébergement, les mises à jour, la supervision et les sauvegardes.",
+          best: "vous voulez que l’on prenne soin de vos systèmes.",
+          get: "un coût prévisible, des délais de réponse garantis, un rapport mensuel.",
+        },
+        {
+          title: "Équipe dédiée [si proposée]",
+          text: "Un groupe de nos ingénieurs et designers qui travaille comme une extension de votre équipe.",
+          best: "vous avez un travail continu et besoin de capacité.",
+          get: "une équipe stable, un périmètre flexible, une facturation mensuelle.",
+        },
+        {
+          title: "Abonnement à un produit",
+          text: "Badibo, Kira et nos autres outils, facturés au mois ou à l’année.",
+          best: "vous avez besoin d’une solution prête à l’emploi.",
+        },
+      ] as { title: string; text: string; best: string; get?: string }[],
+      bestLabel: "Idéal quand",
+      getLabel: "Vous obtenez",
+    },
+    which: {
+      eyebrow: "Quelle formule vous convient ?",
+      title: "Quelle formule *vous convient ?*",
+      table: {
+        head: ["Situation", "Formule conseillée"],
+        rows: [
+          ["Nouveau site web ou nouvelle application", "Projet au forfait, puis maintenance"],
+          ["Système existant à entretenir", "Abonnement et maintenance"],
+          ["Feuille de route longue, équipe interne limitée", "Équipe dédiée"],
+          ["Besoin standard (restaurant, commerce)", "Abonnement à un produit"],
+          ["Vous hésitez", "Commencez par un appel de découverte"],
+        ],
+      } satisfies Table,
+    },
+    pricing: {
+      eyebrow: "Nos tarifs",
+      title: "Comment fonctionnent *nos tarifs*",
+      text: "Chaque projet est différent. Après un court appel de découverte, vous recevez une estimation claire. Nous vous expliquons ce qui détermine le coût et où vous pouvez faire des économies. [Ajouter des prix « à partir de » si vous décidez de les publier.]",
+    },
+    billing: {
+      eyebrow: "Facturation et paiement",
+      title: "Facturation et *paiement*",
+      text: "Factures en [USD, CAD, EUR, XAF]. Paiement par [virement bancaire, carte, Wise ou autre]. Échéancier habituel : [p. ex. acompte, jalons, paiement final].",
+      note: "(Vérifier les moyens de paiement que votre entreprise peut accepter.)",
+    },
+    terms: {
+      eyebrow: "Nos conditions, en clair",
+      title: "Nos conditions, *en clair*",
+      items: [
+        { title: "Propriété", text: "les livrables vous appartiennent une fois intégralement payés : code source, fichiers de design et comptes vous sont remis." },
+        { title: "Confidentialité", text: "nous signons des accords de confidentialité." },
+        { title: "Assistance après la mise en ligne", text: "[période de garantie et conditions d’assistance]." },
+        { title: "Demandes de modification", text: "traitées sur la base d’une estimation écrite." },
+      ] satisfies Item[],
+    },
+    cta: { title: "Obtenez une estimation claire.", buttons: [{ label: "Planifier un appel", href: routes.contact.path }] } satisfies FinalCta,
+  },
 });
 
 export const careers = localized({
@@ -432,6 +783,69 @@ export const careers = localized({
       },
       success: "Thank you. We have your application.",
       error: "Something went wrong. Please try again or email us at contact@suppliesandworks.com.",
+    },
+  },
+  fr: {
+    seo: {
+      title: "Carrières | Rejoignez Supplies and Works",
+      description: "Travaillez sur de vrais produits et des projets internationaux avec une équipe basée à Douala. Découvrez nos postes ouverts en logiciel, cloud, design et infrastructure.",
+    } satisfies Seo,
+    hero: {
+      title: "Construisez votre carrière *avec nous.*",
+      sub: "De vrais produits, de vrais clients, une vraie progression, de l’Afrique au monde entier.",
+      image: "youngDevelopers",
+    } satisfies PageHeroCopy,
+    why: {
+      eyebrow: "Pourquoi nous rejoindre",
+      title: "Pourquoi *nous rejoindre*",
+      items: [
+        { title: "Du vrai travail.", text: "Des systèmes en production, des clients payants et nos propres produits." },
+        { title: "Un apprentissage complet.", text: "Cloud, logiciel, IA, design et infrastructure sous un même toit." },
+        { title: "Une ouverture internationale.", text: "Des clients sur plusieurs fuseaux horaires et de cultures variées." },
+        { title: "Des responsabilités.", text: "Une petite équipe, de vraies responsabilités." },
+        { title: "De la progression.", text: "[Formations, certifications, mentorat, budget formation.]" },
+      ] satisfies Item[],
+    },
+    how: {
+      eyebrow: "Notre façon de travailler",
+      title: "Notre façon de *travailler*",
+      tags: ["Télétravail en priorité, hybride quand c’est utile", "Des responsabilités claires", "Des retours réguliers", "Revue de code et partage de connaissances", "Le respect du temps de chacun"],
+    },
+    lookFor: {
+      eyebrow: "Ce que nous recherchons",
+      title: "Ce que nous *recherchons*",
+      tags: ["La curiosité", "Le souci de la qualité", "Une communication claire en anglais ou en français", "L’envie d’apprendre", "La fiabilité"],
+    },
+    roles: {
+      eyebrow: "Postes ouverts",
+      title: "Postes *ouverts*",
+      items: [{ title: "[Intitulé du poste]", studio: "[Studio]", place: "[À distance / Douala]", type: "[Temps plein / Stage]", apply: "Postuler →" }],
+      empty: "Aucun poste ouvert pour le moment. Envoyez-nous votre profil, nous le conserverons.",
+    },
+    internships: {
+      eyebrow: "Stages et alternance",
+      title: "Stages et *alternance*",
+      text: "Nous accueillons des étudiants motivés et des talents en début de carrière. [Décrire le programme.]",
+    },
+    process: {
+      eyebrow: "Processus de recrutement",
+      title: "Processus de *recrutement*",
+      steps: ["Candidature", "Court entretien", "Exercice pratique", "Rencontre avec l’équipe", "Offre"],
+    },
+    apply: {
+      eyebrow: "Candidature spontanée",
+      title: "Candidature *spontanée*",
+      fields: {
+        name: "Nom",
+        email: "E-mail",
+        role: "Poste souhaité",
+        links: "Portfolio, GitHub ou LinkedIn",
+        cv: "Téléverser votre CV",
+        message: "Message",
+        send: "Envoyer",
+      },
+      success: "Merci. Nous avons bien reçu votre candidature.",
+      error: "Une erreur s’est produite. Veuillez réessayer ou nous écrire à contact@suppliesandworks.com.",
     },
   },
 });

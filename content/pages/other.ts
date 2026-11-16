@@ -25,6 +25,26 @@ export const workPage = localized({
     },
     cta: { title: "Want results like these?", buttons: [{ label: "Start a project", href: routes.contact.path }] } satisfies FinalCta,
   },
+  fr: {
+    seo: {
+      title: "Nos réalisations | Études de cas en cloud, logiciel, IA et design | Supplies and Works",
+      description: "Une sélection de projets en cloud, logiciel, web, IA et design, dont nos propres produits Badibo et Kira.",
+    } satisfies Seo,
+    hero: { title: "Des réalisations dont nous sommes *fiers.*", sub: "Une sélection de projets en cloud, logiciel, IA et design." } satisfies PageHeroCopy,
+    intro: "De vrais projets, de vraies contraintes, de vrais résultats. Lorsque nos clients préfèrent la discrétion, nous les anonymisons.",
+    note: "(Études de cas provisoires : relire chacune avant la mise en ligne.)",
+    results: {
+      eyebrow: "Nos résultats en bref",
+      title: "Nos résultats *en bref*",
+      items: [
+        { value: "08", label: "projets" },
+        { value: "08", label: "secteurs" },
+        { value: "03", label: "pays" },
+        { value: "25", label: "clients produits" },
+      ],
+    },
+    cta: { title: "Vous voulez des résultats comme ceux-ci ?", buttons: [{ label: "Lancer un projet", href: routes.contact.path }] } satisfies FinalCta,
+  },
 });
 
 export const caseStudyLabels = localized({
@@ -41,6 +61,20 @@ export const caseStudyLabels = localized({
     learned: "What we learned",
     next: "Next project",
     cta: { title: "Have a similar challenge?", buttons: [{ label: "Talk to us", href: routes.contact.path }] } satisfies FinalCta,
+  },
+  fr: {
+    keyResults: "Résultats clés",
+    visit: "Voir le site en ligne",
+    client: "Le client",
+    challenge: "Le défi",
+    approach: "Notre approche",
+    solution: "La solution",
+    technology: "Technologies",
+    results: "Les résultats",
+    says: "Ce qu’en dit le client",
+    learned: "Ce que nous avons appris",
+    next: "Projet suivant",
+    cta: { title: "Vous avez un défi similaire ?", buttons: [{ label: "Parlons-en", href: routes.contact.path }] } satisfies FinalCta,
   },
 });
 
@@ -79,6 +113,41 @@ export const insights = localized({
       { title: "Building technology in Africa: opportunities and realities", category: "Africa" },
     ],
     newsletter: { title: "Newsletter", text: "One useful idea a month. No spam." },
+  },
+  fr: {
+    seo: {
+      title: "Insights | Cloud, logiciel, IA et entreprendre depuis l’Afrique | Supplies and Works",
+      description:
+        "Des articles pratiques de l’équipe Supplies and Works sur le cloud, la sauvegarde, le logiciel, l’automatisation par l’IA, le design et la conduite d’une entreprise technologique depuis l’Afrique.",
+    } satisfies Seo,
+    hero: {
+      title: "Des idées pour *vous aider à décider.*",
+      sub: "Les notes de notre équipe sur le cloud, le logiciel, l’IA et la construction d’une entreprise technologique depuis l’Afrique.",
+    } satisfies PageHeroCopy,
+    categories: ["Tout", "Cloud", "Sauvegarde", "Logiciel", "IA", "Design", "Afrique", "Actualités"],
+    featured: {
+      label: "Article à la une",
+      category: "Sauvegarde",
+      title: "Pourquoi une sauvegarde sur le même serveur n’est pas une sauvegarde",
+      text: "Beaucoup d’entreprises pensent que leurs données sont protégées parce qu’elles copient leurs fichiers sur un autre disque, dans le même bureau. Un seul incendie, une inondation, un vol ou une attaque par rançongiciel peut détruire les deux copies. Cet article explique la règle 3-2-1 (trois copies, deux types de stockage, une copie hors site), ce qu’il faut sauvegarder en priorité et comment mettre en place des sauvegardes automatiques dans le cloud pour vos serveurs sur site.",
+      cta: "Lire →",
+      image: "hardDrives" as const,
+    },
+    ideasLabel: "Bientôt disponible",
+    // Category assigned to each idea for the filter. [Adjust as articles are written.]
+    ideas: [
+      { title: "Une checklist simple pour migrer votre entreprise vers le cloud", category: "Cloud" },
+      { title: "RPO et RTO expliqués simplement", category: "Sauvegarde" },
+      { title: "Cinq processus de votre entreprise que l’IA peut automatiser cette année", category: "IA" },
+      { title: "Comment diriger une équipe à distance depuis Douala pour des clients du monde entier", category: "Afrique" },
+      { title: "Ce que nous avons appris en créant et en maintenant Badibo et Kira", category: "Actualités" },
+      { title: "Site web, application web ou SaaS : comment choisir", category: "Logiciel" },
+      { title: "Comment réduire votre facture cloud sans nuire aux performances", category: "Cloud" },
+      { title: "Les questions à poser avant d’engager une équipe de développement", category: "Logiciel" },
+      { title: "Guide pratique pour construire un réseau d’entreprise fiable", category: "" },
+      { title: "Créer de la technologie en Afrique : opportunités et réalités", category: "Afrique" },
+    ],
+    newsletter: { title: "Newsletter", text: "Une idée utile par mois. Pas de spam." },
   },
 });
 
@@ -144,6 +213,67 @@ export const contact = localized({
       { q: "Can we talk in French?", a: "Yes, in English or French." },
     ],
   },
+  fr: {
+    seo: {
+      title: "Contacter Supplies and Works | Réserver un appel",
+      description: "Parlez-nous de votre projet. Réservez un appel de 30 minutes ou envoyez-nous un message. Nous répondons sous un jour ouvré.",
+    } satisfies Seo,
+    hero: { title: "Parlons de *votre projet.*", sub: "Dites-nous ce dont vous avez besoin. Nous répondons sous [un jour ouvré]." } satisfies PageHeroCopy,
+    chips: {
+      title: "Que recherchez-vous ?",
+      items: ["Cloud", "Sauvegarde", "Logiciel", "Site web", "IA et automatisation", "Design", "Réseau et infrastructure", "Une démo produit", "Je ne sais pas encore"],
+    },
+    next: {
+      title: "La suite",
+      steps: [
+        { title: "Vous nous dites", text: "ce dont vous avez besoin." },
+        { title: "Nous répondons", text: "sous [un jour ouvré] avec nos questions ou une proposition de créneau." },
+        { title: "Nous échangeons", text: "pendant 30 minutes, sans engagement." },
+        { title: "Vous recevez", text: "une proposition claire si nous sommes faits pour travailler ensemble." },
+      ],
+    },
+    form: {
+      title: "Envoyer un message",
+      name: "Nom",
+      email: "E-mail",
+      company: "Entreprise",
+      country: "Pays",
+      phone: "Téléphone (facultatif)",
+      budget: "Fourchette de budget (facultatif)",
+      budgetOptions: ["[Fourchette 1]", "[Fourchette 2]", "[Fourchette 3]", "[Fourchette 4]"],
+      timeline: "Délai",
+      timelineOptions: ["[Dès que possible]", "[1 à 3 mois]", "[3 à 6 mois]", "[Je ne sais pas encore]"],
+      message: "Parlez-nous de votre projet",
+      send: "Envoyer le message",
+      sending: "Envoi en cours…",
+      success: "Merci. Nous avons bien reçu votre message et vous répondrons sous [un jour ouvré].",
+      error: "Une erreur s’est produite. Veuillez réessayer ou nous écrire à contact@suppliesandworks.com.",
+      required: "Obligatoire",
+      invalidEmail: "Saisissez une adresse e-mail valide.",
+    },
+    book: {
+      title: "Réserver un appel",
+      text: "Choisissez le créneau qui vous convient. Les horaires sont affichés dans votre fuseau horaire.",
+      placeholder: "[Calendrier intégré]",
+    },
+    details: {
+      title: "Coordonnées",
+      items: [
+        { label: "E-mail", value: "contact@suppliesandworks.com" },
+        { label: "Téléphone / WhatsApp", value: "+237 654 174 367 · +237 656 372 914" },
+        { label: "Adresse", value: "Douala, Cameroun" },
+        { label: "Horaires", value: "[Horaires à l’heure de Douala, avec conversion automatique dans le fuseau du visiteur]" },
+        { label: "Support pour nos clients", value: "[E-mail ou portail de support]" },
+      ],
+    },
+    follow: { title: "Suivez-nous", items: ["[LinkedIn]", "[Instagram]", "[Facebook]", "[X]", "[GitHub]"] },
+    quick: [
+      { q: "Quand aurai-je une réponse ?", a: "Sous [un jour ouvré]." },
+      { q: "Le premier appel est-il gratuit ?", a: "Oui." },
+      { q: "Signez-vous des accords de confidentialité (NDA) ?", a: "Oui." },
+      { q: "Pouvons-nous échanger en français ?", a: "Oui, en français ou en anglais." },
+    ],
+  },
 });
 
 export const legal = localized({
@@ -177,6 +307,39 @@ export const legal = localized({
       buttons: [
         { label: "Back to home", href: "/" },
         { label: "Book a call", href: routes.contact.path },
+      ],
+    },
+  },
+  fr: {
+    privacy: {
+      seo: { title: "Politique de confidentialité | Supplies and Works", description: "Comment Supplies and Works collecte, utilise et protège les données personnelles." } satisfies Seo,
+      title: "Politique de confidentialité",
+      note: "(Texte provisoire. À faire relire par un professionnel du droit avant publication.)",
+      intro: "Nous collectons uniquement les informations que vous nous transmettez via nos formulaires et les statistiques nécessaires à l’amélioration du site. Nous ne vendons aucune donnée personnelle. Vous pouvez demander l’accès à vos données, leur rectification ou leur suppression à contact@suppliesandworks.com.",
+      sections: ["Qui sommes-nous", "Données collectées", "Pourquoi nous les utilisons", "Cookies et statistiques", "Partage avec nos prestataires", "Transferts internationaux", "Durée de conservation", "Sécurité", "Vos droits", "Contact"],
+    },
+    terms: {
+      seo: { title: "Conditions d’utilisation | Supplies and Works", description: "Conditions d’utilisation du site de Supplies and Works." } satisfies Seo,
+      title: "Conditions d’utilisation",
+      note: "(Texte provisoire. À faire relire par un professionnel du droit avant publication.)",
+      intro: "",
+      sections: ["Utilisation du site", "Propriété intellectuelle", "Liens vers d’autres sites", "Avertissements", "Limitation de responsabilité", "Droit applicable", "Contact"],
+    },
+    sectionPlaceholder: "[À compléter]",
+    credits: {
+      seo: { title: "Crédits photos | Supplies and Works", description: "Crédits des photographies utilisées sur le site de Supplies and Works." } satisfies Seo,
+      title: "Crédits *photos*",
+      intro: "Photos issues d’Unsplash.",
+      photo: "Photo",
+      by: "par",
+      on: "sur Unsplash",
+    },
+    notFound: {
+      title: "Perdu dans le cloud.",
+      text: "La page que vous cherchez a été déplacée ou n’existe pas.",
+      buttons: [
+        { label: "Retour à l’accueil", href: "/" },
+        { label: "Réserver un appel", href: routes.contact.path },
       ],
     },
   },

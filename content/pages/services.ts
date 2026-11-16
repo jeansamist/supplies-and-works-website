@@ -54,6 +54,49 @@ export const servicesHub = localized({
       buttons: [{ label: "Start the conversation →", href: routes.contact.path }],
     } satisfies FinalCta,
   },
+  fr: {
+    seo: {
+      title: "Services | Cloud, logiciels, IA, design et infrastructure | Supplies and Works",
+      description:
+        "Cinq studios, une seule équipe. Ingénierie cloud, sauvegarde, développement logiciel, conception web, automatisation par l’IA, design créatif et infrastructure sur site.",
+    } satisfies Seo,
+    hero: {
+      title: "Tout ce dont votre technologie a besoin. *Une seule équipe.*",
+      sub: "Cinq studios qui travaillent ensemble : vous n’avez qu’un seul partenaire au lieu de cinq.",
+      image: "networkCables",
+    } satisfies PageHeroCopy,
+    glance: {
+      eyebrow: "Notre offre en un coup d’œil",
+      title: "Notre offre *en un coup d’œil*",
+      table: {
+        head: ["Studio", "Ce qu’il résout", "Missions types"],
+        rows: [
+          ["Studio Cloud", "Systèmes lents, fragiles ou exposés", "Architecture cloud, migration, sauvegarde, reprise après sinistre"],
+          ["Produit & Ingénierie", "Des logiciels inadaptés à votre façon de travailler", "Applications web, mobiles et desktop, SaaS, sites web"],
+          ["IA & Automatisation", "Du temps perdu sur des tâches répétitives", "Audit des processus, automatisation, assistants IA"],
+          ["Studio Créatif", "Une marque qui ne se démarque pas", "Identité, contenus pour les réseaux sociaux, motion design, print"],
+          ["Afrique & Services locaux", "Réseaux et équipements peu fiables", "Réseaux, serveurs, câblage, assistance sur site"],
+        ],
+      } satisfies Table,
+    },
+    pillars: { eyebrow: "Construire · Exploiter · Protéger", title: "*Construire* · *Exploiter* · *Protéger*" },
+    together: {
+      eyebrow: "Comment les studios travaillent ensemble",
+      title: "Comment les studios *travaillent ensemble*",
+      items: [
+        { title: "Exemple 1 – Un groupe de restaurants.", text: "Le studio Produit développe le logiciel de commande, le Studio Cloud l’héberge et le sauvegarde, le Studio Créatif conçoit la marque et les menus, et l’équipe locale installe le réseau et les tablettes." },
+        { title: "Exemple 2 – Un commerce en pleine croissance.", text: "La conception web crée la boutique en ligne, l’IA automatise la gestion des stocks et le traitement des factures, le Cloud protège les données." },
+        { title: "Exemple 3 – Une école.", text: "Les services locaux installent le réseau et la salle serveurs, le Cloud sauvegarde les dossiers des élèves, le studio Produit développe un portail pour les parents." },
+      ] satisfies Item[],
+      note: "(À remplacer par des exemples réels dès que vous en aurez.)",
+    },
+    studios: { eyebrow: "Les cinq studios", title: "Les cinq *studios*" },
+    start: {
+      title: "Vous ne savez pas par où commencer ?",
+      text: "Décrivez votre problème en quelques lignes. Nous vous dirons à quel studio vous adresser et à quoi pourrait ressembler une première étape.",
+      buttons: [{ label: "Lancer la conversation →", href: routes.contact.path }],
+    } satisfies FinalCta,
+  },
 });
 
 export const cloud = localized({
@@ -146,6 +189,96 @@ export const cloud = localized({
       { q: "Can you manage the cloud for us after launch?", a: "Yes, through a maintenance plan." },
     ] satisfies Faq[],
     cta: book("Let’s review your setup.", "A free 30-minute cloud conversation."),
+  },
+  fr: {
+    seo: {
+      title: "Services d’ingénierie cloud | Architecture et migration AWS | Supplies and Works",
+      description:
+        "Architecture cloud, migration et développement cloud-native, pilotés par un AWS Certified Solutions Architect. Cloud hybride et exploitation continue. Réservez un appel.",
+    } satisfies Seo,
+    hero: {
+      eyebrow: "Studio Cloud",
+      title: "Un cloud qui travaille *aussi dur que votre entreprise.*",
+      sub: "Architecture, migration et développement cloud-native, pilotés par un AWS Certified Solutions Architect.",
+      buttons: [
+        { label: "Planifier votre projet cloud", href: routes.contact.path },
+        { label: "Découvrir notre méthode", href: routes.howWeWork.path },
+      ],
+      image: "dataCenter",
+    } satisfies PageHeroCopy,
+    intro: {
+      eyebrow: "Pourquoi le cloud, et pourquoi avec soin",
+      text: "Le cloud peut rendre une entreprise plus rapide, plus résiliente et plus agile. Mal mis en œuvre, il rend aussi les factures imprévisibles et les systèmes fragiles. Nous vous aidons à adopter le cloud de manière réfléchie : bien dimensionné, sécurisé, documenté et abordable.",
+    },
+    what: {
+      eyebrow: "Ce que nous faisons",
+      title: "Ce que nous *faisons*",
+      items: [
+        { title: "Architecture et conception cloud", text: "Nous concevons des environnements cloud adaptés à vos objectifs, à votre trafic et à votre budget. Topologie réseau, gestion des identités et des accès, stockage, bases de données, mise à l’échelle et sécurité sont définis ensemble, avec des schémas que vous pouvez comprendre." },
+        { title: "Migration", text: "Nous transférons vos applications et vos données depuis des serveurs, des hébergeurs ou d’autres clouds vers le cloud, par étapes et avec des plans de retour arrière. Nous évaluons d’abord chaque charge de travail : la conserver, la migrer, la reconstruire ou la retirer." },
+        { title: "Développement cloud-native", text: "Nous développons des logiciels qui tirent pleinement parti du cloud : mise à l’échelle automatique, bases de données managées, files d’attente, fonctions serverless et pipelines de déploiement automatisés." },
+        { title: "Cloud hybride", text: "Certains systèmes doivent rester sur site. Nous les connectons de façon sécurisée au cloud pour la sauvegarde, l’accès à distance et l’extension, sans imposer une migration complète." },
+        { title: "Infrastructure as code et automatisation", text: "Des environnements décrits sous forme de code, donc reproductibles, vérifiables et rapides à reconstruire. Nous utilisons Terraform et AWS CloudFormation (CDK), avec des pipelines de déploiement sur GitHub Actions." },
+        { title: "Supervision, support et optimisation", text: "Nous surveillons les performances, la disponibilité et les coûts, et nous vous recommandons des améliorations chaque mois." },
+      ] satisfies Item[],
+    },
+    focus: {
+      eyebrow: "Notre expertise cloud",
+      title: "Notre expertise *cloud*",
+      text: "Notre cœur de métier est **AWS**, et notre fondateur est **AWS Certified Solutions Architect**. Nous travaillons aussi avec **Microsoft Azure** et **Google Cloud**. Nous choisissons la plateforme adaptée à vos besoins et vous disons en toute transparence où notre expertise est la plus solide.",
+      platforms: ["AWS", "Microsoft Azure", "Google Cloud"],
+    },
+    projects: {
+      eyebrow: "Projets types",
+      title: "Projets *types*",
+      items: [
+        "Faire passer une application d’un serveur unique à une infrastructure cloud évolutive",
+        "Créer une nouvelle plateforme SaaS sur AWS",
+        "Connecter un serveur de bureau au cloud pour la sauvegarde et l’accès à distance",
+        "Réduire une facture cloud en revoyant les ressources et l’architecture",
+        "Mettre en place des pipelines de déploiement pour des mises en production sûres et reproductibles",
+      ],
+      note: "(À remplacer par des projets réels dès que possible.)",
+    },
+    receive: {
+      eyebrow: "Ce que vous recevez",
+      title: "Ce que vous *recevez*",
+      tags: ["Schémas d’architecture", "Mise en place des environnements", "Documentation", "Configuration de la sécurité", "Tableaux de bord de supervision", "Runbooks", "Session de passation", "Contrat de support en option"],
+    },
+    security: {
+      eyebrow: "Notre approche de la sécurité",
+      title: "Notre approche de la *sécurité*",
+      text: "Nous appliquons le principe du moindre privilège, chiffrons les données en transit et au repos, séparons les environnements, conservons des journaux d’audit et révisons régulièrement les accès. Chaque environnement que nous gérons dispose de l’authentification multifacteur sur tous les comptes et de la journalisation d’audit AWS CloudTrail activée dès le premier jour. Nous ne détenons pas de certifications de conformité formelles telles que ISO 27001 ou SOC 2.",
+    },
+    engagement: {
+      eyebrow: "Déroulement d’une mission",
+      title: "Déroulement d’une *mission*",
+      steps: [
+        { title: "Évaluer (1 à 2 semaines)", text: "inventaire, risques, coûts, objectifs." },
+        { title: "Planifier", text: "architecture cible, ordre de migration, budget et calendrier." },
+        { title: "Mettre en œuvre", text: "construction ou migration par étapes, avec tests." },
+        { title: "Exploiter", text: "supervision, mises à jour, revues des coûts, support." },
+      ] satisfies Step[],
+    },
+    why: {
+      eyebrow: "Pourquoi nous choisir pour le cloud",
+      title: "Pourquoi nous choisir *pour le cloud*",
+      items: [
+        "Un architecte certifié sur votre projet, pas seulement un commercial.",
+        "Une réelle expérience de l’exploitation de nos propres produits SaaS en production.",
+        "Une attention particulière à la protection des données et à la résilience.",
+        "Des rapports clairs, sans jargon, sur les coûts et les risques.",
+      ],
+    },
+    faq: [
+      { q: "Dois-je tout migrer vers le cloud ?", a: "Non. Pour beaucoup d’entreprises, une configuration hybride est la meilleure option. Nous recommandons ce qui vous convient." },
+      { q: "Combien de temps dure une migration ?", a: "Cela dépend de la taille et de la complexité. Les petits projets prennent quelques semaines, les plus importants quelques mois. Nous vous remettons un plan après l’évaluation." },
+      { q: "Mon application va-t-elle cesser de fonctionner pendant la migration ?", a: "Nous planifions des migrations par étapes et des retours arrière pour réduire au minimum les interruptions. [Décrire l’approche.]" },
+      { q: "Comment maîtrisez-vous les coûts du cloud ?", a: "Dimensionnement adapté, budgets et alertes, revues régulières et étiquetage rigoureux des ressources." },
+      { q: "Travaillez-vous avec Azure et Google Cloud ?", a: "Oui. AWS reste notre domaine d’expertise le plus approfondi." },
+      { q: "Pouvez-vous gérer notre cloud après la mise en service ?", a: "Oui, dans le cadre d’un contrat de maintenance." },
+    ] satisfies Faq[],
+    cta: book("Faisons le point sur votre infrastructure.", "Un échange cloud gratuit de 30 minutes.", "Réserver un appel"),
   },
 });
 
@@ -255,6 +388,111 @@ export const backup = localized({
     ] satisfies Faq[],
     cta: book("Find out how exposed your data is.", "A free backup review.", "Book a review"),
   },
+  fr: {
+    seo: {
+      title: "Sauvegarde cloud automatique et reprise après sinistre pour serveurs sur site | Supplies and Works",
+      description:
+        "Des sauvegardes automatiques, chiffrées et testées de vos serveurs sur site vers le cloud, avec un plan de reprise écrit. Protégez les données de votre entreprise.",
+    } satisfies Seo,
+    hero: {
+      eyebrow: "Studio Cloud · Protéger",
+      title: "Vos données en sécurité. *Même dans les pires moments.*",
+      sub: "Des sauvegardes automatiques, chiffrées et testées de vos systèmes sur site vers le cloud.",
+      buttons: [
+        { label: "Protéger mes données", href: routes.contact.path },
+        { label: "Obtenir un audit de sauvegarde gratuit", href: routes.contact.path },
+      ],
+    } satisfies PageHeroCopy,
+    risk: {
+      eyebrow: "Le risque est réel",
+      title: "Le risque est *réel*",
+      items: [
+        { title: "Le matériel tombe en panne.", text: "Les disques et les serveurs s’usent." },
+        { title: "Les accidents arrivent.", text: "Un dossier supprimé, une boisson renversée, une surtension." },
+        { title: "Les catastrophes frappent.", text: "Incendie, inondation, vol." },
+        { title: "Les attaques sont fréquentes.", text: "Les rançongiciels bloquent les fichiers et exigent un paiement." },
+        { title: "Les copies sont rares.", text: "Beaucoup d’entreprises dépendent d’un seul disque, d’un seul serveur, de la mémoire d’une seule personne." },
+      ] satisfies Item[],
+      conclusion: "Si la seule copie de vos données critiques se trouve à un seul endroit, un seul incident suffit à vous immobiliser pendant des jours, voire des semaines.",
+    },
+    setup: {
+      eyebrow: "Ce que nous mettons en place",
+      title: "Ce que nous *mettons en place*",
+      items: [
+        { title: "Sauvegarde automatique", text: "Vos fichiers, bases de données et systèmes sont copiés vers un stockage cloud sécurisé, selon la fréquence de votre choix. Aucune intervention manuelle." },
+        { title: "Chiffrement et contrôle d’accès", text: "Les données sont chiffrées en transit et au repos. Seules les personnes autorisées peuvent y accéder." },
+        { title: "Versionnage et rétention", text: "Conservez plusieurs versions pour revenir à hier, à la semaine dernière ou au mois dernier, y compris avant une attaque par rançongiciel." },
+        { title: "Tests de restauration", text: "Nous réalisons des exercices de restauration et vous en communiquons les résultats. Une sauvegarde n’a de valeur que si elle se restaure." },
+        { title: "Plan de reprise après sinistre", text: "Un plan écrit et concret : qui fait quoi, dans quel ordre, avec quels outils, pour reprendre le travail. [En option : un environnement de secours dans le cloud pour redémarrer les systèmes critiques.]" },
+        { title: "Supervision et alertes", text: "Nous surveillons les tâches de sauvegarde chaque jour et corrigeons les échecs avant qu’ils ne posent problème." },
+        { title: "Reporting", text: "Un rapport mensuel sur l’état des sauvegardes, l’espace de stockage utilisé et les tests de restauration." },
+      ] satisfies Item[],
+    },
+    numbers: {
+      eyebrow: "Deux indicateurs essentiels",
+      title: "Deux indicateurs *essentiels*",
+      rpo: { name: "RPO (Recovery Point Objective)", text: "la quantité de données que vous pouvez vous permettre de perdre, par exemple une heure ou une journée." },
+      rto: { name: "RTO (Recovery Time Objective)", text: "la durée d’interruption que vous pouvez vous permettre, par exemple une heure ou une journée." },
+      examples: ["une heure", "une journée"],
+      outro: "Nous les définissons d’abord avec vous, puis nous concevons la solution pour les atteindre. Une clinique et une petite boutique n’ont pas besoin des mêmes objectifs.",
+    },
+    protect: {
+      eyebrow: "Ce que nous protégeons",
+      title: "Ce que nous *protégeons*",
+      tags: ["Serveurs de fichiers", "Bases de données", "Applications métier", "Machines virtuelles", "Postes de travail des collaborateurs", "E-mails et documents", "Configuration des équipements réseau et de sécurité"],
+      note: "(Ne conserver que ce que vous pouvez réellement fournir.)",
+    },
+    how: {
+      eyebrow: "Comment ça marche",
+      title: "Comment ça *marche*",
+      steps: [
+        { title: "Analyser", text: "nous cartographions vos serveurs, vos données et vos risques." },
+        { title: "Définir", text: "vous choisissez votre RPO, votre RTO et ce qu’il faut protéger." },
+        { title: "Connecter", text: "nous relions vos systèmes sur site au cloud de façon sécurisée." },
+        { title: "Automatiser", text: "les planifications, la rétention et les alertes sont configurées." },
+        { title: "Tester", text: "premiers exercices de restauration et plan de reprise écrit." },
+        { title: "Superviser", text: "contrôles quotidiens, rapports mensuels, test complet annuel." },
+      ] satisfies Step[],
+    },
+    options: {
+      eyebrow: "Sur site, dans le cloud ou les deux ?",
+      title: "Sur site, dans le cloud *ou les deux ?*",
+      table: {
+        head: ["Option", "Idéal pour", "Limites"],
+        rows: [
+          ["Copie locale uniquement", "Restaurations rapides", "Perdue en cas d’incendie, d’inondation ou de vol"],
+          ["Copie cloud uniquement", "À l’abri des sinistres sur site", "Restaurations dépendantes du débit internet"],
+          ["**Local + cloud (recommandé)**", "Restaurations rapides et protection contre les sinistres", "Nécessite une mise en place et une supervision, que nous prenons en charge"],
+        ],
+        highlightRow: 2,
+      } satisfies Table,
+    },
+    who: {
+      eyebrow: "Pour qui",
+      title: "Pour *qui*",
+      tags: ["Cliniques et pharmacies", "Écoles", "Cabinets comptables et d’avocats", "Commerçants et distributeurs", "Restaurants et hôtels", "ONG", "Usines et ateliers", "Toute entreprise disposant de ses propres serveurs"],
+    },
+    plans: {
+      eyebrow: "Formules et tarifs",
+      title: "Formules et *tarifs*",
+      lead: "Sur abonnement, selon le volume de stockage, le nombre de systèmes et les objectifs de reprise.",
+      items: [
+        { name: "Essentiel", text: "[Fonctionnalités, prix]" },
+        { name: "Business", text: "[Fonctionnalités, prix]" },
+        { name: "Critique", text: "[Fonctionnalités, prix]" },
+      ],
+      note: "(Définir les formules réelles. Conserver la structure si elle est utile.)",
+    },
+    faq: [
+      { q: "À quelle fréquence les sauvegardes sont-elles effectuées ?", a: "Aussi souvent que nécessaire : toutes les heures, chaque jour ou en continu, selon votre objectif de reprise." },
+      { q: "Comment gérez-vous une connexion internet lente ou instable ?", a: "Nous utilisons des sauvegardes incrémentielles et une planification de la bande passante, afin que seules les modifications soient envoyées, en dehors des heures de travail. [Adapter à la réalité.]" },
+      { q: "Où mes données sont-elles stockées ?", a: "Dans un stockage cloud sécurisé, dans une région convenue avec vous. [Préciser le fournisseur et les régions.]" },
+      { q: "Que se passe-t-il en cas d’attaque par rançongiciel ?", a: "Des sauvegardes versionnées et protégées nous permettent de restaurer des copies saines datant d’avant l’attaque. Nous vous conseillons aussi en matière de prévention." },
+      { q: "Pouvons-nous faire un test de restauration ?", a: "Oui. Nous testons régulièrement et vous montrons les résultats." },
+      { q: "Ai-je besoin de nouveau matériel ?", a: "Souvent, non. Nous utilisons ce que vous avez déjà et ne recommandons de nouveaux équipements que lorsqu’ils apportent un bénéfice clair." },
+    ] satisfies Faq[],
+    cta: book("Découvrez à quel point vos données sont exposées.", "Un audit de sauvegarde gratuit.", "Réserver un audit"),
+  },
 });
 
 export const software = localized({
@@ -357,6 +595,105 @@ export const software = localized({
     ] satisfies Faq[],
     cta: book("Have an idea, a problem or a messy system? Let’s talk."),
   },
+  fr: {
+    seo: {
+      title: "Développement de logiciels sur mesure | Applications web, mobiles et desktop | Supplies and Works",
+      description:
+        "Applications web, mobiles et desktop sur mesure, API et produits SaaS, conçus par une équipe qui exploite ses propres logiciels en production. Lancez votre projet.",
+    } satisfies Seo,
+    hero: {
+      eyebrow: "Produit & Ingénierie",
+      title: "Des logiciels conçus autour de *votre façon réelle de travailler.*",
+      sub: "Des applications web, mobiles et desktop pour les entreprises et les particuliers, conçues, développées et maintenues par une seule équipe.",
+      buttons: [
+        { label: "Parlez-nous de votre produit", href: routes.contact.path },
+        { label: "Voir nos produits", href: routes.products.path },
+      ],
+      image: "codeScreen",
+    } satisfies PageHeroCopy,
+    proof: {
+      eyebrow: "La preuve que nous livrons",
+      text: "Nous ne nous contentons pas d’écrire du code pour nos clients. Nous concevons, lançons et maintenons nos propres produits SaaS, Badibo et Kira, utilisés par des clients payants. Cette expérience nourrit chaque projet : nous pensons à l’onboarding, au support, aux mises à jour, aux coûts et à la sécurité dès le premier jour.",
+      cta: { label: "Voir nos produits →", href: routes.products.path },
+    },
+    build: {
+      eyebrow: "Ce que nous développons",
+      title: "Ce que nous *développons*",
+      items: [
+        { title: "Applications web", text: "Plateformes métier, portails clients, tableaux de bord, systèmes de réservation, outils internes et places de marché." },
+        { title: "Applications mobiles", text: "Des applications iOS et Android fluides, au rendu natif. Fonctionnement hors ligne et notifications là où c’est utile." },
+        { title: "Logiciels desktop", text: "Des outils fiables pour les points de vente, le back-office et un usage quotidien intensif." },
+        { title: "API et intégrations", text: "Connectez vos systèmes, vos prestataires de paiement et vos services tiers. Automatisez les flux de données entre vos outils." },
+        { title: "Produits SaaS", text: "Du concept à un produit en ligne et facturable : authentification, abonnements, interfaces d’administration, analytics." },
+        { title: "Modernisation", text: "Reprendre un système ancien ou fragile, le stabiliser et le faire évoluer vers une plateforme moderne et maintenable." },
+      ] satisfies Item[],
+    },
+    good: {
+      eyebrow: "Notre vision d’un bon logiciel",
+      title: "Notre vision d’un *bon logiciel*",
+      items: [
+        "**Utile dès le premier jour** : nous commençons par la plus petite version qui résout le vrai problème.",
+        "**Simple à utiliser** : vos équipes le prennent en main rapidement et vos clients n’ont besoin d’aucune formation.",
+        "**Rapide et stable** : testé, supervisé et prêt à accompagner votre croissance.",
+        "**Sécurisé** : authentification, permissions, protection des données et déploiement sûr.",
+        "**Maintenable** : code propre, documentation et tests, pour que toute bonne équipe puisse reprendre le travail.",
+      ],
+    },
+    process: {
+      eyebrow: "Notre démarche",
+      title: "Notre *démarche*",
+      steps: [
+        { title: "Cadrage (1 à 2 semaines)", text: "objectifs, utilisateurs, contraintes, indicateurs de réussite." },
+        { title: "Conception", text: "parcours utilisateurs, wireframes, design d’interface, plan technique." },
+        { title: "Développement", text: "des cycles courts avec une démo chaque semaine." },
+        { title: "Assurance qualité", text: "tests sur appareils et avec des données réelles." },
+        { title: "Lancement", text: "déploiement, supervision, formation, passation." },
+        { title: "Support et évolution", text: "maintenance, améliorations, nouvelles fonctionnalités." },
+      ] satisfies Step[],
+    },
+    toolbox: {
+      eyebrow: "Notre boîte à outils",
+      title: "Notre *boîte à outils*",
+      table: {
+        head: ["Domaine", "Outils"],
+        rows: [
+          ["Front-end", "React, Next.js, TypeScript"],
+          ["Mobile", "[Flutter / React Native / natif, selon le cas]"],
+          ["Back-end", "Node.js, Python, [autres]"],
+          ["Données", "PostgreSQL, [autres]"],
+          ["Cloud et DevOps", "AWS, Docker, CI/CD, Terraform"],
+          ["Design", "Figma"],
+        ],
+      } satisfies Table,
+      note: "(À adapter à votre stack réelle. Ne pas lister d’outils que l’équipe ne peut pas maîtriser.)",
+    },
+    team: {
+      eyebrow: "Comment nous travaillons avec votre équipe",
+      title: "Comment nous travaillons *avec votre équipe*",
+      text: "Intégrés à votre organisation ou en totale autonomie. Tableau de suivi partagé, démos hebdomadaires, responsables clairement identifiés, accès au code dès le premier jour.",
+    },
+    cases: {
+      eyebrow: "Cas d’usage types",
+      title: "Cas d’usage *types*",
+      items: [
+        "Un système de commande et de facturation pour un restaurant",
+        "Une boutique et un gestionnaire de stock pour un commerce",
+        "Un portail client pour une société de services",
+        "Une application mobile pour les équipes terrain",
+        "Une plateforme de réservation et de paiement",
+      ],
+      note: "(À remplacer par des références réelles.)",
+    },
+    faq: [
+      { q: "Combien coûte un logiciel sur mesure ?", a: "Cela dépend du périmètre. Après un court cadrage, nous vous remettons une estimation claire. Beaucoup de projets démarrent par une première version plus réduite pour maîtriser les coûts." },
+      { q: "Combien de temps cela prend-il ?", a: "Une première version utile prend souvent quelques semaines, pas des années. Nous convenons d’un calendrier après le cadrage." },
+      { q: "À qui appartient le code ?", a: "À vous, une fois le projet intégralement payé. Nous vous remettons le code source, les fichiers de design et les comptes, et nous conservons uniquement le droit de réutiliser des briques génériques et non confidentielles." },
+      { q: "Pouvez-vous travailler avec nos développeurs actuels ?", a: "Oui." },
+      { q: "Assurez-vous la maintenance ?", a: "Oui. Consultez nos modèles de collaboration." },
+      { q: "Pouvez-vous reprendre un projet commencé par une autre équipe ?", a: "Oui. Nous examinons d’abord le code et vous disons en toute honnêteté ce qu’il faut garder et ce qu’il faut reconstruire." },
+    ] satisfies Faq[],
+    cta: book("Une idée, un problème ou un système à remettre en ordre ? Parlons-en.", undefined, "Réserver un appel"),
+  },
 });
 
 export const webDesign = localized({
@@ -444,6 +781,91 @@ export const webDesign = localized({
       { q: "Can the site be in English and French?", a: "Yes." },
     ] satisfies Faq[],
     cta: book("Let’s make your website work for you."),
+  },
+  fr: {
+    seo: {
+      title: "Conception et développement web | Des sites rapides et modernes | Supplies and Works",
+      description:
+        "Des sites web conçus et développés pour renforcer votre présence en ligne : sites vitrines, boutiques en ligne, landing pages, refontes, avec des bases SEO solides et un CMS simple.",
+    } satisfies Seo,
+    hero: {
+      eyebrow: "Produit & Ingénierie",
+      title: "Des sites web qui donnent de votre entreprise une image *à la hauteur de ce qu’elle est.*",
+      sub: "Un design et un développement centrés sur vos objectifs, votre audience et votre présence en ligne.",
+      buttons: [
+        { label: "Lancer votre site web", href: routes.contact.path },
+        { label: "Voir nos sites récents", href: routes.work.path },
+      ],
+      image: "responsiveDevices",
+    } satisfies PageHeroCopy,
+    intro: {
+      eyebrow: "Votre site web est votre premier rendez-vous",
+      text: "La plupart de vos clients vous découvrent en ligne avant de vous rencontrer. Un site lent, confus ou daté vous coûte leur confiance, et la confiance perdue vous coûte des ventes. Nous concevons des sites qui expliquent ce que vous faites en quelques secondes, se chargent rapidement sur n’importe quel téléphone et rendent l’étape suivante évidente.",
+    },
+    deliver: {
+      eyebrow: "Ce que nous livrons",
+      title: "Ce que nous *livrons*",
+      items: [
+        { title: "Sites vitrines", text: "Une présence claire et crédible pour votre entreprise." },
+        { title: "Boutiques en ligne", text: "Catalogues, paniers, paiements, stocks et commandes." },
+        { title: "Landing pages", text: "Des pages ciblées pour vos campagnes et vos lancements." },
+        { title: "Refontes", text: "Un nouveau look, une nouvelle structure et de meilleures performances pour un site existant." },
+        { title: "Portails web", text: "Espaces clients, espaces membres, réservations et formulaires." },
+        { title: "Gestion de contenu", text: "Un CMS pour que votre équipe modifie les contenus sans développeur." },
+        { title: "Performance et bases SEO", text: "Rapidité, structure propre, métadonnées et analytics." },
+        { title: "Maintenance", text: "Mises à jour, sauvegardes, sécurité et améliorations." },
+      ] satisfies Item[],
+    },
+    expect: {
+      eyebrow: "Ce à quoi vous pouvez vous attendre",
+      title: "Ce à quoi vous pouvez *vous attendre*",
+      items: [
+        "**Mobile first.** La plupart des visiteurs sont sur téléphone. Nous concevons d’abord pour eux.",
+        "**Rapidité.** Des pages qui se chargent vite, même avec une connexion lente.",
+        "**Des messages clairs.** Des mots et une mise en page qui incitent à passer à l’action.",
+        "**Accessibilité.** Lisible, navigable au clavier et inclusif par défaut.",
+        "**Mises à jour faciles.** Vous pouvez modifier vous-même les textes et les images.",
+        "**Sécurité.** Hébergement sécurisé, sauvegardes et mises à jour.",
+      ],
+    },
+    process: {
+      eyebrow: "Notre démarche",
+      title: "Notre *démarche*",
+      steps: [
+        { title: "Comprendre", text: "votre audience, vos objectifs, vos concurrents et vos contenus." },
+        { title: "Structurer", text: "arborescence, plan de contenu et wireframes." },
+        { title: "Concevoir", text: "identité visuelle, mises en page et interactions." },
+        { title: "Développer", text: "un code propre, rapide et maintenable." },
+        { title: "Tester", text: "appareils, navigateurs, rapidité et accessibilité." },
+        { title: "Lancer et faire grandir", text: "mise en ligne, mesure, amélioration." },
+      ] satisfies Step[],
+    },
+    beforeAfter: {
+      eyebrow: "Avant et après",
+      title: "Avant et *après*",
+      note: "(Curseur interactif comparant l’ancien et le nouveau site. Utiliser des projets réels.)",
+      before: "Avant",
+      after: "Après",
+    },
+    extras: {
+      eyebrow: "Options supplémentaires",
+      title: "Options *supplémentaires*",
+      tags: ["Identité de marque et visuels par notre Studio Créatif", "Aide à la rédaction", "Hébergement et sauvegardes par notre Studio Cloud", "Paiement et réservation en ligne", "Sites multilingues en anglais et en français"],
+    },
+    pricing: {
+      eyebrow: "Repères tarifaires",
+      title: "Repères *tarifaires*",
+      text: "Nos sites vont du simple site d’une page aux plateformes complexes. Nous établissons un devis forfaitaire après un court appel de cadrage. [Ajouter des prix « à partir de » si vous le souhaitez.]",
+    },
+    faq: [
+      { q: "Combien de temps faut-il pour créer un site web ?", a: "Un petit site peut prendre de deux à quatre semaines. Les projets plus importants prennent plus de temps. Nous le confirmons après le cadrage." },
+      { q: "Puis-je modifier le site moi-même ?", a: "Oui, grâce à un CMS simple et à une courte formation." },
+      { q: "Rédigez-vous les contenus ?", a: "Nous pouvons vous aider à les structurer et à les rédiger, ou travailler à partir de vos textes." },
+      { q: "Mon site sera-t-il visible sur Google ?", a: "Nous posons des bases solides : structure, rapidité, métadonnées. Le positionnement dépend aussi des contenus et du temps." },
+      { q: "Hébergez-vous le site ?", a: "Oui, avec sauvegardes et supervision, ou nous le déployons chez votre hébergeur." },
+      { q: "Le site peut-il être en anglais et en français ?", a: "Oui." },
+    ] satisfies Faq[],
+    cta: book("Faisons travailler votre site web pour vous.", undefined, "Réserver un appel"),
   },
 });
 
@@ -537,6 +959,95 @@ export const ai = localized({
     ] satisfies Faq[],
     cta: book("Find your first three automations.", "Book an AI audit.", "Book now"),
   },
+  fr: {
+    seo: {
+      title: "Conseil en IA et automatisation | De l’audit des processus à la mise en œuvre | Supplies and Works",
+      description:
+        "Nous auditons vos processus métier, identifions ce qui peut être automatisé grâce à l’IA, et mettons en place chatbots, workflows et assistants qui font gagner du temps à vos équipes.",
+    } satisfies Seo,
+    hero: {
+      eyebrow: "Studio IA & Automatisation",
+      title: "Laissez l’IA décharger votre équipe des *tâches répétitives.*",
+      sub: "Nous identifions ce qui peut être automatisé dans votre entreprise, établissons un plan clair et le concrétisons.",
+      buttons: [
+        { label: "Réserver un audit IA", href: routes.contact.path },
+        { label: "Voir comment ça marche", href: "#journey" },
+      ],
+      image: "robotArm",
+    } satisfies PageHeroCopy,
+    intro: {
+      eyebrow: "Une IA qui part de votre activité, pas de l’effet de mode",
+      text: "Beaucoup d’entreprises savent qu’elles devraient « faire quelque chose avec l’IA », sans savoir par où commencer. D’autres essaient un outil, puis l’abandonnent. Notre approche est différente. Nous étudions la façon dont vos équipes travaillent réellement, repérons les tâches répétitives, lentes ou sources d’erreurs, et décidons avec vous où l’IA et l’automatisation apporteront un retour mesurable.",
+    },
+    journey: {
+      eyebrow: "Notre offre en quatre étapes",
+      title: "Notre offre en *quatre étapes*",
+      receiveLabel: "Vous recevez",
+      steps: [
+        { title: "Audit", text: "Nous échangeons avec vos équipes, cartographions les processus clés et mesurons où passe le temps. Nous identifions ce qui peut être numérisé, ce qui peut être automatisé et ce qui doit rester humain.", receive: "des cartographies de processus, une liste d’opportunités, une estimation du temps gagné." },
+        { title: "Feuille de route", text: "Nous classons les opportunités selon leur impact, l’effort requis et le risque, et proposons un plan par phases avec coûts et calendrier.", receive: "une feuille de route priorisée, une analyse de rentabilité, des outils recommandés." },
+        { title: "Mise en œuvre", text: "Nous développons et intégrons les solutions : workflows, assistants, traitement de documents, rapports. Nous les connectons à vos outils actuels et formons votre équipe.", receive: "des automatisations opérationnelles, de la documentation, une formation." },
+        { title: "Accompagnement", text: "Nous suivons les résultats, corrigeons les problèmes et faisons évoluer les solutions au rythme de votre entreprise.", receive: "supervision, maintenance, revues d’amélioration trimestrielles." },
+      ],
+    },
+    where: {
+      eyebrow: "Là où l’IA et l’automatisation font la différence",
+      title: "Là où l’IA et l’automatisation *font la différence*",
+      table: {
+        head: ["Domaine", "Exemples"],
+        rows: [
+          ["Service client", "Rédiger des brouillons de réponses, répondre aux questions fréquentes, orienter les demandes"],
+          ["Documents", "Extraire les données des factures, contrats et formulaires"],
+          ["Ventes et marketing", "Qualifier les prospects, personnaliser les relances, produire des premières versions de contenus"],
+          ["Finance et administration", "Rapprocher les écritures, générer des rapports, envoyer des relances"],
+          ["Opérations", "Suivre les stocks, planifier les tâches, déclencher des alertes"],
+          ["Connaissances", "Un assistant interne qui répond aux questions à partir de vos propres documents"],
+          ["Données", "Tableaux de bord et reporting automatique"],
+        ],
+      } satisfies Table,
+    },
+    build: {
+      eyebrow: "Ce que nous développons",
+      title: "Ce que nous *développons*",
+      tags: ["Automatisation des workflows entre vos outils", "Assistants conversationnels et vocaux", "Traitement de documents", "Assistants de connaissances internes", "Tableaux de bord de données", "Intégrations et API sur mesure", "Fonctionnalités d’IA au sein de vos propres logiciels"],
+      note: "(Ne conserver que ce que l’équipe peut livrer aujourd’hui. Ajouter des exemples réels au fil des projets.)",
+    },
+    principles: {
+      eyebrow: "Nos principes",
+      title: "Nos *principes*",
+      items: [
+        { title: "L’humain d’abord.", text: "Nous automatisons des tâches, pas des personnes. Les équipes gardent la main et valident ce qui compte." },
+        { title: "Commencer petit.", text: "Un processus clair, un résultat mesurable, puis on étend." },
+        { title: "Mesurer.", text: "Chaque projet a un avant et un après." },
+        { title: "Protéger vos données.", text: "Nous définissons les données auxquelles un outil d’IA peut accéder, où elles sont traitées et qui y a accès." },
+        { title: "Rester honnêtes.", text: "Nous vous disons quand l’IA n’est pas la bonne réponse." },
+      ] satisfies Item[],
+    },
+    audit: {
+      eyebrow: "Comment se déroule un audit",
+      title: "Comment se déroule *un audit*",
+      items: [
+        { title: "Durée", text: "[p. ex. 1 à 3 semaines]" },
+        { title: "Format", text: "entretiens, revue des processus, revue des données, rapport et présentation" },
+        { title: "Livrable", text: "une feuille de route claire, utilisable avec nous ou avec n’importe quel prestataire" },
+        { title: "Prix", text: "[prix forfaitaire ou fourchette]" },
+      ] satisfies Item[],
+      note: "(Définir votre format réel.)",
+    },
+    who: {
+      eyebrow: "Pour qui",
+      title: "Pour *qui*",
+      tags: ["PME dont la charge administrative augmente", "Entreprises aux nombreux processus manuels", "Équipes submergées de documents et de messages", "Fondateurs qui veulent se développer sans recruter pour chaque tâche"],
+    },
+    faq: [
+      { q: "Ai-je besoin de beaucoup de données ?", a: "Pas toujours. Beaucoup d’automatisations fonctionnent avec les données dont vous disposez déjà." },
+      { q: "L’IA va-t-elle remplacer mes collaborateurs ?", a: "Notre objectif est de supprimer le travail répétitif pour que vos équipes se consacrent à des tâches à plus forte valeur." },
+      { q: "Mes données sont-elles en sécurité ?", a: "Nous définissons avec vous les accès et le traitement des données, et vous expliquons clairement les options." },
+      { q: "Quels résultats puis-je attendre ?", a: "Nous estimons le temps et les coûts économisés lors de l’audit. Les résultats dépendent de vos processus." },
+      { q: "Pouvez-vous travailler avec nos outils actuels ?", a: "Oui, nous nous intégrons aux outils métier courants." },
+    ] satisfies Faq[],
+    cta: book("Identifiez vos trois premières automatisations.", "Réservez un audit IA.", "Réserver maintenant"),
+  },
 });
 
 export const creative = localized({
@@ -618,6 +1129,85 @@ export const creative = localized({
       { q: "How long does a brand project take?", a: "Typically [X to Y weeks]." },
     ] satisfies Faq[],
     cta: book("Tell us about your brand.", undefined, "Brief the studio"),
+  },
+  fr: {
+    seo: {
+      title: "Studio Créatif | Identité de marque, réseaux sociaux et motion design | Supplies and Works",
+      description:
+        "Identités de marque, contenus pour les réseaux sociaux, spots publicitaires et design print, par une équipe créative qui maîtrise aussi le logiciel et le web.",
+    } satisfies Seo,
+    hero: {
+      eyebrow: "Studio Créatif",
+      title: "Un design qui se *remarque et marque les esprits.*",
+      sub: "Identités de marque, contenus pour les réseaux sociaux, spots publicitaires et plus encore, créés par des designers qui comprennent la technologie.",
+      buttons: [
+        { label: "Briefer le studio", href: routes.contact.path },
+        { label: "Voir nos réalisations", href: "#portfolio" },
+      ],
+      image: "creativeDesk",
+    } satisfies PageHeroCopy,
+    intro: {
+      eyebrow: "Pourquoi le design fait partie de la technologie",
+      text: "Logiciels, sites web et produits réussissent lorsqu’ils inspirent confiance et paraissent clairs. Parce que nous concevons et développons, notre travail de marque s’intègre naturellement aux applications, aux sites et aux campagnes. Aucun décalage entre le logo et le produit.",
+    },
+    create: {
+      eyebrow: "Ce que nous créons",
+      title: "Ce que nous *créons*",
+      items: [
+        { title: "Identité de marque", text: "Logo, palette de couleurs, typographie, ton de voix et charte graphique. Un système utilisable partout." },
+        { title: "Contenus pour les réseaux sociaux", text: "Modèles de publications, campagnes, carrousels, stories et forfaits de contenus mensuels." },
+        { title: "Spots publicitaires et motion design", text: "Courtes vidéos publicitaires, logos animés, vidéos explicatives et motion graphics pour les réseaux sociaux et le web." },
+        { title: "Supports imprimés et numériques", text: "Flyers, brochures, catalogues, cartes de visite, menus, présentations et rapports." },
+        { title: "Packaging et étiquettes", text: "Design de produits et d’emballages [si proposé]." },
+        { title: "Visuels d’interface et de produit", text: "Icônes, illustrations et systèmes visuels pour applications et sites web." },
+      ] satisfies Item[],
+    },
+    how: {
+      eyebrow: "Notre façon de travailler",
+      title: "Notre façon de *travailler*",
+      steps: [
+        { title: "Brief", text: "objectifs, audience, concurrents, inspirations." },
+        { title: "Concepts", text: "deux ou trois pistes créatives." },
+        { title: "Affinage", text: "des allers-retours jusqu’à ce que le résultat soit juste." },
+        { title: "Livraison", text: "fichiers finaux dans tous les formats utiles." },
+        { title: "Kit de marque", text: "un guide pour que votre équipe reste cohérente." },
+      ] satisfies Step[],
+    },
+    packages: {
+      eyebrow: "Forfaits",
+      title: "Forfaits *(exemples à définir)*",
+      items: [
+        { name: "Identité de départ", text: "[Contenu, prix]" },
+        { name: "Marque complète", text: "[Contenu, prix]" },
+        { name: "Forfait réseaux sociaux mensuel", text: "[Contenu, prix]" },
+        { name: "Pack motion", text: "[Contenu, prix]" },
+      ],
+    },
+    principles: {
+      eyebrow: "Nos principes créatifs",
+      title: "Nos principes *créatifs*",
+      items: [
+        "**La clarté avant tout.** Si on ne le comprend pas en quelques secondes, ce n’est pas terminé.",
+        "**Authentique.** Nous reflétons votre véritable activité, pas des clichés de banques d’images.",
+        "**Cohérent.** Une seule identité visuelle pour votre logo, votre site, votre application et vos réseaux sociaux.",
+        "**Pratique.** Des fichiers et des modèles que votre équipe peut réellement utiliser.",
+      ],
+    },
+    portfolio: {
+      eyebrow: "Portfolio",
+      title: "*Portfolio*",
+      note: "(Galerie en mosaïque avec visionneuse et courtes légendes de projets. Utiliser des réalisations réelles.)",
+      caption: "[Légende du projet]",
+      motion: "[Showreel motion : ajouter un fichier vidéo]",
+    },
+    faq: [
+      { q: "Combien de séries de modifications sont incluses ?", a: "[p. ex. 2 à 3 séries par étape.]" },
+      { q: "Quels fichiers vais-je recevoir ?", a: "Logos vectoriels, PNG, PDF et fichiers sources, ainsi qu’une charte de marque." },
+      { q: "Pouvez-vous concevoir pour des publics anglophones et francophones ?", a: "Oui." },
+      { q: "Pouvez-vous gérer nos réseaux sociaux ?", a: "[Oui/Non/Contenus uniquement.]" },
+      { q: "Combien de temps dure un projet de marque ?", a: "En général [X à Y semaines]." },
+    ] satisfies Faq[],
+    cta: book("Parlez-nous de votre marque.", undefined, "Briefer le studio"),
   },
 });
 
@@ -704,5 +1294,88 @@ export const local = localized({
       { q: "Do you work outside Cameroon?", a: "[Describe regional reach.]" },
     ] satisfies Faq[],
     cta: book("Let us visit your site and design your infrastructure.", undefined, "Request a site visit"),
+  },
+  fr: {
+    seo: {
+      title: "Infrastructure informatique et services réseau au Cameroun et en Afrique centrale | Supplies and Works",
+      description:
+        "Infrastructure réseau, serveurs et bureautique complète pour les entreprises au Cameroun et en Afrique centrale : conception, fourniture, installation, maintenance et assistance.",
+    } satisfies Seo,
+    hero: {
+      eyebrow: "Afrique & Services locaux",
+      title: "Une infrastructure informatique complète pour les entreprises au *Cameroun et en Afrique centrale.*",
+      sub: "Réseaux, serveurs et systèmes sur site, conçus, fournis, installés et maintenus par nos propres ingénieurs.",
+      buttons: [
+        { label: "Demander une visite sur site", href: routes.contact.path },
+        { label: "Parler à un ingénieur", href: routes.contact.path },
+      ],
+      image: "networkEngineer",
+    } satisfies PageHeroCopy,
+    intro: {
+      eyebrow: "Bien plus que du matériel",
+      text: "N’importe qui peut vendre un routeur ou un ordinateur. Ce dont les entreprises ont besoin, c’est d’un environnement qui fonctionne au quotidien : un réseau stable, des serveurs fiables, un câblage soigné, des données protégées, et quelqu’un qui répond quand quelque chose tombe en panne. Nous construisons l’ensemble, et nous restons pour en prendre soin.",
+    },
+    what: {
+      eyebrow: "Ce que nous faisons",
+      title: "Ce que nous *faisons*",
+      items: [
+        { title: "Conception et installation de réseaux", text: "Planification, installation et configuration de réseaux filaires et sans fil pour bureaux, commerces, écoles, cliniques et entrepôts. Études de couverture, commutation, routage, Wi-Fi, pare-feu, accès à distance sécurisé." },
+        { title: "Câblage structuré", text: "Un câblage propre, étiqueté et conforme aux normes pour les bureaux et les bâtiments." },
+        { title: "Salles serveurs et serveurs sur site", text: "Conception et aménagement de salles serveurs : baies, protection électrique, climatisation, contrôle d’accès. Installation, configuration et maintenance de serveurs." },
+        { title: "Fourniture d’équipements", text: "Ordinateurs, serveurs, switchs, points d’accès, imprimantes, onduleurs, vidéosurveillance et plus encore, choisis en fonction de vos besoins et de votre budget, pas de notre marge." },
+        { title: "Aménagement des postes de travail", text: "Équipement complet de vos bureaux : postes de travail, imprimantes, téléphonie et systèmes de visioconférence, comptes utilisateurs et messagerie." },
+        { title: "Systèmes de sécurité", text: "Vidéosurveillance, contrôle d’accès et sécurité réseau [si proposé]." },
+        { title: "Maintenance et assistance", text: "Maintenance planifiée, interventions rapides sur site, assistance à distance et pièces détachées. [Préciser les délais d’intervention une fois définis.]" },
+      ] satisfies Item[],
+    },
+    chain: {
+      eyebrow: "Toute la chaîne, du câble au cloud",
+      title: "Toute la chaîne, *du câble au cloud*",
+      text: "Notre équipe d’infrastructure locale travaille main dans la main avec notre Studio Cloud. Vos serveurs sur site peuvent être sauvegardés automatiquement dans le cloud, supervisés à distance et étendus à des services cloud. Une seule équipe, de la prise murale jusqu’au cloud.",
+      cta: { label: "Découvrir la sauvegarde et la reprise →", href: routes.backup.path },
+    },
+    process: {
+      eyebrow: "Notre démarche",
+      title: "Notre *démarche*",
+      steps: [
+        { title: "Visite et relevé", text: "nous venons sur place, mesurons et écoutons." },
+        { title: "Conception et devis", text: "une conception claire, une liste d’équipements et un prix." },
+        { title: "Fourniture", text: "nous commandons et préparons les équipements." },
+        { title: "Installation", text: "propre, testée et documentée." },
+        { title: "Passation et formation", text: "votre équipe apprend comment tout fonctionne." },
+        { title: "Assistance", text: "contrats de maintenance et assistance rapide." },
+      ] satisfies Step[],
+    },
+    projects: {
+      eyebrow: "Les projets que nous prenons en charge",
+      title: "Les projets que nous *prenons en charge*",
+      tags: ["Petits bureaux", "Immeubles sur plusieurs étages", "Écoles et centres de formation", "Cliniques et pharmacies", "Hôtels et restaurants", "Commerces et centres de distribution", "ONG et bureaux de terrain"],
+      note: "(Ajouter des exemples et des photos réels.)",
+    },
+    where: {
+      eyebrow: "Où nous intervenons",
+      title: "Où nous *intervenons*",
+      cameroon: "Cameroun : [Douala, Yaoundé, autres villes].",
+      central: "Afrique centrale : [pays et conditions].",
+      mapNote: "Les zones d’intervention indiquées sont données à titre indicatif. [Confirmer les villes et les zones desservies.]",
+    },
+    why: {
+      eyebrow: "Pourquoi nos clients nous choisissent",
+      title: "Pourquoi nos clients *nous choisissent*",
+      items: [
+        "Nos propres ingénieurs réalisent le travail, pas des sous-traitants.",
+        "Chaque installation est documentée.",
+        "Un seul partenaire pour l’équipement, l’installation, le cloud et l’assistance.",
+        "Des recommandations honnêtes, y compris quand une solution moins chère suffit.",
+      ],
+    },
+    faq: [
+      { q: "Vous occupez-vous uniquement de l’installation, ou fournissez-vous aussi le matériel ?", a: "Les deux. Nous pouvons fournir, installer et maintenir, ou travailler avec le matériel dont vous disposez déjà." },
+      { q: "Proposez-vous des contrats de maintenance ?", a: "Oui. [Décrire les niveaux.]" },
+      { q: "En combien de temps pouvez-vous intervenir en cas de panne ?", a: "[Définir les délais d’intervention par ville et par formule.]" },
+      { q: "Pouvez-vous protéger nos données ?", a: "Oui, grâce à des sauvegardes locales et à des sauvegardes automatiques dans le cloud." },
+      { q: "Intervenez-vous en dehors du Cameroun ?", a: "[Décrire la couverture régionale.]" },
+    ] satisfies Faq[],
+    cta: book("Laissez-nous visiter vos locaux et concevoir votre infrastructure.", undefined, "Demander une visite sur site"),
   },
 });

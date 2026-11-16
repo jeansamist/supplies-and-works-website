@@ -141,4 +141,141 @@ export const home = localized({
       ],
     } satisfies FinalCta,
   },
+  fr: {
+    seo: {
+      title: "Supplies and Works | Ingénierie cloud, logicielle et IA depuis l’Afrique",
+      description:
+        "Un partenaire technologique basé au Cameroun. Nous construisons, exploitons et protégeons plateformes cloud, logiciels, automatisations IA et identités de marque pour des entreprises du monde entier. Réservez un appel.",
+    } satisfies Seo,
+    hero: {
+      eyebrow: "Partenaire technologique · De Douala au monde entier",
+      headlineBefore: "Nous concevons,",
+      rotating: ["construisons", "exploitons", "protégeons"],
+      headlineAfter: "la technologie dont dépend votre entreprise.",
+      sub: "Ingénierie cloud, logiciels sur mesure, automatisation par l’IA et design créatif, réunis dans une seule équipe. Conçu en Afrique. Livré dans le monde entier.",
+      primary: { label: "Réserver un appel", href: routes.contact.path },
+      secondary: { label: "Voir nos réalisations", href: routes.work.path },
+      proof: [
+        "Un AWS Certified Solutions Architect dans l’équipe",
+        "Des produits SaaS en production avec des clients payants",
+        "Français et anglais",
+      ],
+      scroll: "Faites défiler pour explorer",
+    } satisfies HomeHeroCopy,
+    tech: ["AWS", "Microsoft Azure", "Google Cloud", "React", "Next.js", "Node.js", "Flutter", "Python", "PostgreSQL", "Docker", "Terraform", "Figma"],
+    who: {
+      eyebrow: "Qui nous sommes",
+      text: "Aujourd’hui, toute entreprise repose sur la technologie. Serveurs, applications, sites web, données, outils, personnes. Quand un maillon lâche, tout le monde le ressent. Supplies and Works existe pour que vous n’ayez plus jamais à courir après cinq fournisseurs différents pour régler un seul problème. Nous sommes une équipe de dix ingénieurs, designers et techniciens à Douala, au Cameroun. Nous couvrons toute la chaîne, du câble dans le mur jusqu’au cloud, de la première ligne de code jusqu’à la marque qu’elle porte. Nous le construisons, nous l’exploitons, et nous le protégeons.",
+    },
+    studios: { eyebrow: "Nos cinq studios", title: "Nos *cinq* studios" },
+    pillars: { eyebrow: "Construire · Exploiter · Protéger", title: "*Construire* · *Exploiter* · *Protéger*" },
+    data: {
+      eyebrow: "Vos données, protégées",
+      title: "Vos serveurs sont dans une seule pièce. *Vos données ne devraient pas l’être.*",
+      text: "Beaucoup d’entreprises conservent leur bien le plus précieux, leurs données, sur un serveur au fond du bureau. Une surtension, une inondation, une machine volée, une attaque par rançongiciel, et toute l’activité s’arrête. Nous connectons vos systèmes sur site au cloud et les sauvegardons automatiquement.",
+      points: [
+        { title: "Automatique", text: "des sauvegardes planifiées, personne n’a besoin d’y penser." },
+        { title: "Sécurisé", text: "chiffré en transit comme au repos." },
+        { title: "Testé", text: "nous nous exerçons aux restaurations avant que vous en ayez besoin." },
+        { title: "Surveillé", text: "nous vous alertons quand quelque chose ne va pas, avant que cela ne devienne une crise." },
+      ],
+      cta: { label: "Voir la sauvegarde et la reprise →", href: routes.backup.path },
+    },
+    products: {
+      eyebrow: "Produits",
+      title: "Des produits que nous avons *conçus et que nous exploitons* nous-mêmes",
+      text: "La plupart des entreprises informatiques vendent du temps. Nous, nous créons aussi des produits. Nos logiciels tournent en production chaque jour, au service de clients payants, et sont maintenus par l’équipe qui les a écrits. Nous savons donc ce qu’exige une livraison réelle, sur la durée.",
+      items: [
+        { name: "Badibo", tagline: "Gestion de restaurant.", text: "Commandes, tables, menu, facturation et rapports au même endroit.", cta: { label: "Découvrir Badibo →", href: routes.badibo.path } },
+        { name: "Kira", tagline: "Gestion de boutique.", text: "Ventes, stock, produits et clients au même endroit.", cta: { label: "Découvrir Kira →", href: routes.kira.path } },
+      ],
+    },
+    numbers: {
+      eyebrow: "En chiffres",
+      title: "En *chiffres*",
+      items: [
+        { value: "25", label: "clients payants sur nos produits" },
+        { value: "08", label: "projets livrés" },
+        { value: "03", label: "pays servis" },
+        { value: "05", label: "années d’expérience" },
+        { value: "10", label: "membres dans l’équipe" },
+      ],
+    },
+    why: {
+      eyebrow: "Pourquoi les équipes nous choisissent",
+      title: "Pourquoi les équipes *nous choisissent*",
+      items: [
+        { title: "Un seul partenaire, à chaque niveau.", text: "Infrastructure, cloud, logiciel, design et IA sous un même toit. Moins d’intermédiaires, moins d’excuses." },
+        { title: "Nous livrons nos propres produits.", text: "La preuve que nous savons construire, lancer et assurer le suivi." },
+        { title: "Une expertise cloud, centrée sur la protection des données.", text: "Une architecture certifiée AWS et une spécialité : la sauvegarde des données sur site vers le cloud." },
+        { title: "Une communication claire.", text: "Un interlocuteur unique, des démos chaque semaine, un langage simple." },
+        { title: "Un avantage de fuseau horaire et de coût.", text: "Des heures communes avec la côte Est des États-Unis et l’Europe, et une structure de coûts qui fait aller votre budget plus loin." },
+        { title: "Bilingues par défaut.", text: "Français et anglais, à l’écrit comme à l’oral." },
+      ],
+    },
+    industries: {
+      eyebrow: "Les secteurs que nous servons",
+      title: "Les secteurs *que nous servons*",
+      // `example` is the one-line hover reveal. DRAFT examples: adjust freely.
+      items: [
+        { name: "Restauration et hôtellerie", example: "Commandes, tables et facturation dans un seul système avec Badibo." },
+        { name: "Commerce de détail", example: "Ventes et stock sous contrôle avec Kira, plus une boutique en ligne." },
+        { name: "Éducation", example: "Réseaux scolaires, sauvegarde des dossiers élèves et portails parents." },
+        { name: "Santé et cliniques", example: "Données patients sauvegardées dans le cloud, chaque nuit, automatiquement." },
+        { name: "Logistique et distribution", example: "Suivi des stocks et alertes automatiques sur l’ensemble des entrepôts." },
+        { name: "Services professionnels", example: "Portails clients, messagerie professionnelle et automatisation documentaire." },
+        { name: "Startups et SaaS", example: "Du MVP à un produit évolutif sur AWS, exploité par l’équipe qui l’a construit." },
+        { name: "ONG et associations", example: "Des réseaux fiables pour les bureaux de terrain et des outils simples pour les donateurs et les membres." },
+      ],
+    },
+    africa: {
+      eyebrow: "Conçu en Afrique",
+      title: "Conçu en *Afrique*",
+      text: "Nous sommes fiers de l’endroit où nous travaillons. Depuis Douala, nous servons des clients au Cameroun, en France et aux États-Unis avec les mêmes exigences que n’importe quelle entreprise dans le monde. Notre équipe travaille en français et en anglais, partage chaque jour ouvré des heures communes avec la côte Est américaine, et apporte une ingénierie pointue à un coût qui vous permet d’en faire plus.",
+      cta: { label: "Lire notre histoire →", href: routes.builtInAfrica.path },
+    },
+    work: {
+      eyebrow: "Réalisations choisies",
+      title: "Réalisations *choisies*",
+      cta: { label: "Voir toutes nos réalisations →", href: routes.work.path },
+    },
+    process: {
+      eyebrow: "Notre méthode",
+      title: "Notre méthode en *4 étapes*",
+      steps: [
+        { title: "Écouter", text: "Nous apprenons à connaître votre activité, vos contraintes et vos objectifs avant de toucher au moindre outil." },
+        { title: "Concevoir", text: "Vous recevez un plan clair : périmètre, calendrier et prix." },
+        { title: "Construire", text: "Nous livrons par cycles courts. Vous voyez l’avancement chaque semaine." },
+        { title: "Exploiter et protéger", text: "Nous restons à vos côtés, assurons le support et continuons d’améliorer." },
+      ] satisfies Step[],
+      cta: { label: "Voir la méthode complète →", href: routes.howWeWork.path },
+    },
+    testimonials: {
+      title: "Ce que disent *nos clients*",
+      quotes: [
+        // DRAFT texts: have each person approve their quote before launch.
+        { text: "« Supplies and Works nous a donné une identité de marque qui ressemble enfin à l’entreprise que nous sommes. Une charte claire, tous les fichiers dont nous avions besoin, et une équipe à l’écoute à chaque étape. »", by: "Joseph BAHA, Support informatique, Neptune Oil SA, Cameroun · Identité de marque" },
+        { text: "« Avec MarrowMails, j’ai enfin une adresse professionnelle sur mon propre domaine, configurée en quelques minutes et payée par Mobile Money. Les résumés par IA me font gagner du temps chaque matin. »", by: "Victor ILOME, Freelance, Indépendant, Cameroun · MarrowMails" },
+        { text: "« Heekoo me permet d’échanger avec des clients dans des langues que je ne parle pas, avec ma propre voix. L’équipe derrière le produit est réactive et ne cesse de l’améliorer. »", by: "William MESSI, Freelance, Indépendant, France · Heekoo" },
+      ],
+    },
+    faq: [
+      { q: "Où votre équipe est-elle basée ?", a: "À Douala, au Cameroun. Nous travaillons à distance avec des clients du monde entier, et sur site en Afrique centrale." },
+      { q: "Travaillez-vous avec des clients hors d’Afrique ?", a: "Oui. Les clients internationaux sont une priorité. Nous travaillons en français et en anglais, avec des plages horaires communes planifiées." },
+      { q: "Quels fuseaux horaires couvrez-vous ?", a: "Douala est à UTC+1. Nous partageons toute la journée avec l’Europe, et l’après-midi ainsi que le début de soirée avec la côte Est des États-Unis : au moins 4 heures chaque jour ouvré, avec un support de 8 h à 19 h, heure de Douala." },
+      { q: "Avec quelle taille d’entreprise travaillez-vous ?", a: "Les startups et les PME sont notre cœur de cible. Nous accompagnons aussi des organisations plus grandes sur des projets bien définis." },
+      { q: "Comment fixez-vous vos prix ?", a: "Au projet, par forfait mensuel, ou les deux. Vous recevez toujours une estimation claire avant que nous commencions." },
+      { q: "À qui appartiennent le code et les designs ?", a: "À vous, une fois le projet entièrement payé. Nous vous remettons le code source, les fichiers de design et les comptes, et ne conservons que le droit de réutiliser des briques génériques et non confidentielles." },
+      { q: "Pouvez-vous reprendre un système existant ?", a: "Oui. Nous commençons par un court audit de l’existant, puis nous convenons ensemble d’un plan." },
+      { q: "Proposez-vous un support après le lancement ?", a: "Oui. Nos contrats de maintenance et de support assurent le bon fonctionnement et l’amélioration continue de vos systèmes." },
+    ] satisfies Faq[],
+    finalCta: {
+      title: "Dites-nous ce dont vous avez besoin. Nous vous dirons comment nous nous y prendrions.",
+      text: "Un appel de 30 minutes. Sans engagement.",
+      buttons: [
+        { label: "Réserver un appel", href: `${routes.contact.path}#book` },
+        { label: "Envoyer un message", href: `${routes.contact.path}#message` },
+      ],
+    } satisfies FinalCta,
+  },
 });
