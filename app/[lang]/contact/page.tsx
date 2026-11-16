@@ -5,7 +5,7 @@ import { FaqSection } from "@/components/sections/blocks";
 import { Rich } from "@/components/ui/rich";
 import { Container, Section } from "@/components/ui/section";
 import { contact } from "@/content/pages/other";
-import { site, siteConfig } from "@/content/site";
+import { formatPhone, site, siteConfig } from "@/content/site";
 import { toLocale } from "@/lib/i18n";
 import { routes } from "@/lib/routes";
 import { pageMetadata } from "@/lib/seo";
@@ -69,7 +69,22 @@ export default async function ContactPage({ params }: PageProps<"/[lang]/contact
                 {t.details.items.map((d) => (
                   <div key={d.label} className="border-t border-line pt-3">
                     <dt className="text-sm text-muted">{d.label}</dt>
-                    <dd className="font-medium"><Rich text={d.value} /></dd>
+                    <dd className="font-medium">
+                      {d.label === "Email" ? (
+                        <a href={`mailto:${siteConfig.email}`} className="link-draw">{d.value}</a>
+                      ) : d.label.startsWith("Phone") ? (
+                        <span className="flex flex-col">
+                          {siteConfig.phones.map((p) => (
+                            <span key={p} className="flex flex-wrap gap-x-3">
+                              <a href={`tel:${p}`} className="link-draw">{formatPhone(p)}</a>
+                              <a href={`https://wa.me/${p.replace("+", "")}`} target="_blank" rel="noopener noreferrer" className="text-sm font-normal text-muted link-draw">WhatsApp</a>
+                            </span>
+                          ))}
+                        </span>
+                      ) : (
+                        <Rich text={d.value} />
+                      )}
+                    </dd>
                   </div>
                 ))}
               </dl>

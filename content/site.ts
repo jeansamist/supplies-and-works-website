@@ -11,15 +11,17 @@ export const siteConfig = {
   url: process.env.NEXT_PUBLIC_SITE_URL ?? "https://suppliesandworks.com",
   /** Brand yellow sampled from the logo. */
   brandYellow: "#FCEE21",
-  email: "[EMAIL]",
-  phone: "[PHONE / WHATSAPP]",
-  address: "[Street], Douala, Cameroon",
+  email: "contact@suppliesandworks.com",
+  phone: "+237 654 174 367 · +237 656 372 914",
+  /** Dialable numbers (also used for WhatsApp links). */
+  phones: ["+237654174367", "+237656372914"],
+  address: "Douala, Cameroon",
   /** Calendly (or similar) URL. Empty = the booking section shows a placeholder. */
   bookingUrl: "",
   /** IANA zone for the footer clock and overlap calculator. */
   timeZone: "Africa/Douala",
   /** Working hours in Douala (24h) used for the "We overlap for X hours" line. [Confirm] */
-  workingHours: { start: 8, end: 18 },
+  workingHours: { start: 8, end: 19 },
   /** Assumed visitor working hours in their own zone. */
   visitorHours: { start: 9, end: 18 },
   socials: [
@@ -30,6 +32,9 @@ export const siteConfig = {
     { label: "GitHub", href: "" },
   ],
 } as const;
+
+/** "+237654174367" → "+237 654 174 367" */
+export const formatPhone = (p: string) => p.replace(/^(\+\d{3})(\d{3})(\d{3})(\d{3})$/, "$1 $2 $3 $4");
 
 export type NavItem = { label: string; href: string; description?: string };
 

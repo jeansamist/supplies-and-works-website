@@ -85,7 +85,7 @@ export const cloud = localized({
         { title: "Migration", text: "We move applications and data from servers, hosting providers or other clouds into the cloud, in stages and with rollback plans. We assess each workload first: keep, move, rebuild or retire." },
         { title: "Cloud-native development", text: "We build software that uses the cloud properly: automatic scaling, managed databases, queues, serverless functions, and automated deployment pipelines." },
         { title: "Hybrid cloud", text: "Some systems must stay on site. We connect them securely to the cloud for backup, remote access and extension, without forcing a full move." },
-        { title: "Infrastructure as code and automation", text: "Environments described in code, so they are repeatable, reviewable and fast to rebuild. [Tools: Terraform, CloudFormation, etc.]" },
+        { title: "Infrastructure as code and automation", text: "Environments described in code, so they are repeatable, reviewable and fast to rebuild. We use Terraform and AWS CloudFormation (CDK), with deployment pipelines in GitHub Actions." },
         { title: "Monitoring, support and optimization", text: "We watch performance, availability and cost, and we recommend improvements every month." },
       ] satisfies Item[],
     },
@@ -115,7 +115,7 @@ export const cloud = localized({
     security: {
       eyebrow: "Our approach to security",
       title: "Our approach to *security*",
-      text: "We apply the principle of least privilege, encrypt data in transit and at rest, separate environments, keep audit logs, and review access regularly. [Add real practices and any compliance work you have done. Do not claim certifications you do not hold.]",
+      text: "We apply the principle of least privilege, encrypt data in transit and at rest, separate environments, keep audit logs, and review access regularly. Every environment we manage has multi-factor authentication on all accounts and AWS CloudTrail audit logging switched on from day one. We do not hold formal compliance certifications such as ISO 27001 or SOC 2.",
     },
     engagement: {
       eyebrow: "How an engagement works",
@@ -350,7 +350,7 @@ export const software = localized({
     faq: [
       { q: "How much does custom software cost?", a: "It depends on scope. After a short discovery we give a clear estimate. Many projects start with a smaller first version to control cost." },
       { q: "How long does it take?", a: "A first useful version often takes weeks, not years. We agree a timeline after discovery." },
-      { q: "Who owns the code?", a: "You do, once paid. [Confirm terms.]" },
+      { q: "Who owns the code?", a: "You do, once the project is paid in full. We hand over the source code, design files and accounts, and only keep the right to reuse generic, non-confidential building blocks." },
       { q: "Can you work with our existing developers?", a: "Yes." },
       { q: "Do you provide maintenance?", a: "Yes. See our engagement models." },
       { q: "Can you take over a project another team started?", a: "Yes. We review the code first and tell you honestly what to keep and what to rebuild." },

@@ -122,7 +122,7 @@ export const badibo = localized<ProductPage>({
     production: {
       eyebrow: "In production today",
       title: "In production *today*",
-      text: "[X] restaurants in [countries] use Badibo. [Add key figure such as orders processed.]",
+      text: "3 restaurants in Cameroon use Badibo. [Add key figure such as orders processed.]",
       quote: { text: "“[CUSTOMER QUOTE]”", by: "[Name], [Restaurant], [City]" },
     },
     plans: {
@@ -205,7 +205,7 @@ export const kira = localized<ProductPage>({
     production: {
       eyebrow: "In production today",
       title: "In production *today*",
-      text: "[X] shops in [countries] use Kira. [Add key figure.]",
+      text: "22 shops in Cameroon use Kira. [Add key figure.]",
       quote: { text: "“[CUSTOMER QUOTE]”", by: "[Name], [Shop], [City]" },
     },
     plans: {

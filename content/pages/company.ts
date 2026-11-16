@@ -82,11 +82,11 @@ export const about = localized({
       eyebrow: "Our numbers",
       title: "Our *numbers*",
       items: [
-        { value: "[X]", label: "people" },
-        { value: "[X]", label: "projects" },
-        { value: "[X]", label: "customers" },
-        { value: "[X]", label: "countries" },
-        { value: "[X]", label: "years" },
+        { value: "10", label: "people" },
+        { value: "08", label: "projects" },
+        { value: "25", label: "customers" },
+        { value: "03", label: "countries" },
+        { value: "05", label: "years" },
       ],
     },
     cta: {
@@ -119,7 +119,7 @@ export const builtInAfrica = localized({
       title: "Six reasons to work with a team in *Douala*",
       items: [
         { title: "Real engineering depth.", text: "Our team builds and operates production systems, including our own paid software products." },
-        { title: "A workable time zone.", text: "Douala runs on UTC+1. We overlap with Europe all day and with the U.S. East Coast in the afternoon. [Overlap table below.]" },
+        { title: "A workable time zone.", text: "Douala runs on UTC+1. We overlap with Europe all day and with the U.S. East Coast in the afternoon: at least 4 hours a day. See the overlap table below." },
         { title: "Better value.", text: "A lower cost structure means more engineering for your budget, without cutting quality." },
         { title: "Two working languages.", text: "We write, present and support in English and French. Useful for North America, the UK, France, Canada and francophone Africa." },
         { title: "Local knowledge for Africa.", text: "If you are entering or growing in Central Africa, we understand the infrastructure, the payment habits, the constraints and the opportunities." },
@@ -134,9 +134,9 @@ export const builtInAfrica = localized({
         rows: [
           ["Paris / Brussels", "About 0 to 1 hour", "Full working day"],
           ["London", "About 0 to 1 hour", "Full working day"],
-          ["New York / Toronto", "About 5 to 6 hours", "[Late morning to evening, Douala time]"],
-          ["Chicago", "About 6 to 7 hours", "[Adjust]"],
-          ["Los Angeles / Vancouver", "About 8 to 9 hours", "[Adjust]"],
+          ["New York / Toronto", "About 5 to 6 hours", "At least 4 hours (15:00 to 19:00 Douala time)"],
+          ["Chicago", "About 6 to 7 hours", "About 3 hours (16:00 to 19:00 Douala time)"],
+          ["Los Angeles / Vancouver", "About 8 to 9 hours", "Short daily window, plus calls scheduled on request"],
         ],
       } satisfies Table,
       footnote: "(The differences shift with daylight saving time. Confirm and complete the overlap column.)",
@@ -261,7 +261,7 @@ export const howWeWork = localized({
     timezones: {
       eyebrow: "Working across time zones",
       title: "Working across *time zones*",
-      text: "We are on UTC+1. We plan fixed overlap hours with each client and keep decisions and updates in writing, so work continues while you sleep. [Describe overlap, response times and support windows.]",
+      text: "We are on UTC+1. We plan fixed overlap hours with each client and keep decisions and updates in writing, so work continues while you sleep. We overlap at least 4 hours a day with the U.S. East Coast, answer within one working day, and provide support from 8:00 to 19:00 Douala time.",
     },
     quality: {
       eyebrow: "Quality practices",
@@ -360,7 +360,7 @@ export const engagement = localized({
       eyebrow: "Terms in plain words",
       title: "Terms in *plain words*",
       items: [
-        { title: "Ownership", text: "you own the deliverables once paid. [Confirm.]" },
+        { title: "Ownership", text: "you own the deliverables once paid in full: source code, design files and accounts are handed over." },
         { title: "Confidentiality", text: "we sign NDAs." },
         { title: "Support after launch", text: "[warranty period and support terms]." },
         { title: "Change requests", text: "handled with a written estimate." },
@@ -431,7 +431,7 @@ export const careers = localized({
         send: "Send",
       },
       success: "Thank you. We have your application.",
-      error: "Something went wrong. Please try again or email us at [EMAIL].",
+      error: "Something went wrong. Please try again or email us at contact@suppliesandworks.com.",
     },
   },
 });

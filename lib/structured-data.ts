@@ -22,6 +22,7 @@ export function organizationLd() {
     areaServed: "Worldwide",
     knowsLanguage: ["en", "fr"],
     ...(isReal(siteConfig.email) ? { email: siteConfig.email } : {}),
+    telephone: siteConfig.phones[0],
     sameAs: siteConfig.socials.map((s) => s.href).filter(Boolean),
   };
 }

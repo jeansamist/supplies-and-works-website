@@ -4,7 +4,7 @@ import { Button } from "@/components/ui/button";
 import { LogoPlaceholder } from "@/components/ui/logo-placeholder";
 import { Marquee } from "@/components/ui/marquee";
 import { Rich } from "@/components/ui/rich";
-import { siteConfig, type SiteCopy } from "@/content/site";
+import { formatPhone, siteConfig, type SiteCopy } from "@/content/site";
 import { localePath, type Locale } from "@/lib/i18n";
 
 /** Cameroon flag that waves gently (green · red with yellow star · yellow). */
@@ -85,8 +85,15 @@ export function SiteFooter({ copy, locale }: { copy: SiteCopy; locale: Locale })
             <div className="space-y-4">
               <h3 className="text-sm font-semibold tracking-wide text-muted uppercase">{f.contactTitle}</h3>
               <ul className="space-y-2.5">
-                <li><Rich text={siteConfig.email} /></li>
-                <li><Rich text={siteConfig.phone} /></li>
+                <li>
+                  <a href={`mailto:${siteConfig.email}`} className="link-draw" data-cursor="link">{siteConfig.email}</a>
+                </li>
+                {siteConfig.phones.map((p) => (
+                  <li key={p} className="flex flex-wrap items-center gap-x-3">
+                    <a href={`tel:${p}`} className="link-draw" data-cursor="link">{formatPhone(p)}</a>
+                    <a href={`https://wa.me/${p.replace("+", "")}`} target="_blank" rel="noopener noreferrer" className="text-sm text-muted link-draw hover:text-fg">WhatsApp</a>
+                  </li>
+                ))}
                 <li><Rich text={siteConfig.address} /></li>
               </ul>
             </div>

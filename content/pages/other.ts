@@ -12,15 +12,15 @@ export const workPage = localized({
     } satisfies Seo,
     hero: { title: "Work we are *proud of.*", sub: "Selected projects across cloud, software, AI and design." } satisfies PageHeroCopy,
     intro: "Real projects, real constraints, real results. Where clients prefer privacy, we anonymize.",
-    note: "(Add 3 to 5 real projects before launch.)",
+    note: "(Draft case studies: review each one before launch.)",
     results: {
       eyebrow: "Results at a glance",
       title: "Results *at a glance*",
       items: [
-        { value: "[X]", label: "projects" },
-        { value: "[X]", label: "sectors" },
-        { value: "[X]", label: "countries" },
-        { value: "[X]", label: "product customers" },
+        { value: "08", label: "projects" },
+        { value: "08", label: "sectors" },
+        { value: "03", label: "countries" },
+        { value: "25", label: "product customers" },
       ],
     },
     cta: { title: "Want results like these?", buttons: [{ label: "Start a project", href: routes.contact.path }] } satisfies FinalCta,
@@ -30,6 +30,7 @@ export const workPage = localized({
 export const caseStudyLabels = localized({
   en: {
     keyResults: "Key results",
+    visit: "Visit the live site",
     client: "The client",
     challenge: "The challenge",
     approach: "Our approach",
@@ -116,7 +117,7 @@ export const contact = localized({
       send: "Send message",
       sending: "Sending…",
       success: "Thank you. We have your message and will reply within [one working day].",
-      error: "Something went wrong. Please try again or email us at [EMAIL].",
+      error: "Something went wrong. Please try again or email us at contact@suppliesandworks.com.",
       required: "Required",
       invalidEmail: "Enter a valid email address.",
     },
@@ -128,9 +129,9 @@ export const contact = localized({
     details: {
       title: "Contact details",
       items: [
-        { label: "Email", value: "[EMAIL]" },
-        { label: "Phone / WhatsApp", value: "[PHONE]" },
-        { label: "Address", value: "[Street], Douala, Cameroon" },
+        { label: "Email", value: "contact@suppliesandworks.com" },
+        { label: "Phone / WhatsApp", value: "+237 654 174 367 · +237 656 372 914" },
+        { label: "Address", value: "Douala, Cameroon" },
         { label: "Hours", value: "[Hours in Douala time, with automatic conversion to the visitor’s time]" },
         { label: "Support for current clients", value: "[Support email or portal]" },
       ],
@@ -151,7 +152,7 @@ export const legal = localized({
       seo: { title: "Privacy Policy | Supplies and Works", description: "How Supplies and Works collects, uses and protects personal data." } satisfies Seo,
       title: "Privacy Policy",
       note: "(Placeholder. Have a legal professional review it before publishing.)",
-      intro: "We collect only the information you give us through our forms and the analytics needed to improve the site. We do not sell personal data. You can ask to access, correct or delete your data at [EMAIL].",
+      intro: "We collect only the information you give us through our forms and the analytics needed to improve the site. We do not sell personal data. You can ask to access, correct or delete your data at contact@suppliesandworks.com.",
       sections: ["Who we are", "Data we collect", "Why we use it", "Cookies and analytics", "Sharing with service providers", "International transfers", "Retention", "Security", "Your rights", "Contact"],
     },
     terms: {
