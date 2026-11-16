@@ -303,6 +303,7 @@ export const work = localized({
         result: "Live with paying restaurants.",
         filters: ["Products", "Software"],
         image: "restaurantKitchen",
+        logo: { src: "/work/logo-badibo.svg", bg: "#1C1C15", color: true },
         href: routes.badibo.path,
         detail: productDetail(),
       },
