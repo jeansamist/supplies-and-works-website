@@ -49,7 +49,7 @@ export default async function CreativePage({ params }: PageProps<"/[lang]/servic
         </Container>
       </Section>
 
-      <FaqSection items={t.faq} />
+      <FaqSection locale={locale} items={t.faq} />
       <CtaBand cta={t.cta} locale={locale} />
     </>
   );

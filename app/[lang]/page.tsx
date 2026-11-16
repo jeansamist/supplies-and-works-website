@@ -17,6 +17,7 @@ import { TiltCard } from "@/components/ui/tilt-card";
 import { home } from "@/content/pages/home";
 import { shared } from "@/content/shared";
 import { work } from "@/content/work";
+import { ui } from "@/content/ui";
 import { localePath, toLocale } from "@/lib/i18n";
 import { pageMetadata } from "@/lib/seo";
 import { faqLd } from "@/lib/structured-data";
@@ -44,7 +45,7 @@ export default async function HomePage({ params }: PageProps<"/[lang]">) {
       {/* 2. Technology strip */}
       <div id="after-hero" className="border-y border-line py-6">
         <Marquee
-          label="Technologies we work with"
+          label={ui(locale).techStrip}
           items={t.tech.map((name) => (
             <span key={name} className="text-xl font-semibold text-muted transition-colors hover:text-fg sm:text-2xl">
               {name}
@@ -74,7 +75,7 @@ export default async function HomePage({ params }: PageProps<"/[lang]">) {
             </p>
           </div>
           <div data-reveal>
-            <BackupDiagram />
+            <BackupDiagram locale={locale} />
           </div>
           <ul data-reveal="stagger" className="grid gap-4 sm:grid-cols-2 lg:grid-cols-4">
             {t.data.points.map((p, i) => (
@@ -144,7 +145,7 @@ export default async function HomePage({ params }: PageProps<"/[lang]">) {
             </div>
           </div>
           <div data-reveal>
-            <AfricaMap />
+            <AfricaMap locale={locale} />
           </div>
         </Container>
       </Section>
@@ -164,10 +165,10 @@ export default async function HomePage({ params }: PageProps<"/[lang]">) {
       <ProcessSteps eyebrow={t.process.eyebrow} title={t.process.title} steps={t.process.steps} cta={t.process.cta} locale={locale} />
 
       {/* 12. Testimonials (placeholders until real ones exist) */}
-      <Testimonials title={t.testimonials.title} quotes={t.testimonials.quotes} />
+      <Testimonials locale={locale} title={t.testimonials.title} quotes={t.testimonials.quotes} />
 
       {/* 13. FAQ */}
-      <FaqSection items={t.faq} tone="surface" />
+      <FaqSection locale={locale} items={t.faq} tone="surface" />
 
       {/* 14. Final CTA */}
       <div className="pt-3 sm:pt-4">

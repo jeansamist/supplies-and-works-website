@@ -2,13 +2,9 @@
 
 import { useRef, useState, type PointerEvent } from "react";
 import { cn } from "@/lib/utils";
+import { useUi } from "@/components/layout/locale-provider";
 
 export type MockupKind = "badibo" | "kira";
-
-const TABS: Record<MockupKind, string[]> = {
-  badibo: ["Menu", "Orders", "Reports"],
-  kira: ["Sales", "Stock", "Reports"],
-};
 
 /**
  * Illustrative product interface (no real data, skeleton UI) that tilts in 3D
@@ -18,7 +14,8 @@ const TABS: Record<MockupKind, string[]> = {
 export function ProductMockup({ kind, tabs = false, className }: { kind: MockupKind; tabs?: boolean; className?: string }) {
   const ref = useRef<HTMLDivElement>(null);
   const [tab, setTab] = useState(0);
-  const names = TABS[kind];
+  const t = useUi();
+  const names = t.mockup[kind];
 
   function onMove(e: PointerEvent<HTMLDivElement>) {
     if (e.pointerType !== "mouse" || window.matchMedia("(prefers-reduced-motion: reduce)").matches) return;
@@ -49,7 +46,7 @@ export function ProductMockup({ kind, tabs = false, className }: { kind: MockupK
           <span className="size-2.5 rounded-full bg-accent" />
           <span className="ml-3 text-xs font-semibold capitalize">{kind}</span>
           {tabs ? (
-            <div role="tablist" aria-label={`${kind} screens`} className="ml-auto flex gap-1 rounded-full bg-surface-2 p-0.5">
+            <div role="tablist" aria-label={`${kind} ${t.mockup.screens}`} className="ml-auto flex gap-1 rounded-full bg-surface-2 p-0.5">
               {names.map((n, i) => (
                 <button
                   key={n}

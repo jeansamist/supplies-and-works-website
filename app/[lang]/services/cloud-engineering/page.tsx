@@ -42,7 +42,7 @@ export default async function CloudPage({ params }: PageProps<"/[lang]/services/
       <div className="border-y border-line py-6">
         <Marquee items={["AWS", "Microsoft Azure", "Google Cloud", "Terraform", "Docker", "CI/CD"].map((x) => <span key={x} className="font-serif text-3xl text-muted italic">{x}</span>)} separator="✦" />
       </div>
-      <FaqSection items={t.faq} />
+      <FaqSection locale={locale} items={t.faq} />
       <CtaBand cta={t.cta} locale={locale} />
     </>
   );

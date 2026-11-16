@@ -5,6 +5,7 @@ import { TextLink, label } from "@/components/ui/button";
 import { Rich } from "@/components/ui/rich";
 import { Container, Section, SectionHeading } from "@/components/ui/section";
 import { careers } from "@/content/pages/company";
+import { ui } from "@/content/ui";
 import { toLocale } from "@/lib/i18n";
 import { routes } from "@/lib/routes";
 import { pageMetadata } from "@/lib/seo";
@@ -41,7 +42,7 @@ export default async function CareersPage({ params }: PageProps<"/[lang]/careers
               </li>
             ))}
           </ul>
-          <p data-reveal className="text-muted italic">(If none: “{t.roles.empty}”)</p>
+          <p data-reveal className="text-muted italic">({ui(locale).careersNoRoles}: “{t.roles.empty}”)</p>
         </Container>
       </Section>
 

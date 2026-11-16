@@ -2,6 +2,7 @@
 
 import { useEffect, useRef, useState } from "react";
 import { useMediaQuery } from "@/lib/hooks";
+import { useUi } from "@/components/layout/locale-provider";
 import { gsap } from "@/lib/motion";
 import { cn } from "@/lib/utils";
 
@@ -17,6 +18,7 @@ export function CursorFollower() {
   const [state, setState] = useState<CursorState>("default");
   const enabled = useMediaQuery("(hover: hover) and (pointer: fine) and (prefers-reduced-motion: no-preference)");
   const [hidden, setHidden] = useState(true);
+  const t = useUi();
 
   useEffect(() => {
     if (!enabled) return;
@@ -61,8 +63,8 @@ export function CursorFollower() {
             (state === "view" || state === "drag") && "size-24 bg-accent text-accent-ink",
           )}
         >
-          {state === "view" && "View"}
-          {state === "drag" && "Drag"}
+          {state === "view" && t.cursor.view}
+          {state === "drag" && t.cursor.drag}
         </div>
       </div>
       <div ref={dot} className="absolute top-0 left-0">

@@ -4,12 +4,11 @@ import { Cancel01Icon, Search01Icon } from "@hugeicons/core-free-icons";
 import { HugeiconsIcon } from "@hugeicons/react";
 import Link from "next/link";
 import { useEffect, useMemo, useRef, useState } from "react";
-import { LanguageSwitcher } from "@/components/layout/language-switcher";
 import { Button } from "@/components/ui/button";
 import { LogoPlaceholder } from "@/components/ui/logo-placeholder";
 import type { SiteCopy } from "@/content/site";
 import { localePath, type Locale } from "@/lib/i18n";
-import { routes } from "@/lib/routes";
+import { routeLabel, routes } from "@/lib/routes";
 import { cn } from "@/lib/utils";
 
 /**
@@ -40,15 +39,15 @@ export function MobileMenu({
 
   const primary = [
     ...copy.header.nav.map((n) => ({ label: n.label, href: n.href })),
-    { label: routes.about.label, href: routes.about.path },
-    { label: routes.contact.label, href: routes.contact.path },
+    { label: routeLabel(routes.about, locale), href: routes.about.path },
+    { label: routeLabel(routes.contact, locale), href: routes.contact.path },
   ];
   const all = useMemo(
     () =>
       Object.values(routes)
         .filter((r) => r.path !== "/")
-        .map((r) => ({ label: r.label, href: r.path })),
-    [],
+        .map((r) => ({ label: routeLabel(r, locale), href: r.path })),
+    [locale],
   );
   const results = query.trim()
     ? all.filter((r) => r.label.toLowerCase().includes(query.trim().toLowerCase()))
@@ -151,7 +150,6 @@ export function MobileMenu({
       </nav>
 
       <div className="flex items-center justify-between gap-3 p-4">
-        <LanguageSwitcher current={locale} label={copy.header.language} soonLabel={copy.header.languageSoon} className="border-accent-ink/20" />
         <Button href={l("/contact")} variant="solid" onClick={onClose}>
           {copy.header.cta}
         </Button>

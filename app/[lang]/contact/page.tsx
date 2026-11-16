@@ -5,6 +5,7 @@ import { FaqSection } from "@/components/sections/blocks";
 import { Rich } from "@/components/ui/rich";
 import { Container, Section } from "@/components/ui/section";
 import { contact } from "@/content/pages/other";
+import { ui } from "@/content/ui";
 import { formatPhone, site, siteConfig } from "@/content/site";
 import { toLocale } from "@/lib/i18n";
 import { routes } from "@/lib/routes";
@@ -101,7 +102,7 @@ export default async function ContactPage({ params }: PageProps<"/[lang]/contact
         </Container>
       </Section>
 
-      <FaqSection title="Quick answers" items={t.quick} tone="surface" />
+      <FaqSection locale={locale} title={ui(locale).quickAnswers} items={t.quick} tone="surface" />
     </>
   );
 }

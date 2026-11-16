@@ -3,26 +3,28 @@
 import { useState } from "react";
 import cameroon from "@/lib/geo/cameroon.json";
 import { cn } from "@/lib/utils";
+import { useUi } from "@/components/layout/locale-provider";
 
 /**
  * Cameroon outline with service zones. Hover / focus / tap a city to see its
  * zone. Which cities are served (and the radius of each zone) is set in
  * `ZONES` below. [Confirm the cities and zones you serve.]
  */
-const ZONES: Record<string, { radius: number; label: string }> = {
-  douala: { radius: 70, label: "Head office · [Coverage to confirm]" },
+const ZONES: Record<string, { radius: number; label: string; head?: boolean }> = {
+  douala: { radius: 70, label: "[Coverage to confirm]", head: true },
   yaounde: { radius: 60, label: "[Coverage to confirm]" },
   // Add other cities from lib/geo/cameroon.json, e.g. bafoussam, kribi, garoua…
 };
 
 export function CameroonMap() {
+  const t = useUi();
   const [active, setActive] = useState("douala");
   const { size, path, cities } = cameroon as { size: number; path: string; cities: { id: string; name: string; x: number; y: number }[] };
   const current = cities.find((c) => c.id === active);
 
   return (
     <div data-reveal className="grid gap-8 rounded-[2rem] border border-line bg-surface p-6 sm:p-10 md:grid-cols-[1.2fr_1fr] md:items-center">
-      <svg viewBox={`0 0 ${size} ${size}`} className="h-auto w-full" role="img" aria-label="Map of Cameroon with service zones">
+      <svg viewBox={`0 0 ${size} ${size}`} className="h-auto w-full" role="img" aria-label={t.cameroonMap.label}>
         <path d={path} className="fill-bg stroke-fg/30" strokeWidth={2} />
         {cities
           .filter((c) => ZONES[c.id])
@@ -57,9 +59,10 @@ export function CameroonMap() {
         })}
       </svg>
       <div className="space-y-4" aria-live="polite">
-        <p className="text-sm font-semibold tracking-wide text-muted uppercase">Service zone</p>
+        <p className="text-sm font-semibold tracking-wide text-muted uppercase">{t.cameroonMap.zone}</p>
         <p className="font-serif text-h3">{current?.name}</p>
         <p className="text-muted">
+          {ZONES[active]?.head && <span className="font-semibold text-fg">{t.cameroonMap.headOffice} · </span>}
           {ZONES[active]?.label.startsWith("[") ? <span className="ph">{ZONES[active].label}</span> : ZONES[active]?.label}
         </p>
         <ul className="flex flex-wrap gap-2 pt-2">

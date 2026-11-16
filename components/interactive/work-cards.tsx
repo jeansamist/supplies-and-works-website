@@ -7,6 +7,7 @@ import { Rich } from "@/components/ui/rich";
 import type { CaseStudy } from "@/content/work";
 import { localePath, type Locale } from "@/lib/i18n";
 import { routes } from "@/lib/routes";
+import { useUi } from "@/components/layout/locale-provider";
 import { cn } from "@/lib/utils";
 
 const hrefFor = (item: CaseStudy) => item.href ?? `${routes.work.path}/${item.slug}`;
@@ -73,12 +74,13 @@ export function WorkCarousel({ items, locale }: { items: CaseStudy[]; locale: Lo
 
 /** Filterable grid (/work). Cards re-flow with a fade when the filter changes. */
 export function WorkGrid({ items, filters, locale }: { items: CaseStudy[]; filters: readonly string[]; locale: Locale }) {
+  const t = useUi();
   const [active, setActive] = useState(filters[0]);
   const visible = active === filters[0] ? items : items.filter((i) => (i.filters as string[]).includes(active));
 
   return (
     <div className="space-y-12">
-      <div role="group" aria-label="Filter projects" className="flex flex-wrap gap-2">
+      <div role="group" aria-label={t.work.filterLabel} className="flex flex-wrap gap-2">
         {filters.map((f) => (
           <button
             key={f}
@@ -90,7 +92,7 @@ export function WorkGrid({ items, filters, locale }: { items: CaseStudy[]; filte
               active === f ? "border-transparent bg-accent text-accent-ink" : "border-line hover:border-fg",
             )}
           >
-            {f}
+            {t.work.filters[f] ?? f}
           </button>
         ))}
       </div>
@@ -101,7 +103,7 @@ export function WorkGrid({ items, filters, locale }: { items: CaseStudy[]; filte
           </li>
         ))}
       </ul>
-      {visible.length === 0 && <p className="text-muted">No projects in this category yet.</p>}
+      {visible.length === 0 && <p className="text-muted">{t.work.empty}</p>}
     </div>
   );
 }

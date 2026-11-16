@@ -5,6 +5,7 @@ import { Rich } from "@/components/ui/rich";
 import type { Item } from "@/content/types";
 import { prefersReducedMotion } from "@/lib/motion";
 import { cn } from "@/lib/utils";
+import { useUi } from "@/components/layout/locale-provider";
 
 type Device = "web" | "mobile" | "desktop";
 
@@ -14,6 +15,7 @@ type Device = "web" | "mobile" | "desktop";
  * tab list all switch slides.
  */
 export function AppTypes({ items }: { items: (Item & { device: Device })[] }) {
+  const t = useUi();
   const [i, setI] = useState(0);
   const [auto, setAuto] = useState(true);
 
@@ -32,7 +34,7 @@ export function AppTypes({ items }: { items: (Item & { device: Device })[] }) {
   return (
     <div data-reveal className="grid gap-10 rounded-[2rem] border border-line bg-surface p-6 sm:p-10 lg:grid-cols-[1fr_1.2fr] lg:items-center" aria-roledescription="carousel">
       <div className="space-y-8">
-        <div role="tablist" aria-label="Application types" className="flex flex-wrap gap-2">
+        <div role="tablist" aria-label={t.carousel.label} className="flex flex-wrap gap-2">
           {items.map((it, n) => (
             <button
               key={it.title}
@@ -52,10 +54,10 @@ export function AppTypes({ items }: { items: (Item & { device: Device })[] }) {
           </p>
         </div>
         <div className="flex items-center gap-3">
-          <button type="button" onClick={() => go(i - 1)} aria-label="Previous" className="flex size-11 items-center justify-center rounded-full border border-line hover:bg-accent hover:text-accent-ink">
+          <button type="button" onClick={() => go(i - 1)} aria-label={t.carousel.previous} className="flex size-11 items-center justify-center rounded-full border border-line hover:bg-accent hover:text-accent-ink">
             ←
           </button>
-          <button type="button" onClick={() => go(i + 1)} aria-label="Next" className="flex size-11 items-center justify-center rounded-full border border-line hover:bg-accent hover:text-accent-ink">
+          <button type="button" onClick={() => go(i + 1)} aria-label={t.carousel.next} className="flex size-11 items-center justify-center rounded-full border border-line hover:bg-accent hover:text-accent-ink">
             →
           </button>
           <div className="ml-2 flex gap-1.5" aria-hidden>

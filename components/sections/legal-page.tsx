@@ -3,6 +3,7 @@ import { Rich } from "@/components/ui/rich";
 import { Container } from "@/components/ui/section";
 import { slugify } from "@/lib/utils";
 import type { Locale } from "@/lib/i18n";
+import { ui } from "@/content/ui";
 
 /** Privacy / Terms template: sticky table of contents + numbered sections to complete. */
 export function LegalPage({
@@ -31,7 +32,7 @@ export function LegalPage({
         {intro && <p className="max-w-3xl text-lead text-muted"><Rich text={intro} /></p>}
       </div>
       <div className="mt-16 grid gap-12 lg:grid-cols-[16rem_1fr]">
-        <nav aria-label="Sections" className="lg:sticky lg:top-28 lg:self-start">
+        <nav aria-label={ui(locale).sections} className="lg:sticky lg:top-28 lg:self-start">
           <ol className="space-y-2 text-sm">
             {sections.map((s, i) => (
               <li key={s}>

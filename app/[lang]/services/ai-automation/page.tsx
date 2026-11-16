@@ -36,7 +36,7 @@ export default async function AiPage({ params }: PageProps<"/[lang]/services/ai-
       <FeatureGrid eyebrow={t.principles.eyebrow} title={t.principles.title} items={t.principles.items} tone="ink" />
       <FeatureGrid eyebrow={t.audit.eyebrow} title={t.audit.title} items={t.audit.items} columns={4} numbered={false} footnote={t.audit.note} />
       <TagCloud eyebrow={t.who.eyebrow} title={t.who.title} tags={t.who.tags} tone="surface" />
-      <FaqSection items={t.faq} />
+      <FaqSection locale={locale} items={t.faq} />
       <CtaBand cta={t.cta} locale={locale} />
     </>
   );

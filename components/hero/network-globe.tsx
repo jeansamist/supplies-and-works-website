@@ -3,6 +3,7 @@
 import { useEffect, useRef } from "react";
 import worldDots from "@/lib/geo/world-dots.json";
 import { isLowPower, isTouchDevice, prefersReducedMotion } from "@/lib/motion";
+import { useUi } from "@/components/layout/locale-provider";
 
 /** Cameroon (Douala) is the origin; every arc starts there. */
 const ORIGIN = { name: "Douala", lon: 9.7043, lat: 4.0511 };
@@ -47,6 +48,7 @@ function slerp(a: Vec, b: Vec, t: number): Vec {
  * Pauses when off-screen or the tab is hidden; static frame with reduced motion.
  */
 export function NetworkGlobe({ className }: { className?: string }) {
+  const t = useUi();
   const canvasRef = useRef<HTMLCanvasElement>(null);
 
   useEffect(() => {
@@ -338,7 +340,7 @@ export function NetworkGlobe({ className }: { className?: string }) {
       ref={canvasRef}
       data-cursor="drag"
       role="img"
-      aria-label="Interactive globe: Douala, Cameroon, connected to Toronto, New York, Montréal, Paris, London, Lagos, Nairobi, Kigali, Johannesburg and Dubai"
+      aria-label={t.globeLabel}
       className={className}
       style={{ touchAction: "pan-y" }}
     />

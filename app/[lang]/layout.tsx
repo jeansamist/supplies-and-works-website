@@ -5,6 +5,7 @@ import { CookieBanner } from "@/components/layout/cookie-banner";
 import { CursorFollower } from "@/components/layout/cursor";
 import { Extras } from "@/components/layout/extras";
 import { Loader } from "@/components/layout/loader";
+import { LocaleProvider } from "@/components/layout/locale-provider";
 import { PageTransition } from "@/components/layout/page-transition";
 import { ScrollProgress } from "@/components/layout/scroll-progress";
 import { SiteFooter } from "@/components/layout/site-footer";
@@ -65,6 +66,7 @@ export default async function RootLayout({ children, params }: LayoutProps<"/[la
         <a href="#main" className="skip-link">
           {copy.skipLink}
         </a>
+        <LocaleProvider locale={locale}>
         <Loader label={copy.loader.label} />
         <ScrollProgress />
         <SiteHeader copy={copy} locale={locale} />
@@ -79,6 +81,7 @@ export default async function RootLayout({ children, params }: LayoutProps<"/[la
         <SmoothScroll />
         <MotionDirector />
         <Extras />
+        </LocaleProvider>
       </body>
     </html>
   );

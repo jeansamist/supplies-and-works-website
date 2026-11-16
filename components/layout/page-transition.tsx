@@ -4,6 +4,7 @@ import { useSitePathname } from "@/lib/hooks";
 import { useEffect, useRef, type ReactNode } from "react";
 import { gsap, prefersReducedMotion } from "@/lib/motion";
 import { labelForPath } from "@/lib/routes";
+import { useLocale } from "@/components/layout/locale-provider";
 
 /**
  * Page transition: on every client-side navigation a yellow curtain covering
@@ -16,7 +17,8 @@ export function PageTransition({ children }: { children: ReactNode }) {
   const curtain = useRef<HTMLDivElement>(null);
   const content = useRef<HTMLDivElement>(null);
   const first = useRef(true);
-  const name = labelForPath(pathname);
+  const locale = useLocale();
+  const name = labelForPath(pathname, locale);
 
   useEffect(() => {
     if (first.current) {

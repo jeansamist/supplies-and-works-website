@@ -9,17 +9,19 @@ import { Eyebrow } from "@/components/ui/section";
 import type { PageHeroCopy } from "@/content/types";
 import { localePath, type Locale } from "@/lib/i18n";
 import { breadcrumbsFor } from "@/lib/routes";
+import { ui } from "@/content/ui";
 import { breadcrumbLd } from "@/lib/structured-data";
 import { cn } from "@/lib/utils";
 
 export function Breadcrumbs({ path, locale, current }: { path: string; locale: Locale; current?: string }) {
-  const trail = breadcrumbsFor(path);
+  const trail = breadcrumbsFor(path, locale);
   if (current && trail.length) trail[trail.length - 1].label = current;
-  const items = [{ path: "/", label: "Home" }, ...trail];
+  const t = ui(locale);
+  const items = [{ path: "/", label: t.home }, ...trail];
   return (
     <>
       <JsonLd data={breadcrumbLd(items.map((i) => ({ ...i, path: localePath(locale, i.path) })))} />
-      <nav aria-label="Breadcrumb" data-reveal>
+      <nav aria-label={t.breadcrumb} data-reveal>
         <ol className="flex flex-wrap items-center gap-1.5 text-sm text-muted">
           {items.map((item, i) => (
             <li key={item.path} className="flex items-center gap-1.5">

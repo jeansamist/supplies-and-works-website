@@ -3,6 +3,7 @@
 import { useState, type FormEvent } from "react";
 import { Field, TextArea } from "@/components/forms/field";
 import { Rich } from "@/components/ui/rich";
+import { useUi } from "@/components/layout/locale-provider";
 import type { careers } from "@/content/pages/company";
 
 type Copy = ReturnType<typeof careers>["apply"];
@@ -13,13 +14,14 @@ export function ApplyForm({ copy }: { copy: Copy }) {
   const [errors, setErrors] = useState<Record<string, string>>({});
   const [file, setFile] = useState("");
   const f = copy.fields;
+  const t = useUi();
 
   async function submit(e: FormEvent<HTMLFormElement>) {
     e.preventDefault();
     const fd = new FormData(e.currentTarget);
     const errs: Record<string, string> = {};
-    if (!String(fd.get("name") ?? "").trim()) errs.name = "Required";
-    if (!/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(String(fd.get("email") ?? ""))) errs.email = "Enter a valid email address.";
+    if (!String(fd.get("name") ?? "").trim()) errs.name = t.apply.required;
+    if (!/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(String(fd.get("email") ?? ""))) errs.email = t.apply.invalidEmail;
     setErrors(errs);
     if (Object.keys(errs).length) return;
     setState("sending");
@@ -48,9 +50,9 @@ export function ApplyForm({ copy }: { copy: Copy }) {
       <label className="flex cursor-pointer items-center justify-between gap-4 rounded-2xl border border-dashed border-line px-5 py-4 transition-colors hover:border-fg sm:col-span-2">
         <span>
           <span className="block font-semibold">{f.cv}</span>
-          <span className="text-sm text-muted">{file || "PDF, DOC, DOCX · max 5 MB"}</span>
+          <span className="text-sm text-muted">{file || t.apply.fileHint}</span>
         </span>
-        <span className="rounded-full bg-fg px-4 py-2 text-sm font-semibold text-bg">Browse</span>
+        <span className="rounded-full bg-fg px-4 py-2 text-sm font-semibold text-bg">{t.apply.browse}</span>
         <input type="file" name="cv" accept=".pdf,.doc,.docx" className="sr-only" onChange={(e) => setFile(e.target.files?.[0]?.name ?? "")} />
       </label>
       <TextArea id="ap-message" name="message" label={f.message} className="sm:col-span-2" />

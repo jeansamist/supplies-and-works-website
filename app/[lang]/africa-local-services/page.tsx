@@ -30,7 +30,7 @@ export default async function LocalPage({ params }: PageProps<"/[lang]/africa-lo
       <FeatureGrid eyebrow={t.what.eyebrow} title={t.what.title} items={t.what.items} tone="surface" />
       <Statement eyebrow={t.chain.eyebrow} title={t.chain.title} paragraphs={[t.chain.text]} cta={t.chain.cta} locale={locale}>
         <div data-reveal className="pt-4">
-          <BackupDiagram />
+          <BackupDiagram locale={locale} />
         </div>
       </Statement>
       <ProcessSteps eyebrow={t.process.eyebrow} title={t.process.title} steps={t.process.steps} locale={locale} />
@@ -46,7 +46,7 @@ export default async function LocalPage({ params }: PageProps<"/[lang]/africa-lo
         </Container>
       </Section>
       <Checklist eyebrow={t.why.eyebrow} title={t.why.title} items={t.why.items} image="technician" />
-      <FaqSection items={t.faq} tone="surface" />
+      <FaqSection locale={locale} items={t.faq} tone="surface" />
       <div className="pt-3 sm:pt-4"><CtaBand cta={t.cta} locale={locale} /></div>
     </>
   );

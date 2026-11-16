@@ -1,6 +1,8 @@
 import { CloudServerIcon, LockIcon, ServerStack01Icon } from "@hugeicons/core-free-icons";
 import { HugeiconsIcon, type IconSvgElement } from "@hugeicons/react";
 import { cn } from "@/lib/utils";
+import { ui } from "@/content/ui";
+import type { Locale } from "@/lib/i18n";
 
 /**
  * Animated diagram: office server → encrypted tunnel → cloud storage.
@@ -8,13 +10,8 @@ import { cn } from "@/lib/utils";
  * nothing to hydrate; stops with reduced motion). Horizontal on desktop,
  * vertical on mobile.
  */
-export function BackupDiagram({
-  labels = { server: "Office server", tunnel: "Encrypted tunnel", cloud: "Cloud storage" },
-  className,
-}: {
-  labels?: { server: string; tunnel: string; cloud: string };
-  className?: string;
-}) {
+export function BackupDiagram({ locale = "en", className }: { locale?: Locale; className?: string }) {
+  const labels = ui(locale).backup;
   return (
     <div
       role="img"

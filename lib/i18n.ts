@@ -9,8 +9,8 @@ export const locales = ["en", "fr"] as const;
 export type Locale = (typeof locales)[number];
 export const defaultLocale: Locale = "en";
 
-/** Locales that are actually built and linked. Add "fr" when the copy is ready. */
-export const enabledLocales: readonly Locale[] = ["en"];
+/** Locales that are actually built and linked. */
+export const enabledLocales: readonly Locale[] = ["en", "fr"];
 
 export const localeNames: Record<Locale, string> = {
   en: "English",

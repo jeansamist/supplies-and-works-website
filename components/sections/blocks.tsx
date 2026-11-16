@@ -13,6 +13,7 @@ import { TiltCard } from "@/components/ui/tilt-card";
 import type { ImageKey } from "@/content/images";
 import type { Cta, Faq, FinalCta, Item, Step, Table } from "@/content/types";
 import { localePath, type Locale } from "@/lib/i18n";
+import { ui } from "@/content/ui";
 import { cn } from "@/lib/utils";
 
 /* ─── Intro paragraph, revealed word by word while scrolling ─────────────── */
@@ -495,11 +496,12 @@ export function Statement({
 }
 
 /* ─── FAQ ────────────────────────────────────────────────────────────────── */
-export function FaqSection({ title = "Frequently asked questions", items, id = "faq", tone }: { title?: string; items: Faq[]; id?: string; tone?: "default" | "surface" | "ink" }) {
+export function FaqSection({ title, items, id = "faq", tone, locale = "en" }: { title?: string; items: Faq[]; id?: string; tone?: "default" | "surface" | "ink"; locale?: Locale }) {
+  const t = ui(locale);
   return (
     <Section id={id} tone={tone}>
       <Container className="grid gap-12 lg:grid-cols-[0.8fr_1.2fr]">
-        <SectionHeading eyebrow="FAQ" title={title} className="lg:sticky lg:top-32 lg:self-start" />
+        <SectionHeading eyebrow={t.faq} title={title ?? t.faqTitle} className="lg:sticky lg:top-32 lg:self-start" />
         <Accordion items={items} />
       </Container>
     </Section>
@@ -507,11 +509,11 @@ export function FaqSection({ title = "Frequently asked questions", items, id = "
 }
 
 /* ─── Testimonial placeholder ────────────────────────────────────────────── */
-export function Testimonials({ title, quotes, note }: { title: string; quotes: { text: string; by: string }[]; note?: string }) {
+export function Testimonials({ title, quotes, note, locale = "en" }: { title: string; quotes: { text: string; by: string }[]; note?: string; locale?: Locale }) {
   return (
     <Section>
       <Container className="space-y-12">
-        <SectionHeading eyebrow="Testimonials" title={title} />
+        <SectionHeading eyebrow={ui(locale).testimonials} title={title} />
         <ul data-reveal="stagger" className="grid gap-4 md:grid-cols-3">
           {quotes.map((q, i) => (
             <TiltCard key={i} as="li" tilt={4} className="flex flex-col justify-between gap-10 p-8">
@@ -581,12 +583,13 @@ export function Plans({
 
 /* ─── Final "Let's talk" band ────────────────────────────────────────────── */
 export function CtaBand({ cta, locale }: { cta: FinalCta; locale: Locale }) {
+  const talk = ui(locale).letsTalk;
   return (
     <section className="px-3 pb-3 sm:px-4 sm:pb-4">
       <div className="relative isolate overflow-hidden rounded-[2rem] bg-accent px-6 py-20 text-accent-ink sm:rounded-[2.5rem] sm:px-12 sm:py-28">
         <Marquee
           className="pointer-events-none absolute inset-x-0 top-1/2 -z-10 -translate-y-1/2 opacity-[0.08] [mask-image:none]"
-          items={["Let’s talk", "Let’s talk", "Let’s talk"].map((t, i) => (
+          items={[talk, talk, talk].map((t, i) => (
             <span key={i} className="font-serif text-[18vw] leading-none italic">
               {t}
             </span>
@@ -597,7 +600,7 @@ export function CtaBand({ cta, locale }: { cta: FinalCta; locale: Locale }) {
         <div className="mx-auto flex max-w-6xl flex-col gap-10 md:flex-row md:items-end md:justify-between">
           <div className="max-w-3xl space-y-5">
             <p data-reveal className="inline-flex items-center gap-2 text-sm font-semibold tracking-wide uppercase">
-              <span aria-hidden className="size-1.5 rounded-full bg-accent-ink" /> Let’s talk
+              <span aria-hidden className="size-1.5 rounded-full bg-accent-ink" /> {talk}
             </p>
             <h2 data-split className="font-serif text-h2 text-balance">
               <Rich text={cta.title} mark={false} />

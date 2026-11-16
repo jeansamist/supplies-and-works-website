@@ -83,15 +83,14 @@ Contact, newsletter and job applications post to `/api/*`. Each route validates 
 
 Booking: set `siteConfig.bookingUrl` in `content/site.ts` to a Calendly or Cal.com link and it is embedded on `/contact#book`.
 
-### Adding French (`/fr`)
+### Languages (English + French)
 
-The structure is ready:
+The site is bilingual: English at the root (`/about`), French under `/fr` (`/fr/about`).
 
-1. In `lib/i18n.ts`, add `"fr"` to `enabledLocales`.
-2. In each `content/**` file, add a `fr: { … }` object next to `en`. Missing pages fall back to English.
-3. In `components/layout/language-switcher.tsx`, turn the FR pill into a link (the comment there explains how).
-
-English stays at the root (`/about`), and French lives at `/fr/about`. The proxy (`proxy.ts`) rewrites root URLs to `app/[lang]` and redirects `/en/*` to the clean URL.
+- **Copy:** every `content/**` file has an `en` and an `fr` object with the same shape. Short interface strings (buttons, widget labels, aria labels) are in `content/ui.ts`, and route labels (breadcrumbs, menus) are in `lib/routes.ts`.
+- **Switching:** the language dropdown sits in the footer and keeps the visitor on the same page. It lists every language in `enabledLocales` (`lib/i18n.ts`).
+- **Adding another language:** add it to `locales` and `enabledLocales`, then add its object next to `en` and `fr` in the content files. Missing copy falls back to English.
+- **Routing:** `proxy.ts` rewrites root URLs to `app/[lang]` with `en`, serves `/fr/*` directly, and redirects `/en/*` to the clean URL. Canonical and `hreflang` links, plus the sitemap, cover both languages.
 
 ## Design system
 

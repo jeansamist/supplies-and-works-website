@@ -3,6 +3,7 @@
 import { useState } from "react";
 import { Rich } from "@/components/ui/rich";
 import { cn } from "@/lib/utils";
+import { useUi } from "@/components/layout/locale-provider";
 
 type JourneyStep = { title: string; text: string; receive: string };
 
@@ -13,6 +14,7 @@ type JourneyStep = { title: string; text: string; receive: string };
  */
 export function AiJourney({ steps, receiveLabel }: { steps: JourneyStep[]; receiveLabel: string }) {
   const [active, setActive] = useState(0);
+  const t = useUi();
   const step = steps[active];
 
   const onKey = (e: React.KeyboardEvent) => {
@@ -26,7 +28,7 @@ export function AiJourney({ steps, receiveLabel }: { steps: JourneyStep[]; recei
         <div aria-hidden className="absolute top-6 right-[12.5%] left-[12.5%] hidden h-0.5 bg-line sm:block">
           <div className="h-full origin-left bg-accent transition-transform duration-700 ease-out-expo" style={{ transform: `scaleX(${active / (steps.length - 1)})` }} />
         </div>
-        <div role="tablist" aria-label="Steps" onKeyDown={onKey} className="relative grid grid-cols-2 gap-3 sm:grid-cols-4">
+        <div role="tablist" aria-label={t.steps} onKeyDown={onKey} className="relative grid grid-cols-2 gap-3 sm:grid-cols-4">
           {steps.map((s, i) => (
             <button
               key={s.title}

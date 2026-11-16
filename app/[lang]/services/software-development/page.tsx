@@ -55,7 +55,7 @@ export default async function SoftwarePage({ params }: PageProps<"/[lang]/servic
       <DataTable eyebrow={t.toolbox.eyebrow} title={t.toolbox.title} table={t.toolbox.table} footnote={t.toolbox.note} />
       <Statement eyebrow={t.team.eyebrow} title={t.team.title} paragraphs={[t.team.text]} locale={locale} tone="ink" />
       <Checklist eyebrow={t.cases.eyebrow} title={t.cases.title} items={t.cases.items} footnote={t.cases.note} image="mobileApp" />
-      <FaqSection items={t.faq} tone="surface" />
+      <FaqSection locale={locale} items={t.faq} tone="surface" />
       <div className="pt-3 sm:pt-4"><CtaBand cta={t.cta} locale={locale} /></div>
     </>
   );

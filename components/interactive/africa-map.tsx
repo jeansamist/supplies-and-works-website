@@ -1,5 +1,7 @@
 import africaDots from "@/lib/geo/africa-dots.json";
 import { cn } from "@/lib/utils";
+import { ui } from "@/content/ui";
+import type { Locale } from "@/lib/i18n";
 
 // Equirectangular projection of the Africa grid into a 700×760 viewBox.
 const BOUNDS = { lonMin: -18, lonMax: 52, latMin: -36, latMax: 38 };
@@ -24,7 +26,7 @@ const LINKS = [
  * Dotted map of Africa with a glowing node on Cameroon, connected to
  * African hubs and to the rest of the world. Pure SVG + CSS animation.
  */
-export function AfricaMap({ className }: { className?: string }) {
+export function AfricaMap({ className, locale = "en" }: { className?: string; locale?: Locale }) {
   const ox = px(DOUALA.lon);
   const oy = py(DOUALA.lat);
 
@@ -32,7 +34,7 @@ export function AfricaMap({ className }: { className?: string }) {
     <svg
       viewBox={`-80 -80 ${W + 160} ${H + 120}`}
       role="img"
-      aria-label="Map of Africa. Cameroon glows and is connected to Lagos, Nairobi, Kigali, Johannesburg and cities in North America, Europe and the Middle East."
+      aria-label={ui(locale).africaMapLabel}
       className={cn("h-auto w-full overflow-visible", className)}
     >
       <g className="fill-fg">

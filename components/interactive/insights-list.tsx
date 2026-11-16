@@ -2,6 +2,7 @@
 
 import { useState } from "react";
 import { cn } from "@/lib/utils";
+import { useUi } from "@/components/layout/locale-provider";
 
 /** Category filter + list of upcoming article ideas. */
 export function InsightsList({
@@ -14,10 +15,11 @@ export function InsightsList({
   label: string;
 }) {
   const [active, setActive] = useState(categories[0]);
+  const t = useUi();
   const list = active === categories[0] ? ideas : ideas.filter((i) => i.category === active);
   return (
     <div className="space-y-10">
-      <div role="group" aria-label="Categories" className="flex flex-wrap gap-2">
+      <div role="group" aria-label={t.categories} className="flex flex-wrap gap-2">
         {categories.map((c) => (
           <button
             key={c}

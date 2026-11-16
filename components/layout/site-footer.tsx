@@ -1,5 +1,6 @@
 import Link from "next/link";
 import { BackToTop, NewsletterForm, Wordmark, WorldClock } from "@/components/layout/footer-parts";
+import { LanguageSwitcher } from "@/components/layout/language-switcher";
 import { Button } from "@/components/ui/button";
 import { LogoPlaceholder } from "@/components/ui/logo-placeholder";
 import { Marquee } from "@/components/ui/marquee";
@@ -94,7 +95,7 @@ export function SiteFooter({ copy, locale }: { copy: SiteCopy; locale: Locale })
                     <a href={`https://wa.me/${p.replace("+", "")}`} target="_blank" rel="noopener noreferrer" className="text-sm text-muted link-draw hover:text-fg">WhatsApp</a>
                   </li>
                 ))}
-                <li><Rich text={siteConfig.address} /></li>
+                <li><Rich text={siteConfig.addressByLocale[locale] ?? siteConfig.address} /></li>
               </ul>
             </div>
             <div className="space-y-4">
@@ -125,7 +126,10 @@ export function SiteFooter({ copy, locale }: { copy: SiteCopy; locale: Locale })
             </li>
           ))}
         </ul>
-        <p>{f.copyright}</p>
+        <div className="flex flex-wrap items-center gap-4">
+          <LanguageSwitcher current={locale} label={copy.header.language} />
+          <p>{f.copyright}</p>
+        </div>
       </div>
 
       <BackToTop label={f.backToTop} />

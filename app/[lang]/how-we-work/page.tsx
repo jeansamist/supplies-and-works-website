@@ -35,7 +35,7 @@ export default async function HowWeWorkPage({ params }: PageProps<"/[lang]/how-w
       <TagCloud eyebrow={t.quality.eyebrow} title={t.quality.title} tags={t.quality.tags} tone="surface" />
       <TagCloud eyebrow={t.tools.eyebrow} title={t.tools.title} tags={t.tools.tags} />
       <Statement eyebrow={t.ask.eyebrow} title={t.ask.title} paragraphs={[t.ask.text]} locale={locale} tone="ink" />
-      <FaqSection items={t.faq} />
+      <FaqSection locale={locale} items={t.faq} />
       <CtaBand cta={t.cta} locale={locale} />
     </>
   );

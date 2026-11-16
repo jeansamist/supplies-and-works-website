@@ -5,7 +5,6 @@ import { HugeiconsIcon } from "@hugeicons/react";
 import Link from "next/link";
 import { useSitePathname } from "@/lib/hooks";
 import { useEffect, useId, useRef, useState } from "react";
-import { LanguageSwitcher } from "@/components/layout/language-switcher";
 import { MobileMenu } from "@/components/layout/mobile-menu";
 import { ThemeToggle } from "@/components/layout/theme";
 import { Button } from "@/components/ui/button";
@@ -166,12 +165,6 @@ export function SiteHeader({ copy, locale }: { copy: SiteCopy; locale: Locale })
           </nav>
 
           <div className="flex shrink-0 items-center gap-1 sm:gap-2">
-            <LanguageSwitcher
-              current={locale}
-              label={copy.header.language}
-              soonLabel={copy.header.languageSoon}
-              className="hidden sm:flex"
-            />
             <ThemeToggle label={copy.header.theme} />
             <div className="hidden sm:block">
               <Button href={l("/contact")} size="sm" magnetic>

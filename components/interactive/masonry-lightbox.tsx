@@ -7,6 +7,7 @@ import { Photo } from "@/components/ui/photo";
 import { Rich } from "@/components/ui/rich";
 import type { ImageKey } from "@/content/images";
 import { cn } from "@/lib/utils";
+import { useUi } from "@/components/layout/locale-provider";
 
 type Tile = { image: ImageKey; caption: string; tall?: boolean };
 
@@ -15,6 +16,7 @@ type Tile = { image: ImageKey; caption: string; tall?: boolean };
  * (Esc closes, arrows navigate). Replace the tiles with real work.
  */
 export function MasonryLightbox({ tiles }: { tiles: Tile[] }) {
+  const t = useUi();
   const [open, setOpen] = useState<number | null>(null);
   const closeRef = useRef<HTMLButtonElement>(null);
   const lastFocus = useRef<HTMLElement | null>(null);
@@ -62,7 +64,7 @@ export function MasonryLightbox({ tiles }: { tiles: Tile[] }) {
       {open !== null && (
         <div role="dialog" aria-modal="true" aria-label={tiles[open].caption} className="fixed inset-0 z-[85] flex flex-col bg-[#0a0a0a]/95 p-4 text-[#ededed] backdrop-blur-sm sm:p-8" onClick={() => setOpen(null)}>
           <div className="flex justify-end">
-            <button ref={closeRef} type="button" aria-label="Close" onClick={() => setOpen(null)} className="flex size-12 items-center justify-center rounded-full bg-accent text-accent-ink">
+            <button ref={closeRef} type="button" aria-label={t.lightbox.close} onClick={() => setOpen(null)} className="flex size-12 items-center justify-center rounded-full bg-accent text-accent-ink">
               <HugeiconsIcon icon={Cancel01Icon} className="size-5" />
             </button>
           </div>
@@ -70,13 +72,13 @@ export function MasonryLightbox({ tiles }: { tiles: Tile[] }) {
             <Photo image={tiles[open].image} sizes="100vw" fx={false} className="absolute inset-0 rounded-2xl bg-transparent [&_img]:object-contain" />
           </div>
           <div className="flex items-center justify-between gap-4 pt-4" onClick={(e) => e.stopPropagation()}>
-            <button type="button" onClick={() => setOpen((open - 1 + tiles.length) % tiles.length)} className="rounded-full border border-white/20 px-4 py-2" aria-label="Previous">
+            <button type="button" onClick={() => setOpen((open - 1 + tiles.length) % tiles.length)} className="rounded-full border border-white/20 px-4 py-2" aria-label={t.lightbox.previous}>
               ←
             </button>
             <p className="text-center text-sm">
               <Rich text={tiles[open].caption} /> · {open + 1}/{tiles.length}
             </p>
-            <button type="button" onClick={() => setOpen((open + 1) % tiles.length)} className="rounded-full border border-white/20 px-4 py-2" aria-label="Next">
+            <button type="button" onClick={() => setOpen((open + 1) % tiles.length)} className="rounded-full border border-white/20 px-4 py-2" aria-label={t.lightbox.next}>
               →
             </button>
           </div>
@@ -91,6 +93,7 @@ export function MasonryLightbox({ tiles }: { tiles: Tile[] }) {
  * until then it shows a styled placeholder with a working play/pause control.
  */
 export function MotionPlayer({ src, poster, placeholder }: { src?: string; poster: ImageKey; placeholder: string }) {
+  const t = useUi();
   const video = useRef<HTMLVideoElement>(null);
   const [playing, setPlaying] = useState(false);
 
@@ -117,7 +120,7 @@ export function MotionPlayer({ src, poster, placeholder }: { src?: string; poste
       <button
         type="button"
         onClick={toggle}
-        aria-label={playing ? "Pause" : "Play"}
+        aria-label={playing ? t.lightbox.pause : t.lightbox.play}
         data-cursor="link"
         className="absolute top-1/2 left-1/2 flex size-20 -translate-1/2 items-center justify-center rounded-full bg-accent text-accent-ink transition-transform hover:scale-110"
       >

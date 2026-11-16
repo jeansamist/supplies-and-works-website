@@ -2,6 +2,7 @@
 
 import { useRef, useState, type KeyboardEvent, type PointerEvent } from "react";
 import { Rich } from "@/components/ui/rich";
+import { useUi } from "@/components/layout/locale-provider";
 
 /**
  * Draggable before/after comparison. Drag the handle (mouse/touch) or use the
@@ -78,20 +79,20 @@ export function BeforeAfter({
 }
 
 function MockSite({ variant, label }: { variant: "before" | "after"; label: string }) {
+  const t = useUi();
   if (variant === "before") {
     return (
       <div className="grid size-full grid-rows-[auto_1fr] bg-[#e9e6df] p-6 font-[Times,serif] text-[#333] sm:p-10">
         <div className="flex items-center justify-between border-b-2 border-[#999] pb-3">
-          <span className="text-xl underline">COMPANY NAME</span>
+          <span className="text-xl underline">{t.beforeAfter.company}</span>
           <span className="hidden gap-3 text-sm text-[#0000ee] underline sm:flex">
-            <span>Home</span>
-            <span>About us</span>
-            <span>Products</span>
-            <span>Contact</span>
+            {t.beforeAfter.nav.map((n) => (
+              <span key={n}>{n}</span>
+            ))}
           </span>
         </div>
         <div className="grid place-items-center text-center">
-          <Rich text={`[${label}: old site screenshot]`} />
+          <Rich text={`[${label}: ${t.beforeAfter.oldShot}]`} />
         </div>
       </div>
     );
@@ -111,7 +112,7 @@ function MockSite({ variant, label }: { variant: "before" | "after"; label: stri
         <span className="h-6 w-3/4 rounded-full bg-white sm:h-10" />
         <span className="h-6 w-1/2 rounded-full bg-white/70 sm:h-10" />
         <span className="mt-2 text-sm text-[#edededb3]">
-          <Rich text={`[${label}: new site screenshot]`} />
+          <Rich text={`[${label}: ${t.beforeAfter.newShot}]`} />
         </span>
       </div>
     </div>

@@ -52,11 +52,12 @@ export function useIsClient(): boolean {
 }
 
 /**
- * Pathname without the default-locale prefix. English pages are served from
- * /en/* through a rewrite, so the server sees "/en/about" while the browser
- * shows "/about"; normalising avoids hydration mismatches.
+ * Pathname without any locale prefix ("/fr/about" and "/about" → "/about").
+ * English pages are served from /en/* through a rewrite, so the server sees
+ * "/en/about" while the browser shows "/about"; normalising avoids hydration
+ * mismatches and gives one path to compare against the route list.
  */
 export function useSitePathname(): string {
   const p = usePathname();
-  return p.replace(/^\/en(?=\/|$)/, "") || "/";
+  return p.replace(/^\/(en|fr)(?=\/|$)/, "") || "/";
 }

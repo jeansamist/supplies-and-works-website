@@ -2,6 +2,7 @@
 
 import { useState } from "react";
 import { cn } from "@/lib/utils";
+import { useUi } from "@/components/layout/locale-provider";
 
 type Target = { name: string; text: string };
 
@@ -20,6 +21,7 @@ export function RpoRto({ rpo, rto, examples }: { rpo: Target; rto: Target; examp
 }
 
 function Dial({ target, examples, kind }: { target: Target; examples: string[]; kind: string }) {
+  const t = useUi();
   const [i, setI] = useState(0);
   const fill = i === 0 ? 1 / 24 : 1;
   const C = 2 * Math.PI * 70;
@@ -43,7 +45,7 @@ function Dial({ target, examples, kind }: { target: Target; examples: string[]; 
         <div>
           <p className="font-serif text-5xl font-semibold">{kind}</p>
           <p className="mt-1 text-muted" aria-live="polite">
-            e.g. <strong className="text-fg">{examples[i]}</strong>
+            {t.rpo.example} <strong className="text-fg">{examples[i]}</strong>
           </p>
         </div>
       </div>
@@ -64,7 +66,7 @@ function Dial({ target, examples, kind }: { target: Target; examples: string[]; 
             {e}
           </button>
         ))}
-        <span className="ph ml-auto self-center">[Your target]</span>
+        <span className="ph ml-auto self-center">{t.rpo.target}</span>
       </div>
     </div>
   );

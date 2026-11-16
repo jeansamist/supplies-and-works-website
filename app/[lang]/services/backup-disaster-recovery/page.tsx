@@ -25,7 +25,7 @@ export default async function BackupPage({ params }: PageProps<"/[lang]/services
   return (
     <>
       <JsonLd data={[serviceLd({ name: "Backup and Disaster Recovery", description: t.seo.description, path }), faqLd(t.faq)]} />
-      <PageHero copy={t.hero} path={path} locale={locale} aside={<div data-reveal><BackupDiagram /></div>} />
+      <PageHero copy={t.hero} path={path} locale={locale} aside={<div data-reveal><BackupDiagram locale={locale} /></div>} />
 
       {/* The risk is real */}
       <Section tone="ink">
@@ -58,7 +58,7 @@ export default async function BackupPage({ params }: PageProps<"/[lang]/services
       <DataTable eyebrow={t.options.eyebrow} title={t.options.title} table={t.options.table} />
       <TagCloud eyebrow={t.who.eyebrow} title={t.who.title} tags={t.who.tags} tone="surface" marquee />
       <Plans eyebrow={t.plans.eyebrow} title={t.plans.title} lead={t.plans.lead} plans={t.plans.items} footnote={t.plans.note} />
-      <FaqSection items={t.faq} tone="surface" />
+      <FaqSection locale={locale} items={t.faq} tone="surface" />
       <div className="pt-3 sm:pt-4"><CtaBand cta={t.cta} locale={locale} /></div>
     </>
   );

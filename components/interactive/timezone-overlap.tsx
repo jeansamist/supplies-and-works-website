@@ -2,11 +2,12 @@
 
 import { useMemo, useState } from "react";
 import { useNow } from "@/lib/hooks";
+import { useUi } from "@/components/layout/locale-provider";
 import { siteConfig } from "@/content/site";
 import { cn } from "@/lib/utils";
 
 const CITIES = [
-  { name: "Your time zone", zone: "" },
+  { name: "", zone: "" }, // visitor's own zone (label from content/ui.ts)
   { name: "Paris / Brussels", zone: "Europe/Paris" },
   { name: "London", zone: "Europe/London" },
   { name: "New York / Toronto", zone: "America/New_York" },
@@ -30,6 +31,8 @@ function offsetHours(zone: string | undefined, date: Date) {
  * from content/site.ts → siteConfig.workingHours / visitorHours.
  */
 export function TimezoneOverlap({ label }: { label: string }) {
+  const t = useUi();
+  const cityName = (i: number) => (i === 0 ? t.timezone.yours : CITIES[i].name);
   const [city, setCity] = useState(1);
   const now = useNow();
 
@@ -64,8 +67,8 @@ export function TimezoneOverlap({ label }: { label: string }) {
           className="rounded-full border border-line bg-surface px-5 py-3 font-medium outline-none focus-visible:border-fg"
         >
           {CITIES.map((c, i) => (
-            <option key={c.name} value={i}>
-              {c.name}
+            <option key={c.zone || "local"} value={i}>
+              {cityName(i)}
             </option>
           ))}
         </select>
@@ -76,8 +79,8 @@ export function TimezoneOverlap({ label }: { label: string }) {
           <div className="space-y-4" aria-hidden>
             {[
               { name: "Douala", range: [data.ys, data.ye], tone: "bg-fg" },
-              { name: CITIES[city].name, range: [data.v0, data.v1], tone: "bg-fg/30" },
-              { name: "Overlap", range: [data.o0, data.o1], tone: "bg-accent" },
+              { name: cityName(city), range: [data.v0, data.v1], tone: "bg-fg/30" },
+              { name: t.timezone.overlapRow, range: [data.o0, data.o1], tone: "bg-accent" },
             ].map((row) => (
               <div key={row.name} className="grid grid-cols-[7.5rem_1fr] items-center gap-4 sm:grid-cols-[11rem_1fr]">
                 <span className="truncate text-sm font-medium text-muted">{row.name}</span>
@@ -98,8 +101,8 @@ export function TimezoneOverlap({ label }: { label: string }) {
             </div>
           </div>
           <p className="text-lg" aria-live="polite">
-            <span className="font-semibold">{CITIES[city].name}</span>: {data.diff === 0 ? "same time as Douala" : `${Math.abs(data.diff)} h ${data.diff > 0 ? "behind" : "ahead of"} Douala`} ·{" "}
-            <span className="mark font-semibold">{data.overlap} h overlap</span> (timeline in Douala time)
+            <span className="font-semibold">{cityName(city)}</span>{" "}: {data.diff === 0 ? t.timezone.same : `${Math.abs(data.diff)} h ${data.diff > 0 ? t.timezone.behind : t.timezone.ahead}`} ·{" "}
+            <span className="mark font-semibold">{data.overlap} h {t.timezone.overlap}</span> {t.timezone.note}
           </p>
         </>
       )}

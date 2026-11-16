@@ -28,7 +28,7 @@ export default async function BuiltInAfricaPage({ params }: PageProps<"/[lang]/b
         locale={locale}
         aside={
           <div data-reveal className="relative">
-            <AfricaMap />
+            <AfricaMap locale={locale} />
           </div>
         }
       />

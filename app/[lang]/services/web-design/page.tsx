@@ -37,7 +37,7 @@ export default async function WebDesignPage({ params }: PageProps<"/[lang]/servi
       <ProcessSteps eyebrow={t.process.eyebrow} title={t.process.title} steps={t.process.steps} locale={locale} tone="default" />
       <TagCloud eyebrow={t.extras.eyebrow} title={t.extras.title} tags={t.extras.tags} tone="surface" />
       <Statement eyebrow={t.pricing.eyebrow} title={t.pricing.title} paragraphs={[t.pricing.text]} locale={locale} />
-      <FaqSection items={t.faq} tone="surface" />
+      <FaqSection locale={locale} items={t.faq} tone="surface" />
       <div className="pt-3 sm:pt-4"><CtaBand cta={t.cta} locale={locale} /></div>
     </>
   );
