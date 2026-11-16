@@ -305,15 +305,6 @@
     "width": 6024,
     "height": 4024
   },
-  "boutique": {
-    "id": "photo-1770283556599-9ce7898ffbd1",
-    "photographer": "Dwayne joe",
-    "photographerUrl": "https://unsplash.com/@spliff_dj_joe",
-    "pageUrl": "https://unsplash.com/photos/two-men-in-a-nairobi-apparel-district-store-tN7842DPxF0",
-    "alt": "Two men in a clothing store in Nairobi's apparel district",
-    "width": 2624,
-    "height": 3936
-  },
   "pointOfSale": {
     "id": "photo-1647427017067-8f33ccbae493",
     "photographer": "Simon Kadula",
@@ -412,5 +403,14 @@
     "alt": "Antique map of Africa with ornate rococo borders",
     "width": 3440,
     "height": 4171
+  },
+  "kiraShop": {
+    "id": "photo-1687422808311-a776f467a468",
+    "photographer": "Ali Mkumbwa",
+    "photographerUrl": "https://unsplash.com/@mkumbwajr",
+    "pageUrl": "https://unsplash.com/photos/EOkN2pRjFsg",
+    "alt": "Smiling shopkeeper behind the counter of a well-stocked neighbourhood shop",
+    "width": 0,
+    "height": 0
   }
 }

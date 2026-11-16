@@ -13,5 +13,5 @@ export async function generateMetadata({ params }: PageProps<"/[lang]/products/k
 
 export default async function KiraPage({ params }: PageProps<"/[lang]/products/kira">) {
   const locale = toLocale((await params).lang);
-  return <ProductTemplate t={kira(locale)} kind="kira" path={path} locale={locale} category="Shop management" image="boutique" />;
+  return <ProductTemplate t={kira(locale)} kind="kira" path={path} locale={locale} category="Shop management" image="kiraShop" />;
 }
