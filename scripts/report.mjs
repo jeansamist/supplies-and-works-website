@@ -14,7 +14,7 @@ for (const f of files) {
     if (/^\s*(\/\/|\*|\/\*)/.test(line)) return; // skip comments
     // A placeholder starts with a capital letter, is not glued to a Tailwind
     // class prefix (e.g. font-[Times,serif]) and is longer than one letter.
-    const hits = [...line.matchAll(/\[[A-Z][^\]\[]{1,160}\]/g)]
+    const hits = [...line.matchAll(/\[(?:X|[A-Z][^\]\[]{1,160})\]/g)]
       .filter((m) => !/[\w-]$/.test(line.slice(0, m.index)) && !m[0].includes("{"))
       .map((m) => m[0]);
     if (!hits.length) return;
