@@ -11,7 +11,8 @@
     "geo": "node scripts/build-geo.mjs",
     "images": "node scripts/build-images.mjs",
     "logo": "node scripts/build-logo.mjs",
-    "report": "node scripts/report.mjs"
+    "report": "node scripts/report.mjs",
+    "banners": "node scripts/build-banners.mjs"
   },
   "dependencies": {
     "@gsap/react": "^2.1.2",
@@ -31,6 +32,7 @@
     "d3-geo": "^3.1.1",
     "eslint": "^9",
     "eslint-config-next": "16.4.2",
+    "puppeteer-core": "^23.11.1",
     "tailwindcss": "^4",
     "topojson-client": "^3.1.0",
     "typescript": "^5",

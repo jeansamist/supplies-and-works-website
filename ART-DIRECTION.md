@@ -170,6 +170,8 @@ Keep motifs **tasteful and modern**: no tribal patterns, no savannah or safari c
 
 ---
 
+**Ready-made covers** (in `brand/banners/`, rebuild with `pnpm banners`): `facebook-cover.png` (1640×624), `x-twitter-header.png` (1500×500), `linkedin-company-cover.png` (1128×191 @2×), `linkedin-profile-background.png` (1584×396). Each keeps its key content out of the platform's crop and profile-photo zones.
+
 ## 10. Post templates
 
 ### A. Statement / headline post (light)

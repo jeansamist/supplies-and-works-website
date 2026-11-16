@@ -144,3 +144,4 @@ On top of that comes the logo yellow, **`#FCEE21`**, as the single accent.
 | `pnpm logo` | Rebuild the logo PNGs and favicons from `brand/logo-source.png` |
 | `pnpm geo` | Rebuild the dot maps (world, Africa, Cameroon) in `lib/geo/` |
 | `pnpm report` | Refresh `docs/PLACEHOLDERS.md` and `docs/IMAGE-CREDITS.md` |
+| `pnpm banners` | Rebuild the social media covers in `brand/banners/` (Facebook, X, LinkedIn company and profile) |
