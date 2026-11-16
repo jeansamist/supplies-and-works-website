@@ -162,14 +162,15 @@ export function MotionDirector() {
         const target = Number(num.replace(",", "."));
         const decimals = (num.split(/[.,]/)[1] ?? "").length;
         const obj = { v: 0 };
-        el.textContent = `${pre}${(0).toFixed(decimals)}${post}`;
+        el.textContent = `${pre}${(0).toFixed(decimals).padStart(num.length, "0")}${post}`;
         gsap.to(obj, {
           v: target,
           duration: 1.8,
           ease: "expo.out",
           scrollTrigger: { trigger: el, start: "top 90%", once: true },
           onUpdate: () => {
-            el.textContent = `${pre}${obj.v.toFixed(decimals)}${post}`;
+            // Keep leading zeros ("08" counts 00 → 08).
+            el.textContent = `${pre}${obj.v.toFixed(decimals).padStart(num.length, "0")}${post}`;
           },
         });
       });
