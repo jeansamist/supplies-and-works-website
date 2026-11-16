@@ -19,8 +19,13 @@ export type CaseStudy = {
   filters: WorkFilter[];
   /** Unsplash fallback image. */
   image: ImageKey;
-  /** Cover: the client's logo (shown in white) centred on its brand colour. */
-  logo?: { src: string; bg: string };
+  /**
+   * Cover: the client's logo centred on its brand colour.
+   * color: true keeps the logo's own colours on a light tint of `bg`
+   * (otherwise the logo is shown as a white silhouette on `bg`).
+   * size "lg" for square or badge-like logos.
+   */
+  logo?: { src: string; bg: string; color?: boolean; size?: "md" | "lg" };
   /** Screenshot of the live site, shown on the case-study page. */
   screenshot?: { src: string; alt: string };
   /** Live website. */
@@ -76,7 +81,7 @@ export const work = localized({
         result: "Professional email on your own domain, billed by Mobile Money.",
         filters: ["Software", "Cloud", "AI"],
         image: "cloudDashboard",
-        logo: { src: "/work/logo-marrowmails.svg", bg: "#FB6107" },
+        logo: { src: "/work/logo-marrowmails.svg", bg: "#FB6107", color: true },
         screenshot: { src: "/work/marrowmails.jpg", alt: "MarrowMails home page: “Your business deserves better than a Gmail address.”" },
         link: "https://marrowmails.com/",
         detail: {
@@ -198,7 +203,7 @@ export const work = localized({
         result: "Online ordering from local restaurants, delivery or takeaway.",
         filters: ["Web", "Software"],
         image: "restaurantKitchen",
-        logo: { src: "/work/logo-ndzeme.png", bg: "#FE9719" },
+        logo: { src: "/work/logo-ndzeme.png", bg: "#FE9719", color: true, size: "lg" },
         screenshot: { src: "/work/ndzeme.jpg", alt: "Ndzeme restaurants page with categories and restaurant listings" },
         link: "https://nzdeme-jeansamist.vercel.app/restaurants",
         detail: {
@@ -273,7 +278,7 @@ export const work = localized({
         result: "A clear Figma prototype presenting an optometry practice.",
         filters: ["Creative", "Web"],
         image: "responsiveDevices",
-        logo: { src: "/work/logo-mega-optic.png", bg: "#293A89" },
+        logo: { src: "/work/logo-mega-optic.png", bg: "#293A89", color: true },
         screenshot: { src: "/work/mega-optic.jpg", alt: "Mega Optic home page: “L’opticien qui te convient”" },
         link: "https://megaoptic.vercel.app/",
         detail: {
@@ -309,6 +314,7 @@ export const work = localized({
         result: "Live with paying shops.",
         filters: ["Products", "Software"],
         image: "kiraShop",
+        logo: { src: "/work/logo-kira.svg", bg: "#009270", color: true },
         href: routes.kira.path,
         detail: productDetail(),
       },
