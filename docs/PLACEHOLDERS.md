@@ -147,30 +147,30 @@ Also to provide:
 
 ## content/work.ts
 
-- L95: `[Add figures: mailboxes, customers, countries.]`
-- L128: `[Add figures: users, languages used, minutes translated.]`
-- L159: `[Add figures: groups, members, transactions.]`
-- L160: `[Quote]`
-- L160: `[Name]`
-- L160: `[Role]`
-- L184: `[Describe outcomes: listings, visitors, agencies onboarded.]`
-- L185: `[Quote]`
-- L185: `[Name]`
-- L185: `[Role]`
-- L208: `[Describe outcomes: restaurants, orders, users.]`
-- L209: `[Quote]`
-- L209: `[Name]`
-- L209: `[Role]`
-- L232: `[Describe outcomes: visibility, enquiries.]`
-- L233: `[Quote]`
-- L233: `[Name]`
-- L233: `[Role]`
-- L256: `[Describe outcomes: leads, speed scores.]`
-- L257: `[Quote]`
-- L257: `[Name]`
-- L257: `[Role]`
-- L280: `[Describe outcomes.]`
-- L281: `[Quote]`
-- L281: `[Name]`
-- L281: `[Role]`
+- L97: `[Add figures: mailboxes, customers, countries.]`
+- L131: `[Add figures: users, languages used, minutes translated.]`
+- L163: `[Add figures: groups, members, transactions.]`
+- L164: `[Quote]`
+- L164: `[Name]`
+- L164: `[Role]`
+- L188: `[Describe outcomes: listings, visitors, agencies onboarded.]`
+- L189: `[Quote]`
+- L189: `[Name]`
+- L189: `[Role]`
+- L213: `[Describe outcomes: restaurants, orders, users.]`
+- L214: `[Quote]`
+- L214: `[Name]`
+- L214: `[Role]`
+- L238: `[Describe outcomes: visibility, enquiries.]`
+- L239: `[Quote]`
+- L239: `[Name]`
+- L239: `[Role]`
+- L263: `[Describe outcomes: leads, speed scores.]`
+- L264: `[Quote]`
+- L264: `[Name]`
+- L264: `[Role]`
+- L288: `[Describe outcomes.]`
+- L289: `[Quote]`
+- L289: `[Name]`
+- L289: `[Role]`
 

@@ -38,7 +38,6 @@ All photos are from [Unsplash](https://unsplash.com) (Unsplash License). They ar
 | `technician` | [Technician repairing an Android smartphone](https://unsplash.com/photos/K7OUs6y_cm8) | [Clint Bustrillos](https://unsplash.com/@clintbustrillos) |
 | `restaurantKitchen` | [People preparing a fresh salad together in a kitchen](https://unsplash.com/photos/PJUfpkA80eU) | [Sweet Life](https://unsplash.com/@sweetlifediabetes) |
 | `chefTablet` | [Smiling man preparing fresh fruit at a food stall](https://unsplash.com/photos/DsO3tHiNcfU) | [Mugabi Owen](https://unsplash.com/@spenz_official) |
-| `boutique` | [Two men in a clothing store in Nairobi's apparel district](https://unsplash.com/photos/two-men-in-a-nairobi-apparel-district-store-tN7842DPxF0) | [Dwayne joe](https://unsplash.com/@spliff_dj_joe) |
 | `pointOfSale` | [Person using a card payment terminal at a store counter](https://unsplash.com/photos/a-person-is-using-a-pos-machine-in-a-store--gkndM1GvSA) | [Simon Kadula](https://unsplash.com/@simonkadula) |
 | `warehouse` | [Cardboard boxes stacked on metal warehouse shelving](https://unsplash.com/photos/BNBA1h-NgdY) | [CHUTTERSNAP](https://unsplash.com/@chuttersnap) |
 | `stickyNotes` | [Colourful sticky notes scattered on a whiteboard](https://unsplash.com/photos/OBOoohXBrD8) | [Akinyemi Gbadamosi](https://unsplash.com/@mhyk3y) |
@@ -50,3 +49,4 @@ All photos are from [Unsplash](https://unsplash.com) (Unsplash License). They ar
 | `teamLunch` | [Friends laughing together over a meal at a restaurant table](https://unsplash.com/photos/a-group-of-people-sitting-around-a-table-iu5u3JrguHU) | [Jim Nyamao](https://unsplash.com/@jiiimmm) |
 | `coffeeLaptop` | [Laptop computer beside a coffee mug](https://unsplash.com/photos/laptop-computer-beside-coffee-mug-j4uuKnN43_M) | [Alex Knight](https://unsplash.com/@agk42) |
 | `africaMap` | [Antique map of Africa with ornate rococo borders](https://unsplash.com/photos/qJfymm2bDOU) | [Smithsonian](https://unsplash.com/@smithsonian) |
+| `kiraShop` | [Smiling shopkeeper behind the counter of a well-stocked neighbourhood shop](https://unsplash.com/photos/EOkN2pRjFsg) | [Ali Mkumbwa](https://unsplash.com/@mkumbwajr) |
