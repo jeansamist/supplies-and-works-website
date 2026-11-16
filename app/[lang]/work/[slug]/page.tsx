@@ -2,7 +2,8 @@ import { notFound } from "next/navigation";
 import { WorkCard } from "@/components/interactive/work-cards";
 import { PageHero } from "@/components/sections/page-hero";
 import { CtaBand } from "@/components/sections/blocks";
-import { Photo } from "@/components/ui/photo";
+import { WorkCover } from "@/components/ui/work-cover";
+import { TextLink } from "@/components/ui/button";
 import { Rich } from "@/components/ui/rich";
 import { Container, Section } from "@/components/ui/section";
 import { caseStudyLabels } from "@/content/pages/other";
@@ -65,8 +66,13 @@ export default async function CaseStudyPage({ params }: PageProps<"/[lang]/work/
       <Section flush className="pb-16">
         <Container wide className="space-y-8">
           <div data-reveal="clip" className="relative aspect-[16/8] overflow-hidden rounded-[2rem]">
-            <Photo image={item.image} sizes="100vw" priority className="size-full" />
+            <WorkCover item={item} sizes="100vw" priority className="size-full" />
           </div>
+          {item.link && (
+            <div data-reveal>
+              <TextLink href={item.link}>{L.visit}</TextLink>
+            </div>
+          )}
           <div className="space-y-4">
             <p className="text-sm font-semibold tracking-wide text-muted uppercase">{L.keyResults}</p>
             <ul data-reveal="stagger" className="grid gap-4 sm:grid-cols-3">

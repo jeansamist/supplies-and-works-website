@@ -2,7 +2,7 @@
 
 import Link from "next/link";
 import { useRef, useState, type PointerEvent } from "react";
-import { Photo } from "@/components/ui/photo";
+import { WorkCover } from "@/components/ui/work-cover";
 import { Rich } from "@/components/ui/rich";
 import type { CaseStudy } from "@/content/work";
 import { localePath, type Locale } from "@/lib/i18n";
@@ -16,7 +16,7 @@ export function WorkCard({ item, locale, className }: { item: CaseStudy; locale:
   return (
     <Link href={localePath(locale, hrefFor(item))} data-cursor="view" className={cn("group block space-y-4", className)}>
       <div className="relative aspect-[4/3] overflow-hidden rounded-[1.75rem]">
-        <Photo image={item.image} sizes="(min-width: 1024px) 33vw, (min-width: 640px) 50vw, 90vw" className="size-full" imgClassName="group-hover:scale-105" />
+        <WorkCover item={item} sizes="(min-width: 1024px) 33vw, (min-width: 640px) 50vw, 90vw" className="size-full" imgClassName="group-hover:scale-105" />
         <span className="absolute bottom-4 left-4 max-w-[85%] translate-y-3 rounded-full bg-accent px-4 py-2 text-sm font-semibold text-accent-ink opacity-0 shadow-lg transition-all duration-500 ease-out-expo group-hover:translate-y-0 group-hover:opacity-100 group-focus-visible:translate-y-0 group-focus-visible:opacity-100 max-sm:translate-y-0 max-sm:opacity-100">
           <Rich text={item.result} mark={false} />
         </span>
